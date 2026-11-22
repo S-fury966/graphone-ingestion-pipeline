@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import contextlib
 import csv
 import re
+import time
 from collections import Counter
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -543,6 +545,54 @@ def audit_pricing(db: Database, apply: bool = True) -> List[dict]:
     return changes
 
 
+# A free TRIAL is not a free tier, so a product whose only "free" wording is a
+# trial is not freemium. Trial-only FREEMIUM rows are re-labelled: PAID when a
+# real price/billing signal is present, else null.
+_TRIAL_PHRASES = ("free trial", "day trial", "days free", "trial")
+_FREE_TIER_PHRASES = ("free plan", "free tier", "free forever", "always free",
+                      "free for", "$0", "free version", "freemium", "open source")
+
+
+def trial_freemium_verdict(pm_value: Optional[str],
+                           evidence: Optional[str]) -> Optional[str]:
+    """Corrected label for a FREEMIUM product whose pricing evidence is
+    trial-only. Returns the (possibly unchanged) pricing_model.
+
+    Rule (no LLM): if pricing_model is FREEMIUM and the stored evidence mentions
+    trial wording but NONE of the genuine free-tier phrases, then it is not a
+    freemium product -> PAID if the evidence also carries a price tied to a plan
+    or billing period, otherwise null. Any other label/evidence is unchanged.
+    """
+    if pm_value != "FREEMIUM":
+        return pm_value
+    ev = (evidence or "").lower()
+    if not any(p in ev for p in _TRIAL_PHRASES):
+        return pm_value                      # no trial wording -> leave as-is
+    if any(p in ev for p in _FREE_TIER_PHRASES):
+        return pm_value                      # genuine free-tier wording -> leave
+    return "PAID" if _has_paid_signal(evidence) else None
+
+
+def audit_trial_freemium(db: Database, apply: bool = True) -> List[dict]:
+    """Re-label trial-only FREEMIUM products from their STORED evidence (no LLM).
+    Returns the rows whose label changes; applies + re-exports if asked."""
+    changes: List[dict] = []
+    for row in db.iter_products():
+        old = row["pricing_model"]
+        new = trial_freemium_verdict(old, row["evidence_pricing"])
+        if new != old:
+            changes.append({
+                "startup": row["startup_name"], "product": row["product_name"],
+                "old": old, "new": new,
+                "evidence": (row["evidence_pricing"] or "")[:200],
+                "slug": row["startup_slug"], "norm": row["normalized_name"]})
+    if apply and changes:
+        for c in changes:
+            db.update_product_pricing(c["slug"], c["norm"], c["new"])
+        _export(db)
+    return changes
+
+
 async def run(args: argparse.Namespace) -> None:
     db = Database(args.db)
     plan_tiers = load_plan_tiers()
@@ -573,7 +623,8 @@ async def run(args: argparse.Namespace) -> None:
     stop_event = asyncio.Event()
     t0 = datetime.now(timezone.utc)
     prog = {"processed": 0, "win_calls0": 0, "win_429_0": 0, "win_bad": 0,
-            "win_deferred0": 0, "last_export": 0, "stop_reason": None}
+            "win_deferred0": 0, "last_export": 0, "stop_reason": None,
+            "last_finish": time.monotonic(), "watchdog_tripped": False}
 
     def _elapsed_min() -> float:
         return max((datetime.now(timezone.utc) - t0).total_seconds() / 60.0, 1e-6)
@@ -586,6 +637,7 @@ async def run(args: argparse.Namespace) -> None:
     async def after_one(status: str) -> None:
         async with lock:
             prog["processed"] += 1
+            prog["last_finish"] = time.monotonic()   # watchdog heartbeat
             if status in BAD_STATUSES:
                 prog["win_bad"] += 1
             n = prog["processed"]
@@ -651,18 +703,76 @@ async def run(args: argparse.Namespace) -> None:
             row = next(rows_iter, None)
             if row is None or orch.budget_reached():
                 return
-            crawl = await crawl_startup(fetcher, row["slug"], row["website"])
+            crawl = await crawl_startup(fetcher, row["slug"], row["website"], browser)
             stats.attempted += 1
             await process_startup(db, orch, crawl, row["entity_name"], row["one_liner"],
                                   stats, plan_tiers=plan_tiers, dry_run=args.dry_run)
             await after_one(crawl.status)
 
+    watchdog_s = float(getattr(args, "watchdog_timeout_s", 300.0) or 0.0)
+
+    async def watchdog(tasks: List["asyncio.Task"]) -> None:
+        """Backstop: if no startup finishes within watchdog_s, defer the pending
+        startups and force a clean exit. Protects against any unforeseen stall
+        (the per-call provider deadline already handles the known one)."""
+        if watchdog_s <= 0:
+            return
+        tick = max(1.0, min(5.0, watchdog_s / 2))
+        while not stop_event.is_set() and not all(t.done() for t in tasks):
+            await asyncio.sleep(tick)
+            idle = time.monotonic() - prog["last_finish"]
+            if idle >= watchdog_s and not stop_event.is_set():
+                async with lock:
+                    prog["watchdog_tripped"] = True
+                    if prog["stop_reason"] is None:
+                        prog["stop_reason"] = (
+                            f"watchdog: no startup finished for {idle:.0f}s "
+                            f"(>= {watchdog_s:.0f}s); deferring pending startups "
+                            f"and exiting")
+                log.error("WATCHDOG tripped — no progress; exiting", extra={"extra": {
+                    "idle_s": round(idle, 1), "threshold_s": watchdog_s,
+                    "processed": prog["processed"]}})
+                stop_event.set()
+                for t in tasks:        # unstick any wedged worker
+                    t.cancel()
+                return
+
+    browser = None
     async with fetcher:
-        await asyncio.gather(*(worker() for _ in range(max(1, args.concurrency))))
+        if getattr(args, "use_browser", False):
+            from ..crawler.browser import BrowserFetcher
+            browser = BrowserFetcher(
+                global_concurrency=args.browser_concurrency,
+                context_pool_size=max(1, args.browser_concurrency),
+                robots_fetcher=fetcher)
+            await browser.__aenter__()
+            log.info("browser rendering enabled", extra={"extra": {
+                "browser_concurrency": args.browser_concurrency}})
+        try:
+            worker_tasks = [asyncio.create_task(worker())
+                            for _ in range(max(1, args.concurrency))]
+            wd_task = asyncio.create_task(watchdog(worker_tasks))
+            try:
+                await asyncio.gather(*worker_tasks, return_exceptions=True)
+            finally:
+                wd_task.cancel()
+                with contextlib.suppress(asyncio.CancelledError):
+                    await wd_task
+        finally:
+            if browser is not None:
+                await browser.__aexit__(None, None, None)
+
+    # Count any startups never reached (e.g. after a watchdog/stop) as deferred.
+    pending = list(rows_iter)
+    if pending:
+        stats.deferred += len(pending)
+        log.warning("pending startups deferred (run stopped early)", extra={"extra": {
+            "count": len(pending), "slugs": [r["slug"] for r in pending[:20]]}})
 
     if prog["stop_reason"]:
         log.warning("STOPPED EARLY", extra={"extra": {"reason": prog["stop_reason"],
-                    "processed": prog["processed"]}})
+                    "processed": prog["processed"],
+                    "watchdog_tripped": prog["watchdog_tripped"]}})
 
     if not args.dry_run:
         _export(db)
@@ -700,10 +810,17 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--reset-products", action="store_true",
                    help="delete products + crawl_status for the N startups being processed")
     p.add_argument("--dry-run", action="store_true", help="do not persist/export")
+    p.add_argument("--use-browser", action="store_true",
+                   help="escalate js_only homepages through a real browser (Phase V)")
+    p.add_argument("--browser-concurrency", type=int, default=2,
+                   help="concurrent browser renders when --use-browser is set")
     p.add_argument("--audit-pricing", action="store_true",
                    help="re-check stored FREE labels against stored evidence (no LLM), "
                         "apply downgrades, re-export, and exit")
     p.add_argument("--db", default="data/state.db", help="SQLite path")
+    p.add_argument("--watchdog-timeout-s", type=float, default=300.0,
+                   help="if no startup finishes within this many seconds, defer "
+                        "the pending startups and exit cleanly (0 disables)")
     return p
 
 

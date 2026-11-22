@@ -154,7 +154,8 @@ class Orchestrator:
             self.providers[t.name] = build_provider(t.provider, fetcher, t.model,
                                                     key, t.timeout_s,
                                                     getattr(t, "base_url", None),
-                                                    getattr(t, "reasoning_effort", None))
+                                                    getattr(t, "reasoning_effort", None),
+                                                    getattr(t, "max_output_tokens", None))
 
     # ---- circuit breaker ----
     def _circuit_open(self, name: str) -> bool:
@@ -363,15 +364,33 @@ class Orchestrator:
                     await self._buckets[tier.name].acquire()
                     await self._token_windows[tier.name].acquire(est_tokens)
                     self.calls_made += 1
-                    resp = await provider.complete(SYSTEM_PROMPT, user)
+                    # Hard backstop: a provider call that hangs past the fetcher's
+                    # own HTTP timeout (e.g. a wedged per-domain slot or a stuck
+                    # connection) must NEVER park a worker forever. wait_for
+                    # cancels the hung call so the semaphore/slot are released and
+                    # it falls through as an ordinary ProviderDown.
+                    try:
+                        resp = await asyncio.wait_for(
+                            provider.complete(SYSTEM_PROMPT, user),
+                            timeout=self.config.call_deadline_s)
+                    except asyncio.TimeoutError:
+                        raise ProviderDown(
+                            f"provider call exceeded {self.config.call_deadline_s}s deadline")
                 metrics.calls += 1
                 self._learn_limits(tier.name, getattr(resp, "headers", None))
                 self._rl_snapshot(tier.name, getattr(resp, "headers", None), "200")
                 tokens_in += resp.tokens_in
                 tokens_out += resp.tokens_out
 
+                # An empty or null content field is a bad output (NVIDIA Nemotron
+                # does this when its reasoning channel fills the token budget):
+                # treat it as BadOutput so the repair retry / fallback handle it
+                # and it can never raise out of extract().
+                text = resp.text
+                if text is None or not str(text).strip():
+                    raise BadOutput("empty content")
                 try:
-                    raw = json.loads(resp.text)
+                    raw = json.loads(text)
                 except (ValueError, TypeError) as exc:
                     raise BadOutput(f"invalid JSON: {exc}")
                 if not isinstance(raw, dict):

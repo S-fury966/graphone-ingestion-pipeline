@@ -508,8 +508,8 @@ def build_parser() -> argparse.ArgumentParser:
                    help="exclude sources that need the LLM (HN 'Who is hiring')")
     p.add_argument("--max-llm-calls", type=int, default=30)
     p.add_argument("--concurrency", type=int, default=4)
-    p.add_argument("--db", default="data/state_news.db",
-                   help="SQLite path (never data/state.db while another run uses it)")
+    p.add_argument("--db", default="data/state.db",
+                   help="SQLite path (consolidated single DB)")
     p.add_argument("--dry-run", action="store_true")
     return p
 

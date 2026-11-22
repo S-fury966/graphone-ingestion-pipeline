@@ -223,7 +223,10 @@ class OpenAICompatProvider(BaseProvider):
             ],
             "temperature": 0,
             "response_format": {"type": "json_object"},
-            "max_tokens": 2048,
+            # Honor the per-tier output budget; fall back to 2048 when unset.
+            # Verbose/reasoning models (e.g. NVIDIA Nemotron) truncate to empty
+            # content if this is too small, so tiers can raise it in config.
+            "max_tokens": getattr(self, "max_output_tokens", None) or 2048,
         }
         effort = getattr(self, "reasoning_effort", None)
         if effort:
@@ -328,7 +331,8 @@ _PROVIDER_CLASSES = {
 def build_provider(provider: str, fetcher: AsyncFetcher, model: str,
                    api_key: Optional[str], timeout_s: float,
                    base_url: Optional[str] = None,
-                   reasoning_effort: Optional[str] = None) -> BaseProvider:
+                   reasoning_effort: Optional[str] = None,
+                   max_output_tokens: Optional[int] = None) -> BaseProvider:
     cls = _PROVIDER_CLASSES.get(provider)
     if cls is None:
         raise ValueError(f"unknown provider: {provider}")
@@ -336,7 +340,11 @@ def build_provider(provider: str, fetcher: AsyncFetcher, model: str,
         prov: BaseProvider = cls(fetcher, model, api_key, timeout_s, base_url or "")
     else:
         prov = cls(fetcher, model, api_key, timeout_s)
-    # OpenAI-compatible providers (Groq/DeepSeek/generic) honor reasoning_effort.
-    if reasoning_effort and isinstance(prov, OpenAICompatProvider):
-        prov.reasoning_effort = reasoning_effort  # type: ignore[attr-defined]
+    # OpenAI-compatible providers (Groq/DeepSeek/generic) honor reasoning_effort
+    # and a per-tier output-token budget.
+    if isinstance(prov, OpenAICompatProvider):
+        if reasoning_effort:
+            prov.reasoning_effort = reasoning_effort  # type: ignore[attr-defined]
+        if max_output_tokens:
+            prov.max_output_tokens = max_output_tokens  # type: ignore[attr-defined]
     return prov

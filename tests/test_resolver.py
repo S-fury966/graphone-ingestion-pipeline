@@ -197,3 +197,25 @@ def test_extract_domain():
     assert extract_domain("https://openai.com/about") == "openai.com"
     assert extract_domain("www.openai.com") == "openai.com"
     assert extract_domain("Scale AI") is None
+
+
+# ---------------- dotted-abbreviation legal suffixes (regression) ----------------
+def test_dotted_abbreviation_suffix_stripped(resolver):
+    assert resolver.resolve("OpenAI L.L.C.", "STARTUP").canonical == "OpenAI"
+    assert resolver.resolve("Mistral S.A.S.", "STARTUP").canonical == "Mistral AI"
+    assert resolver.resolve("Anthropic P.B.C.", "STARTUP").canonical == "Anthropic"
+
+
+def test_dotted_key_joins_single_letters(resolver):
+    assert resolver._key("OpenAI L.L.C.") == "openai"
+    assert resolver._key("Anthropic P.B.C.") == "anthropic"
+
+
+def test_trailing_single_letter_not_stripped(resolver):
+    # A single trailing letter that is part of a name must survive.
+    assert resolver._key("Vitamin C") == "vitaminc"
+    assert resolver._key("Team A") == "teama"
+    assert resolver.resolve("Vitamin C", "STARTUP").method == "NEW_ENTITY"
+    assert resolver.resolve("Team A", "STARTUP").method == "NEW_ENTITY"
+    # A non-suffix multi-letter acronym must also survive (IBM is not a suffix).
+    assert resolver._key("IBM") == "ibm"

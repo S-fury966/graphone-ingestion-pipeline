@@ -1,0 +1,2297 @@
+entity_type,raw_name,canonical,method,score,matched_alias,source_table,occurrences
+STARTUP,Jasper.ai,Jasper,EXACT,1.0,Jasper AI,"products,startups",2
+STARTUP,Skdse,Skdse,NEW_ENTITY,,,jobs,2
+STARTUP,Wemolo,Wemolo,NEW_ENTITY,,,jobs,2
+STARTUP,intercom,intercom,NEW_ENTITY,,,jobs,2
+PRODUCT,Jasper,Jasper,NEW_ENTITY,,,products,1
+STARTUP,Agilerobotsse,Agilerobotsse,NEW_ENTITY,,,jobs,1
+STARTUP,Enpal,Enpal,NEW_ENTITY,,,jobs,1
+STARTUP,Packmatic,Packmatic,NEW_ENTITY,,,jobs,1
+STARTUP,caronsale,caronsale,NEW_ENTITY,,,jobs,1
+STARTUP,Acolite,Acolite,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Aden,Aden,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,AfterQuery,AfterQuery,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Agave,Agave,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Airbyte,Airbyte,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Akido Labs,Akido Labs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Ark,Ark,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,AssemblyAI,AssemblyAI,EXACT_SELF,1.0,AssemblyAI,"products,startups",4
+STARTUP,Atomic,Atomic,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,BeGo,BeGo,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Berry,Berry,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Bramante,Bramante,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Bunting Labs,Bunting Labs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Cactus Compute,Cactus Compute,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Cognition IP,Cognition IP,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Corgi Labs,Corgi Labs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Cosine,Cosine,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Daqstra,Daqstra,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Data Driven Bioscience,Data Driven Bioscience,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Datoric,Datoric,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,DeepAware AI (Robotics Center of Silicon Valley),DeepAware AI (Robotics Center of Silicon Valley),EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Domu Technology Inc.,Domu Technology Inc.,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Eden,Eden,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Emerge Tools,Emerge Tools,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,FarmLogs,FarmLogs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Feldy,Feldy,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Firebase,Firebase,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Flux Auto,Flux Auto,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,GoCardless,GoCardless,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,GreenTally,GreenTally,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Humoniq,Humoniq,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,InVision Medical Technology,InVision Medical Technology,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,IoTFlows Inc,IoTFlows Inc,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Isengard Industries Inc,Isengard Industries Inc,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Kalam Labs,Kalam Labs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Leena AI,Leena AI,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,LemonSlice,LemonSlice,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,MDalgorithms Inc.,MDalgorithms Inc.,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Manifold Freight,Manifold Freight,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Mentra,Mentra,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,MindPortal,MindPortal,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,MyVR,MyVR,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Naborly,Naborly,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,NewsCatcher,NewsCatcher,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,NuMind,NuMind,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Nuvocargo,Nuvocargo,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,OneSchema,OneSchema,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,OneSignal,OneSignal,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Palette,Palette,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Per Vices,Per Vices,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Picplum,Picplum,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Pincites,Pincites,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,PlanGrid,PlanGrid,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,PointOne,PointOne,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Promise,Promise,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Pump.co,Pump.co,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,QualGent,QualGent,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Qventus,Qventus,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Raven,Raven,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Reality Defender,Reality Defender,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Realm,Realm,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Recall.ai,Recall.ai,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Reflex,Reflex,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Rescale,Rescale,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,RiskCube,RiskCube,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Saleswhale,Saleswhale,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Serafis,Serafis,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Simantic,Simantic,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Sohar Health,Sohar Health,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Sota2,Sota2,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,StarSling,StarSling,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Sully,Sully,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Superside,Superside,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Sway Finance,Sway Finance,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Tap to Learn,Tap to Learn,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Tavus,Tavus,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,TaxGPT,TaxGPT,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Tinfoil,Tinfoil,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Tint,Tint,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Toolify,Toolify,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,TwentyTwo,TwentyTwo,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Verihubs,Verihubs,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Wafer,Wafer,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Waydev,Waydev,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Willow,Willow,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Zavo,Zavo,EXACT_SELF,1.0,,"products,startups",4
+STARTUP,Alice.tech,Alice.tech,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Anakin,Anakin,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Andi,Andi,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Anto Biosciences,Anto Biosciences,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Arbital,Arbital,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Aside,Aside,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Asteroid,Asteroid,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Automat,Automat,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Bite Ninja,Bite Ninja,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Bluejay,Bluejay,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Boundary,Boundary,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Bretton AI,Bretton AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,CODEXA,CODEXA,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Caper,Caper,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Cardinal Gray,Cardinal Gray,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,CircuitHub,CircuitHub,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Citus Data,Citus Data,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Code Four,Code Four,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Composal,Composal,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Conductor Quantum,Conductor Quantum,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Consus,Consus,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Cotera,Cotera,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Cozmo AI,Cozmo AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Deasy Labs,Deasy Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Decisional AI,Decisional AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Deep Interactions,Deep Interactions,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,DigiBuild,DigiBuild,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Directed Edge,Directed Edge,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Drama Drama,Drama Drama,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Empirical Health,Empirical Health,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Evo.Do,Evo.Do,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Executor,Executor,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Feyn,Feyn,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Fieldguide,Fieldguide,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Fintelite,Fintelite,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Firecrawl,Firecrawl,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Frontrunner,Frontrunner,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,GitCafe,GitCafe,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Gleam,Gleam,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Glide,Glide,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Golf,Golf,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,GovDash,GovDash,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Greenboard,Greenboard,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Grep AI,Grep AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Greptile,Greptile,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Gusto,Gusto,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,HOAi,HOAi,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,HackerRank,HackerRank,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Hue,Hue,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Humand,Humand,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Inconvo,Inconvo,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Industrial Next,Industrial Next,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,InspectMind AI,InspectMind AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Integuru,Integuru,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Inventive AI,Inventive AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Jcode,Jcode,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Kaso,Kaso,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Kimpton,Kimpton,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Knowtex,Knowtex,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Lantern AI,Lantern AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Lapis,Lapis,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,LaunchFlow,LaunchFlow,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Lemma,Lemma,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Lingo.dev,Lingo.dev,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Linzumi,Linzumi,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Liquid Compute,Liquid Compute,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,MarqVision,MarqVision,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Marr Labs,Marr Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,MindFort,MindFort,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Mindstate Design Labs,Mindstate Design Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Mito Health,Mito Health,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Monarcha,Monarcha,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Monterey AI,Monterey AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Munito AI,Munito AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Neodocs,Neodocs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Nitrode,Nitrode,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Ontra Mobility,Ontra Mobility,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,OpenRelay,OpenRelay,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Openmart,Openmart,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Opensteer,Opensteer,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Output Labs,Output Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Overstand Labs,Overstand Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Pally,Pally,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Paloma,Paloma,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Parsewise,Parsewise,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Peoplebox.ai,Peoplebox.ai,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Piramidal,Piramidal,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Pointhound,Pointhound,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Polemos Industries,Polemos Industries,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,ProhostAI,ProhostAI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Pylon,Pylon,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Quartzy,Quartzy,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,QueryPie AI,QueryPie AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,RTHM,RTHM,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Ramen VR,Ramen VR,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Raycaster,Raycaster,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Rebulk,Rebulk,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Rejoy Health,Rejoy Health,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Rinsed,Rinsed,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,RunAnywhere,RunAnywhere,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Secoda,Secoda,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Sendbird,Sendbird,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Sendwave,Sendwave,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Sift,Sift,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Sitefire,Sitefire,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Sivo,Sivo,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Slope,Slope,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Spine AI,Spine AI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Stormy,Stormy,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,StratumAI,StratumAI,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Structured Labs,Structured Labs,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Superorder,Superorder,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Syntra,Syntra,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Taiv,Taiv,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Tegore,Tegore,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Turing Labs Inc.,Turing Labs Inc.,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Typewise,Typewise,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,"Veryfi, Inc.","Veryfi, Inc.",EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Yummy Future,Yummy Future,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,cloud humans,cloud humans,EXACT_SELF,1.0,,"products,startups",3
+PRODUCT,Dex,Dex,EXACT_SELF,1.0,,products,2
+PRODUCT,Forge,Forge,EXACT_SELF,1.0,,products,2
+PRODUCT,Nova,Nova,EXACT_SELF,1.0,,products,2
+PRODUCT,Ontra Mobility,Ontra Mobility,EXACT_SELF,1.0,,products,2
+STARTUP,100x,100x,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,1stCollab,1stCollab,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AI Insurance,AI Insurance,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AYC Fund,AYC Fund,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Abstra,Abstra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Abundant,Abundant,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Adam,Adam,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Adapted,Adapted,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Adaptional,Adaptional,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Adentris,Adentris,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Adravision,Adravision,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Affogato AI,Affogato AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Agent Relay,Agent Relay,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AgentCollect,AgentCollect,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Agentic Fabriq,Agentic Fabriq,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Agentic Labs,Agentic Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ageospatial,Ageospatial,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AgileMD,AgileMD,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Agnost AI,Agnost AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AiSDR,AiSDR,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Alai,Alai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Alder,Alder,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Aleph Lab,Aleph Lab,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Alex,Alex,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Alinea,Alinea,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Alkera AI,Alkera AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Altair Health,Altair Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Aluna,Aluna,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ambient.ai,Ambient.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Amorphic Labs,Amorphic Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Amplitude,Amplitude,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Anana,Anana,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Anara,Anara,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Andy AI,Andy AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Anglera,Anglera,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Antigen,Antigen,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Antinuous,Antinuous,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Apollo,Apollo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Aqua Voice,Aqua Voice,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Archal,Archal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Arcimus,Arcimus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Arini,Arini,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Armature,Armature,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Armilla AI,Armilla AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Artemis Search,Artemis Search,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ashr,Ashr,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Assemble,Assemble,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Assembly HOA,Assembly HOA,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Atlia,Atlia,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Atmo,Atmo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Atomic Industries,Atomic Industries,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Attunement,Attunement,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Aucert,Aucert,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Audun,Audun,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Authy,Authy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Autonomous Technologies Group,Autonomous Technologies Group,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Autosana,Autosana,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Autotab,Autotab,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,AvairSense,AvairSense,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Axle,Axle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,BIOS Health,BIOS Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Basepilot,Basepilot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Baud,Baud,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Beam,Beam,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Belvedir,Belvedir,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Benchify,Benchify,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Benchmark,Benchmark,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,BetterBasket,BetterBasket,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Billow AI Labs,Billow AI Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Bizmark,Bizmark,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Blaxel,Blaxel,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Bloomy,Bloomy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Blue Onion,Blue Onion,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Bluedoor,Bluedoor,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Blume Benefits,Blume Benefits,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Bolna AI,Bolna AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Boom AI,Boom AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Boost Robotics,Boost Robotics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Boxes.dev,Boxes.dev,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,BrainHi,BrainHi,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Brainbase Labs,Brainbase Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Breez Labs,Breez Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Brickanta,Brickanta,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Broccoli AI,Broccoli AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Bronco AI,Bronco AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,BusinessOnBot,BusinessOnBot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CLODO,CLODO,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cactus,Cactus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Caddy,Caddy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cair Health,Cair Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cambio,Cambio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Candle,Candle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Canopy Labs,Canopy Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Capuchin,Capuchin,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Carrot Labs,Carrot Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Casca,Casca,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Caseflood.ai,Caseflood.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Casetext,Casetext,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cellbyte,Cellbyte,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Centaur,Centaur,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Centralize,Centralize,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Certus AI,Certus AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Champ,Champ,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Channel3,Channel3,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Checkr,Checkr,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Chima,Chima,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ciro,Ciro,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clarion,Clarion,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clarm,Clarm,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clearest Health,Clearest Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clearline,Clearline,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clearly AI,Clearly AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clerked,Clerked,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clerky,Clerky,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CleverDeck,CleverDeck,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Clicks Health,Clicks Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Closera,Closera,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Codeball,Codeball,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Codecademy,Codecademy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Codes Health,Codes Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Codevisor,Codevisor,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CoffeeAI,CoffeeAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cohere,Cohere,EXACT_SELF,1.0,Cohere,"products,startups",2
+STARTUP,Coldreach,Coldreach,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CombineHealth,CombineHealth,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Commissary Club (formerly 70 Million Jobs),Commissary Club (formerly 70 Million Jobs),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Community Phone Company,Community Phone Company,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,ComplyDo,ComplyDo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Compose.ai,Compose.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Computable,Computable,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Compyle,Compyle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Concourse,Concourse,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Conductor,Conductor,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Conduit,Conduit,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Conifer,Conifer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Conntour,Conntour,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Context.dev,Context.dev,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Continue,Continue,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CopyCat AI,CopyCat AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Corgi Insurance,Corgi Insurance,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Coris,Coris,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cortex AI,Cortex AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Coval,Coval,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,CreativeMode,CreativeMode,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Credal.ai,Credal.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Crimson,Crimson,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cuckoo Labs,Cuckoo Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cyberdesk,Cyberdesk,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Cyclon,Cyclon,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,D-ID,D-ID,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dailybot,Dailybot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Darmiyan,Darmiyan,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dart,Dart,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dartboard,Dartboard,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Darwin,Darwin,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Datafruit,Datafruit,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Decawork,Decawork,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Decent,Decent,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Decohere,Decohere,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,DeepReach Inc.,DeepReach Inc.,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,"DeepSim, Inc.","DeepSim, Inc.",EXACT_SELF,1.0,,"products,startups",2
+STARTUP,DeepSource,DeepSource,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Deepnight,Deepnight,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Definite,Definite,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Degla Inc,Degla Inc,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Design Arena,Design Arena,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Designbase,Designbase,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dexto,Dexto,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dialtone,Dialtone,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Diana,Diana,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Diffusion Studio,Diffusion Studio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,DiligenceSquared,DiligenceSquared,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,DisputeNinja,DisputeNinja,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dock,Dock,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Docket,Docket,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Docucharm,Docucharm,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Doe,Doe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Double – Coding Copilot,Double – Coding Copilot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dream3D,Dream3D,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Dreamscale Labs,Dreamscale Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Drillbit,Drillbit,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,DryMerge,DryMerge,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Duckie,Duckie,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Edexia,Edexia,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Educato,Educato,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,EffiGov,EffiGov,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ekho Labs,Ekho Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Elevate,Elevate,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Elip AI,Elip AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Elite,Elite,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ellipsis,Ellipsis,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ello,Ello,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Elyos AI,Elyos AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Embedder,Embedder,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Enable Us,Enable Us,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Entangl,Entangl,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Erinys,Erinys,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Exec,Exec,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Exla,Exla,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Exosat,Exosat,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Expent Inc,Expent Inc,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Experiential Labs,Experiential Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fabraix,Fabraix,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FactIQ,FactIQ,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Faraday,Faraday,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fenrock AI,Fenrock AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fetii,Fetii,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ficra,Ficra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fieldproxy,Fieldproxy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FinalDose,FinalDose,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Finic,Finic,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Finto,Finto,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Firebender,Firebender,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FirstQuadrant,FirstQuadrant,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FirstWork,FirstWork,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FitnessAI,FitnessAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Flagright,Flagright,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Flair Labs,Flair Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fleetline,Fleetline,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Flick,Flick,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Flockjay,Flockjay,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Floot,Floot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Florin,Florin,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Flowglad,Flowglad,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FlowiseAI,FlowiseAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,FlyCode,FlyCode,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Focal,Focal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fond,Fond,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Foreman,Foreman,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Forge Rewards,Forge Rewards,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Forward,Forward,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Freebuff,Freebuff,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Frizzle,Frizzle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Fuse,Fuse,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Galini,Galini,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Garage,Garage,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Gecko Robotics,Gecko Robotics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Gecko Security,Gecko Security,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,GetCrux,GetCrux,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Giga,Giga,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Glass Health,Glass Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Gooseworks,Gooseworks,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Gradon,Gradon,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Grocalo,Grocalo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Guide Labs,Guide Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Gumloop,Gumloop,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,HUD,HUD,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Handyman.ai,Handyman.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Happenstance,Happenstance,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Harbera,Harbera,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Haystack,Haystack,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Heptabase,Heptabase,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Hippo Scribe,Hippo Scribe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,HireArt,HireArt,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Housewarming,Housewarming,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Hub,Hub,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Hudson Labs (formerly Bedrock AI),Hudson Labs (formerly Bedrock AI),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Human Behavior,Human Behavior,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,HumanLayer,HumanLayer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Hyper Online,Hyper Online,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,HyperProbe,HyperProbe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,IMPACT Drones,IMPACT Drones,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Imagine AI,Imagine AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Impossible Metals,Impossible Metals,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Inari,Inari,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,IncidentFox,IncidentFox,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,InferEdge,InferEdge,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,InpharmD,InpharmD,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Inscribe,Inscribe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Integrated Reasoning,Integrated Reasoning,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Invertix,Invertix,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Julius,Julius,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,JustAI,JustAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,KERNEL,KERNEL,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kairos,Kairos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kebra,Kebra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Keet,Keet,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kenley,Kenley,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kernal Biologics,Kernal Biologics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kestral,Kestral,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Keye,Keye,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Keyframe Labs,Keyframe Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Kino AI,Kino AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Konta.com,Konta.com,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ladder,Ladder,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lamb Labs,Lamb Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lanesurf,Lanesurf,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Langdock,Langdock,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lark,Lark,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Last Accounting Company,Last Accounting Company,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Latent,Latent,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Layers,Layers,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Layup,Layup,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,LeadGenius,LeadGenius,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Leaping AI,Leaping AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,LemonLime,LemonLime,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Libra Robotics,Libra Robotics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lighthouz AI,Lighthouz AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ligo Biosciences,Ligo Biosciences,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lilac,Lilac,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Linum,Linum,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,LiteLLM,LiteLLM,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Locke,Locke,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,LogosGuard,LogosGuard,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lopus,Lopus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lore,Lore,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Luca IQ,Luca IQ,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lucidic AI,Lucidic AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lumeria,Lumeria,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Luminal,Luminal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Lyrebird,Lyrebird,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,MadeThis,MadeThis,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mage Legal,Mage Legal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Magnitude,Magnitude,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Maingen,Maingen,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Make School,Make School,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,MarkIt,MarkIt,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mars Auto,Mars Auto,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mashgin,Mashgin,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mastra,Mastra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Matterport,Matterport,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Maxi,Maxi,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Maximal,Maximal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,May Mobility,May Mobility,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mecha Health,Mecha Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Medigram,Medigram,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Medium Biosciences,Medium Biosciences,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Medmonk,Medmonk,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mesmer,Mesmer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Method,Method,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Meticulate,Meticulate,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Metreecs,Metreecs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mica AI,Mica AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Milky Way AI,Milky Way AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Million,Million,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mimos,Mimos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Minded,Minded,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mindee,Mindee,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,MinusX,MinusX,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mirrors,Mirrors,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Moby Analytics,Moby Analytics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Modern,Modern,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Modus,Modus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Monumint,Monumint,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Morph,Morph,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mosaic,Mosaic,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,MosaicVoice,MosaicVoice,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Motion,Motion,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Motives,Motives,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Moving Atoms,Moving Atoms,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Movley,Movley,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mundo AI,Mundo AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mutiny,Mutiny,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Mystro,Mystro,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Narrative,Narrative,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Native,Native,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,NearWave,NearWave,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,NebuSec,NebuSec,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Nexus,Nexus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Nimbus,Nimbus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Nori,Nori,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Normal,Normal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Norra,Norra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Nowadays,Nowadays,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,ORO AI,ORO AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OS3,OS3,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OWNY,OWNY,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ohm,Ohm,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ollama,Ollama,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Omanta,Omanta,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Omnara,Omnara,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Omnistrate,Omnistrate,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OneChronos,OneChronos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OneTriangle,OneTriangle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ooak Data,Ooak Data,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OpenCurriculum,OpenCurriculum,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,OpenTools,OpenTools,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Openbenchmarks,Openbenchmarks,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Openlayer,Openlayer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Openroll,Openroll,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Orangewood Labs,Orangewood Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Orbio Earth,Orbio Earth,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Orchestra,Orchestra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Orchid,Orchid,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Origin,Origin,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Osmosis,Osmosis,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,"OutRival, Inc.","OutRival, Inc.",EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Outlit,Outlit,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Outship,Outship,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Overheard,Overheard,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Overlap,Overlap,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Overwatch,Overwatch,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,PARES AI,PARES AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pagelever,Pagelever,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pair AI,Pair AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Palisade,Palisade,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,PandasAI,PandasAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pango,Pango,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Papaya,Papaya,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Parallel,Parallel,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Parsagon,Parsagon,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Party,Party,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Patent Watch,Patent Watch,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,PatternFast (prior: Tailornova/Couturme),PatternFast (prior: Tailornova/Couturme),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pelica,Pelica,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pennant,Pennant,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Penny,Penny,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,People.ai,People.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Perceptron ML,Perceptron ML,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Petrarch,Petrarch,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Petrichor,Petrichor,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Phonic,Phonic,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pibit.ai,Pibit.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pier,Pier,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Piris Labs,Piris Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pixelapse,Pixelapse,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Planbase,Planbase,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Plasticity,Plasticity,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pleom,Pleom,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Ploid,Ploid,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pluto,Pluto,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Plyxl,Plyxl,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Polymet,Polymet,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Pomerado,Pomerado,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Popl,Popl,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Postal,Postal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Praxis,Praxis,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Praxos,Praxos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Precious,Precious,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Presti AI,Presti AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Priceonomics,Priceonomics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Primordiant,Primordiant,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Proception Inc,Proception Inc,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,PromptLoop,PromptLoop,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Promptless,Promptless,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Propaya,Propaya,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Proven Group,Proven Group,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Qlo,Qlo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quantstruct,Quantstruct,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quetzal,Quetzal,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quickchat AI,Quickchat AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quill Bills,Quill Bills,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quinn,Quinn,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quotain,Quotain,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Quotient Labs,Quotient Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,ROSS Intelligence,ROSS Intelligence,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Radius,Radius,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Raindrop,Raindrop,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,RamAIn,RamAIn,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rapidfolio,Rapidfolio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rastro,Rastro,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rational,Rational,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Reacher,Reacher,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Readily,Readily,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Redouble AI,Redouble AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,RefineTrain AI,RefineTrain AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Reform,Reform,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Relling,Relling,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Remade,Remade,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Replo,Replo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Resin Technologies,Resin Technologies,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Retell AI,Retell AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Revion,Revion,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Revnu,Revnu,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Revyl,Revyl,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Reworkd,Reworkd,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rima AI (formerly Garage),Rima AI (formerly Garage),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rindler,Rindler,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Risklytics,Risklytics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Risotto,Risotto,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,River,River,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rivet,Rivet,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Riveter,Riveter,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Robocurve,Robocurve,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rodeo Robotics,Rodeo Robotics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rollstack,Rollstack,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rome AI,Rome AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Roxels,Roxels,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Rubbrband,Rubbrband,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,RunLocal AI,RunLocal AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Runtime.si,Runtime.si,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SID,SID,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SPATE,SPATE,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SalaryBox,SalaryBox,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Salus,Salus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sapien,Sapien,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sapling.ai,Sapling.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Scale AI,Scale AI,EXACT_SELF,1.0,Scale AI,"products,startups",2
+STARTUP,Scape,Scape,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Science Exchange,Science Exchange,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Scoop,Scoop,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Scout,Scout,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Screenleap,Screenleap,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Scritch,Scritch,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Segment,Segment,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SellRaze,SellRaze,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Semantix,Semantix,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SendHub,SendHub,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sennu AI,Sennu AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Senso,Senso,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sentient OS,Sentient OS,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Serif Health,Serif Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Servo7,Servo7,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Shofo,Shofo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Shoptiques,Shoptiques,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Shopular,Shopular,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Shortbread,Shortbread,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Shuttle,Shuttle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Siftly,Siftly,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Silimate,Silimate,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Silogy,Silogy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Silurian,Silurian,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sim,Sim,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Simbie AI,Simbie AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Simple AI,Simple AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Simulithic,Simulithic,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sintropix,Sintropix,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SkyLink,SkyLink,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Skymerse,Skymerse,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Skypher,Skypher,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Skyvern,Skyvern,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sleek,Sleek,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Slicker,Slicker,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Soff,Soff,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sona8,Sona8,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sophys,Sophys,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sorcerer,Sorcerer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Sourcebot,Sourcebot,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Spade,Spade,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Speak,Speak,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Speck,Speck,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Speechly,Speechly,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Speko,Speko,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Spline,Spline,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Spur,Spur,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Stably AI (Orca),Stably AI (Orca),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Stillwind,Stillwind,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Stockline,Stockline,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Streak,Streak,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Structured AI,Structured AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Studio,Studio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,SuperKalam,SuperKalam,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Superagent,Superagent,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Superlog,Superlog,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Swiftype,Swiftype,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Swipe,Swipe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Synthio Labs,Synthio Labs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tailor-ED,Tailor-ED,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Taktile,Taktile,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Talos,Talos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,TamLabs,TamLabs,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tamarind Bio,Tamarind Bio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tekton Dynamics,Tekton Dynamics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tell if AI,Tell if AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tempo,Tempo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tenor,Tenor,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,TensorTest,TensorTest,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Terracotta AI,Terracotta AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Terse,Terse,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tetra,Tetra,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Text.ai,Text.ai,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,The Forecasting Company,The Forecasting Company,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Thera,Thera,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Theta,Theta,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Thirdlayer,Thirdlayer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Thunder Compute,Thunder Compute,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Thyme,Thyme,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Toothy AI,Toothy AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,TovenAI,TovenAI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tower,Tower,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tracecat,Tracecat,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Traceforce,Traceforce,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Trata,Trata,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Treblo,Treblo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Treinta,Treinta,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Trellus,Trellus,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Trope,Trope,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Truewind,Truewind,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tusk,Tusk,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Tweeks.io,Tweeks.io,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Twine,Twine,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Typa,Typa,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Type,Type,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,UXDuck,UXDuck,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Unbound,Unbound,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Unify,Unify,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Unlayer,Unlayer,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Unsiloed AI,Unsiloed AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Unthread,Unthread,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Uplane,Uplane,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Userlens,Userlens,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Usul,Usul,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vaero,Vaero,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vapi,Vapi,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,VectorShift,VectorShift,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Veles,Veles,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Velos,Velos,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vendora,Vendora,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Venta AI,Venta AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Venu AI,Venu AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vera Health,Vera Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Verbling,Verbling,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Verdant,Verdant,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,VergeSense,VergeSense,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Veriad,Veriad,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Veriff,Veriff,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Versive,Versive,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vesence,Vesence,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vespper,Vespper,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,VetRec,VetRec,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vetnio,Vetnio,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vibe Kanban,Vibe Kanban,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,VibeFlow,VibeFlow,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vocality Health,Vocality Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vogent,Vogent,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Voiceops,Voiceops,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Vortexify,Vortexify,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Voxel Energy,Voxel Energy,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Waffle,Waffle,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Wattson Health,Wattson Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Weekend (fmr. Volley),Weekend (fmr. Volley),EXACT_SELF,1.0,,"products,startups",2
+STARTUP,WhiteLab Genomics,WhiteLab Genomics,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Within,Within,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Wondercraft,Wondercraft,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Workers IO,Workers IO,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Woz,Woz,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Writesonic,Writesonic,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Yarn,Yarn,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,YouShift,YouShift,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zeit AI,Zeit AI,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zeitview,Zeitview,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zensors,Zensors,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zeon Systems,Zeon Systems,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zomma,Zomma,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,Zudo,Zudo,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,arnata,arnata,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,autarc,autarc,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,co.dev,co.dev,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,herdr,herdr,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,iSono Health,iSono Health,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,nCompass Technologies,nCompass Technologies,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,screenpipe,screenpipe,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,sintem,sintem,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,truemetrics,truemetrics,EXACT_SELF,1.0,,"products,startups",2
+PRODUCT,100X Bot,100X Bot,EXACT_SELF,1.0,,products,1
+PRODUCT,1stCollab,1stCollab,EXACT_SELF,1.0,,products,1
+PRODUCT,6sense Intelligence,6sense Intelligence,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Analytics,AI Analytics,EXACT_SELF,1.0,,products,1
+PRODUCT,AI BallCode,AI BallCode,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Colleagues Platform,AI Colleagues Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Dialer,AI Dialer,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Email Agent,AI Email Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Estimator,AI Estimator,EXACT_SELF,1.0,,products,1
+PRODUCT,AI FileFeeds,AI FileFeeds,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Georeferencer,AI Georeferencer,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Insurance: All-in-One Insurance Management Software,AI Insurance: All-in-One Insurance Management Software,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Personas,AI Personas,EXACT_SELF,1.0,,products,1
+PRODUCT,AI RFP Software,AI RFP Software,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Revenue Execution,AI Revenue Execution,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Review Management Agent,AI Review Management Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Vectorizer for QGIS,AI Vectorizer for QGIS,EXACT_SELF,1.0,,products,1
+PRODUCT,AI Verification Suite,AI Verification Suite,EXACT_SELF,1.0,,products,1
+PRODUCT,ALFRED AI,ALFRED AI,EXACT_SELF,1.0,,products,1
+PRODUCT,AP Automation,AP Automation,EXACT_SELF,1.0,,products,1
+PRODUCT,APE,APE,EXACT_SELF,1.0,,products,1
+PRODUCT,AQ 101,AQ 101,EXACT_SELF,1.0,,products,1
+PRODUCT,AQV 114,AQV 114,EXACT_SELF,1.0,,products,1
+PRODUCT,ARK Disruptive Innovation,ARK Disruptive Innovation,EXACT_SELF,1.0,,products,1
+PRODUCT,ARK Venture,ARK Venture,EXACT_SELF,1.0,,products,1
+PRODUCT,ASK STUDIO,ASK STUDIO,EXACT_SELF,1.0,,products,1
+PRODUCT,ATUSA,ATUSA,EXACT_SELF,1.0,,products,1
+PRODUCT,AYC Fund VIP,AYC Fund VIP,EXACT_SELF,1.0,,products,1
+PRODUCT,Abstra,Abstra,EXACT_SELF,1.0,,products,1
+PRODUCT,Abundant,Abundant,EXACT_SELF,1.0,,products,1
+PRODUCT,Adam,Adam,EXACT_SELF,1.0,,products,1
+PRODUCT,Adapted,Adapted,EXACT_SELF,1.0,,products,1
+PRODUCT,Adaptional,Adaptional,EXACT_SELF,1.0,,products,1
+PRODUCT,Adentris,Adentris,EXACT_SELF,1.0,,products,1
+PRODUCT,Adravision,Adravision,EXACT_SELF,1.0,,products,1
+PRODUCT,Aero Chat,Aero Chat,EXACT_SELF,1.0,,products,1
+PRODUCT,Aero Dynamic,Aero Dynamic,EXACT_SELF,1.0,,products,1
+PRODUCT,Aero Voice,Aero Voice,EXACT_SELF,1.0,,products,1
+PRODUCT,Affirmative AI Liability Insurance,Affirmative AI Liability Insurance,EXACT_SELF,1.0,,products,1
+PRODUCT,Affogato AI,Affogato AI,EXACT_SELF,1.0,,products,1
+PRODUCT,AfterQuery,AfterQuery,EXACT_SELF,1.0,,products,1
+PRODUCT,Agent Andrew,Agent Andrew,EXACT_SELF,1.0,,products,1
+PRODUCT,Agent OS,Agent OS,EXACT_SELF,1.0,,products,1
+PRODUCT,Agent Relay,Agent Relay,EXACT_SELF,1.0,,products,1
+PRODUCT,AgentCollect,AgentCollect,EXACT_SELF,1.0,,products,1
+PRODUCT,AgentMuxer,AgentMuxer,EXACT_SELF,1.0,,products,1
+PRODUCT,Agente Codexa,Agente Codexa,EXACT_SELF,1.0,,products,1
+PRODUCT,Agentic Labs,Agentic Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Agentic Pre-bill Review,Agentic Pre-bill Review,EXACT_SELF,1.0,,products,1
+PRODUCT,Agnost AI,Agnost AI,EXACT_SELF,1.0,,products,1
+PRODUCT,AiSDR,AiSDR,EXACT_SELF,1.0,,products,1
+PRODUCT,Airbyte Cloud,Airbyte Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,Airbyte Core,Airbyte Core,EXACT_SELF,1.0,,products,1
+PRODUCT,Airbyte Flex,Airbyte Flex,EXACT_SELF,1.0,,products,1
+PRODUCT,Akido,Akido,EXACT_SELF,1.0,,products,1
+PRODUCT,Akido Care,Akido Care,EXACT_SELF,1.0,,products,1
+PRODUCT,Alai,Alai,EXACT_SELF,1.0,,products,1
+PRODUCT,Alder,Alder,EXACT_SELF,1.0,,products,1
+PRODUCT,Aleph Kids,Aleph Kids,EXACT_SELF,1.0,,products,1
+PRODUCT,Alex,Alex,EXACT_SELF,1.0,,products,1
+PRODUCT,Alexandria,Alexandria,EXACT_SELF,1.0,,products,1
+PRODUCT,Alfi,Alfi,EXACT_SELF,1.0,,products,1
+PRODUCT,Alice,Alice,EXACT_SELF,1.0,,products,1
+PRODUCT,Alinea,Alinea,EXACT_SELF,1.0,,products,1
+PRODUCT,Alkera,Alkera,EXACT_SELF,1.0,,products,1
+PRODUCT,Altair,Altair,EXACT_SELF,1.0,,products,1
+PRODUCT,Aluna,Aluna,EXACT_SELF,1.0,,products,1
+PRODUCT,Ambient Pulsar,Ambient Pulsar,EXACT_SELF,1.0,,products,1
+PRODUCT,Amplitude,Amplitude,EXACT_SELF,1.0,,products,1
+PRODUCT,Anakin.io,Anakin.io,EXACT_SELF,1.0,,products,1
+PRODUCT,Anana,Anana,EXACT_SELF,1.0,,products,1
+PRODUCT,Anara,Anara,EXACT_SELF,1.0,,products,1
+PRODUCT,Andi AI Search,Andi AI Search,EXACT_SELF,1.0,,products,1
+PRODUCT,Andi AI Search API,Andi AI Search API,EXACT_SELF,1.0,,products,1
+PRODUCT,Android Agent Phone,Android Agent Phone,EXACT_SELF,1.0,,products,1
+PRODUCT,Andy,Andy,EXACT_SELF,1.0,,products,1
+PRODUCT,Anglera,Anglera,EXACT_SELF,1.0,,products,1
+PRODUCT,Antigen,Antigen,EXACT_SELF,1.0,,products,1
+PRODUCT,Antinuous,Antinuous,EXACT_SELF,1.0,,products,1
+PRODUCT,AnyCheck,AnyCheck,EXACT_SELF,1.0,,products,1
+PRODUCT,Apollo GraphOS,Apollo GraphOS,EXACT_SELF,1.0,,products,1
+PRODUCT,Aqua Voice,Aqua Voice,EXACT_SELF,1.0,,products,1
+PRODUCT,Arbital,Arbital,EXACT_SELF,1.0,,products,1
+PRODUCT,Arbital MM,Arbital MM,EXACT_SELF,1.0,,products,1
+PRODUCT,Arcimus,Arcimus,EXACT_SELF,1.0,,products,1
+PRODUCT,Arini,Arini,EXACT_SELF,1.0,,products,1
+PRODUCT,Armature Search®,Armature Search®,EXACT_SELF,1.0,,products,1
+PRODUCT,Arnata,Arnata,EXACT_SELF,1.0,,products,1
+PRODUCT,Artemis Search,Artemis Search,EXACT_SELF,1.0,,products,1
+PRODUCT,Ashr,Ashr,EXACT_SELF,1.0,,products,1
+PRODUCT,Aside,Aside,EXACT_SELF,1.0,,products,1
+PRODUCT,Aside Vault,Aside Vault,EXACT_SELF,1.0,,products,1
+PRODUCT,AskThinker,AskThinker,EXACT_SELF,1.0,,products,1
+PRODUCT,Assemble,Assemble,EXACT_SELF,1.0,,products,1
+PRODUCT,Assembly,Assembly,EXACT_SELF,1.0,,products,1
+PRODUCT,AssemblyAI-STT-3.7,AssemblyAI-STT-3.7,EXACT_SELF,1.0,,products,1
+PRODUCT,AssemblyAI-TTS-1,AssemblyAI-TTS-1,EXACT_SELF,1.0,,products,1
+PRODUCT,Asteroid,Asteroid,EXACT_SELF,1.0,,products,1
+PRODUCT,Astro,Astro,EXACT_SELF,1.0,,products,1
+PRODUCT,Atlas Charts,Atlas Charts,EXACT_SELF,1.0,,products,1
+PRODUCT,Atlas Data Lake,Atlas Data Lake,EXACT_SELF,1.0,,products,1
+PRODUCT,Atlia,Atlia,EXACT_SELF,1.0,,products,1
+PRODUCT,Atmo,Atmo,EXACT_SELF,1.0,,products,1
+PRODUCT,Atomic Industries,Atomic Industries,EXACT_SELF,1.0,,products,1
+PRODUCT,Atomic Invest,Atomic Invest,EXACT_SELF,1.0,,products,1
+PRODUCT,Attack Detection Agent,Attack Detection Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,Attio,Attio,EXACT_SELF,1.0,,products,1
+PRODUCT,Attunement,Attunement,EXACT_SELF,1.0,,products,1
+PRODUCT,Aucert,Aucert,EXACT_SELF,1.0,,products,1
+PRODUCT,Audun,Audun,EXACT_SELF,1.0,,products,1
+PRODUCT,Aura,Aura,EXACT_SELF,1.0,,products,1
+PRODUCT,Aurora foundation model,Aurora foundation model,EXACT_SELF,1.0,,products,1
+PRODUCT,Authy,Authy,EXACT_SELF,1.0,,products,1
+PRODUCT,AutoPilot,AutoPilot,EXACT_SELF,1.0,,products,1
+PRODUCT,Automat Workforce,Automat Workforce,EXACT_SELF,1.0,,products,1
+PRODUCT,Automated Customer Screening,Automated Customer Screening,EXACT_SELF,1.0,,products,1
+PRODUCT,Automated Electronic Lien & Title (ELT),Automated Electronic Lien & Title (ELT),EXACT_SELF,1.0,,products,1
+PRODUCT,Autonomous,Autonomous,EXACT_SELF,1.0,,products,1
+PRODUCT,Autonomous Agent Generation Hive,Autonomous Agent Generation Hive,EXACT_SELF,1.0,,products,1
+PRODUCT,Autonomy-as-a-Service,Autonomy-as-a-Service,EXACT_SELF,1.0,,products,1
+PRODUCT,Autosana,Autosana,EXACT_SELF,1.0,,products,1
+PRODUCT,Autotab,Autotab,EXACT_SELF,1.0,,products,1
+PRODUCT,Axis,Axis,EXACT_SELF,1.0,,products,1
+PRODUCT,Axle,Axle,EXACT_SELF,1.0,,products,1
+PRODUCT,Azimuth,Azimuth,EXACT_SELF,1.0,,products,1
+PRODUCT,Azure Cosmos DB for PostgreSQL,Azure Cosmos DB for PostgreSQL,EXACT_SELF,1.0,,products,1
+PRODUCT,BAML,BAML,EXACT_SELF,1.0,,products,1
+PRODUCT,Bachelor’s in Applied Computer Science,Bachelor’s in Applied Computer Science,EXACT_SELF,1.0,,products,1
+PRODUCT,Backchannel,Backchannel,EXACT_SELF,1.0,,products,1
+PRODUCT,Backstory,Backstory,EXACT_SELF,1.0,,products,1
+PRODUCT,Basepilot,Basepilot,EXACT_SELF,1.0,,products,1
+PRODUCT,Baud,Baud,EXACT_SELF,1.0,,products,1
+PRODUCT,BeGo,BeGo,EXACT_SELF,1.0,,products,1
+PRODUCT,BeGo Black,BeGo Black,EXACT_SELF,1.0,,products,1
+PRODUCT,BeGo Pru,BeGo Pru,EXACT_SELF,1.0,,products,1
+PRODUCT,Beam,Beam,EXACT_SELF,1.0,,products,1
+PRODUCT,BeamTracker,BeamTracker,EXACT_SELF,1.0,,products,1
+PRODUCT,Bear,Bear,EXACT_SELF,1.0,,products,1
+PRODUCT,Belvedir,Belvedir,EXACT_SELF,1.0,,products,1
+PRODUCT,BenGPT,BenGPT,EXACT_SELF,1.0,,products,1
+PRODUCT,Benchify,Benchify,EXACT_SELF,1.0,,products,1
+PRODUCT,Benchmark,Benchmark,EXACT_SELF,1.0,,products,1
+PRODUCT,Benchmark for Agentic Reasoning (BAR),Benchmark for Agentic Reasoning (BAR),EXACT_SELF,1.0,,products,1
+PRODUCT,Berry AI Renewal Agent,Berry AI Renewal Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,Berry Onboarding Widget,Berry Onboarding Widget,EXACT_SELF,1.0,,products,1
+PRODUCT,Berry Support Chat bot,Berry Support Chat bot,EXACT_SELF,1.0,,products,1
+PRODUCT,BetterBasket,BetterBasket,EXACT_SELF,1.0,,products,1
+PRODUCT,Billow,Billow,EXACT_SELF,1.0,,products,1
+PRODUCT,BioPASS Procurement Services,BioPASS Procurement Services,EXACT_SELF,1.0,,products,1
+PRODUCT,Bite Ninja,Bite Ninja,EXACT_SELF,1.0,,products,1
+PRODUCT,Bizmark,Bizmark,EXACT_SELF,1.0,,products,1
+PRODUCT,Blaxel,Blaxel,EXACT_SELF,1.0,,products,1
+PRODUCT,Bloomy,Bloomy,EXACT_SELF,1.0,,products,1
+PRODUCT,Blue Onion,Blue Onion,EXACT_SELF,1.0,,products,1
+PRODUCT,Bluedoor,Bluedoor,EXACT_SELF,1.0,,products,1
+PRODUCT,Bluejay,Bluejay,EXACT_SELF,1.0,,products,1
+PRODUCT,Blume Benefits,Blume Benefits,EXACT_SELF,1.0,,products,1
+PRODUCT,Bolna,Bolna,EXACT_SELF,1.0,,products,1
+PRODUCT,Boom,Boom,EXACT_SELF,1.0,,products,1
+PRODUCT,Boost Robotics,Boost Robotics,EXACT_SELF,1.0,,products,1
+PRODUCT,Boosts,Boosts,EXACT_SELF,1.0,,products,1
+PRODUCT,Boundary Cloud,Boundary Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,BrainHi,BrainHi,EXACT_SELF,1.0,,products,1
+PRODUCT,BrainSee,BrainSee,EXACT_SELF,1.0,,products,1
+PRODUCT,Brainbase,Brainbase,EXACT_SELF,1.0,,products,1
+PRODUCT,Breez,Breez,EXACT_SELF,1.0,,products,1
+PRODUCT,Bretton AI Managed Services,Bretton AI Managed Services,EXACT_SELF,1.0,,products,1
+PRODUCT,Bretton AI platform,Bretton AI platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Brickanta,Brickanta,EXACT_SELF,1.0,,products,1
+PRODUCT,Broccoli AI,Broccoli AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Bronco,Bronco,EXACT_SELF,1.0,,products,1
+PRODUCT,Builder's Risk,Builder's Risk,EXACT_SELF,1.0,,products,1
+PRODUCT,BuildingConnected,BuildingConnected,EXACT_SELF,1.0,,products,1
+PRODUCT,Bushel Business Account,Bushel Business Account,EXACT_SELF,1.0,,products,1
+PRODUCT,Bushel Farm,Bushel Farm,EXACT_SELF,1.0,,products,1
+PRODUCT,Bushel Wallet,Bushel Wallet,EXACT_SELF,1.0,,products,1
+PRODUCT,BusinessOnBot,BusinessOnBot,EXACT_SELF,1.0,,products,1
+PRODUCT,C3,C3,EXACT_SELF,1.0,,products,1
+PRODUCT,CORGI Model,CORGI Model,EXACT_SELF,1.0,,products,1
+PRODUCT,CWM-1,CWM-1,EXACT_SELF,1.0,,products,1
+PRODUCT,Cactus,Cactus,EXACT_SELF,1.0,,products,1
+PRODUCT,Caddy,Caddy,EXACT_SELF,1.0,,products,1
+PRODUCT,Cafe CLI,Cafe CLI,EXACT_SELF,1.0,,products,1
+PRODUCT,Cair platform,Cair platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Calendar API,Calendar API,EXACT_SELF,1.0,,products,1
+PRODUCT,Cambio,Cambio,EXACT_SELF,1.0,,products,1
+PRODUCT,Candle,Candle,EXACT_SELF,1.0,,products,1
+PRODUCT,Canopy Labs,Canopy Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Cantilever,Cantilever,EXACT_SELF,1.0,,products,1
+PRODUCT,Canvas,Canvas,EXACT_SELF,1.0,,products,1
+PRODUCT,Caper Cart,Caper Cart,EXACT_SELF,1.0,,products,1
+PRODUCT,Caper Tooling,Caper Tooling,EXACT_SELF,1.0,,products,1
+PRODUCT,Capuchin,Capuchin,EXACT_SELF,1.0,,products,1
+PRODUCT,Carbon Report,Carbon Report,EXACT_SELF,1.0,,products,1
+PRODUCT,Casca,Casca,EXACT_SELF,1.0,,products,1
+PRODUCT,Caseflood,Caseflood,EXACT_SELF,1.0,,products,1
+PRODUCT,Cash Management,Cash Management,EXACT_SELF,1.0,,products,1
+PRODUCT,Cellbyte,Cellbyte,EXACT_SELF,1.0,,products,1
+PRODUCT,Centaur.ai platform,Centaur.ai platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Centralize,Centralize,EXACT_SELF,1.0,,products,1
+PRODUCT,Certus AI,Certus AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Chakra,Chakra,EXACT_SELF,1.0,,products,1
+PRODUCT,Champ AI SDR,Champ AI SDR,EXACT_SELF,1.0,,products,1
+PRODUCT,Channel3,Channel3,EXACT_SELF,1.0,,products,1
+PRODUCT,ChatSense,ChatSense,EXACT_SELF,1.0,,products,1
+PRODUCT,Checkr,Checkr,EXACT_SELF,1.0,,products,1
+PRODUCT,Chestnut,Chestnut,EXACT_SELF,1.0,,products,1
+PRODUCT,Chima,Chima,EXACT_SELF,1.0,,products,1
+PRODUCT,Ciro,Ciro,EXACT_SELF,1.0,,products,1
+PRODUCT,Citus,Citus,EXACT_SELF,1.0,,products,1
+PRODUCT,Clarion,Clarion,EXACT_SELF,1.0,,products,1
+PRODUCT,Clarity,Clarity,EXACT_SELF,1.0,,products,1
+PRODUCT,Clarm Atlas,Clarm Atlas,EXACT_SELF,1.0,,products,1
+PRODUCT,ClaudIA,ClaudIA,EXACT_SELF,1.0,,products,1
+PRODUCT,Clearline,Clearline,EXACT_SELF,1.0,,products,1
+PRODUCT,Clearly AI,Clearly AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Clerked,Clerked,EXACT_SELF,1.0,,products,1
+PRODUCT,CleverDeck,CleverDeck,EXACT_SELF,1.0,,products,1
+PRODUCT,Clicks,Clicks,EXACT_SELF,1.0,,products,1
+PRODUCT,Clodo,Clodo,EXACT_SELF,1.0,,products,1
+PRODUCT,Closera,Closera,EXACT_SELF,1.0,,products,1
+PRODUCT,Cloud Chat,Cloud Chat,EXACT_SELF,1.0,,products,1
+PRODUCT,Cloud Mac,Cloud Mac,EXACT_SELF,1.0,,products,1
+PRODUCT,Cloud Sim,Cloud Sim,EXACT_SELF,1.0,,products,1
+PRODUCT,CoCounsel,CoCounsel,EXACT_SELF,1.0,,products,1
+PRODUCT,Cobrowsing for Customer Support,Cobrowsing for Customer Support,EXACT_SELF,1.0,,products,1
+PRODUCT,Coco,Coco,EXACT_SELF,1.0,,products,1
+PRODUCT,Coda,Coda,EXACT_SELF,1.0,,products,1
+PRODUCT,Code Four INSIGHTS,Code Four INSIGHTS,EXACT_SELF,1.0,,products,1
+PRODUCT,Code Four REPORT,Code Four REPORT,EXACT_SELF,1.0,,products,1
+PRODUCT,Codecademy,Codecademy,EXACT_SELF,1.0,,products,1
+PRODUCT,Codes Health,Codes Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Codev,Codev,EXACT_SELF,1.0,,products,1
+PRODUCT,Codevisor,Codevisor,EXACT_SELF,1.0,,products,1
+PRODUCT,Codexa,Codexa,EXACT_SELF,1.0,,products,1
+PRODUCT,CoffeeAI,CoffeeAI,EXACT_SELF,1.0,,products,1
+PRODUCT,Coldreach,Coldreach,EXACT_SELF,1.0,,products,1
+PRODUCT,CombineHealth,CombineHealth,EXACT_SELF,1.0,,products,1
+PRODUCT,Commercial Auto,Commercial Auto,EXACT_SELF,1.0,,products,1
+PRODUCT,Commissary Club,Commissary Club,EXACT_SELF,1.0,,products,1
+PRODUCT,Compact mobile launchers,Compact mobile launchers,EXACT_SELF,1.0,,products,1
+PRODUCT,Company Lifetime Package,Company Lifetime Package,EXACT_SELF,1.0,,products,1
+PRODUCT,Company Monitors,Company Monitors,EXACT_SELF,1.0,,products,1
+PRODUCT,ComplyDo,ComplyDo,EXACT_SELF,1.0,,products,1
+PRODUCT,Composal Desktop,Composal Desktop,EXACT_SELF,1.0,,products,1
+PRODUCT,Compose AI,Compose AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Compute API,Compute API,EXACT_SELF,1.0,,products,1
+PRODUCT,Compyle,Compyle,EXACT_SELF,1.0,,products,1
+PRODUCT,Concourse,Concourse,EXACT_SELF,1.0,,products,1
+PRODUCT,Conductor Cloud,Conductor Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,Conduit,Conduit,EXACT_SELF,1.0,,products,1
+PRODUCT,Conifer,Conifer,EXACT_SELF,1.0,,products,1
+PRODUCT,Conntour,Conntour,EXACT_SELF,1.0,,products,1
+PRODUCT,Console,Console,EXACT_SELF,1.0,,products,1
+PRODUCT,Consus,Consus,EXACT_SELF,1.0,,products,1
+PRODUCT,Consus Launcher,Consus Launcher,EXACT_SELF,1.0,,products,1
+PRODUCT,Containers,Containers,EXACT_SELF,1.0,,products,1
+PRODUCT,Context.dev,Context.dev,EXACT_SELF,1.0,,products,1
+PRODUCT,Continue,Continue,EXACT_SELF,1.0,,products,1
+PRODUCT,Control,Control,EXACT_SELF,1.0,,products,1
+PRODUCT,CopyCat,CopyCat,EXACT_SELF,1.0,,products,1
+PRODUCT,Corgi,Corgi,EXACT_SELF,1.0,,products,1
+PRODUCT,Corgi Intelligence,Corgi Intelligence,EXACT_SELF,1.0,,products,1
+PRODUCT,Corgi Labs,Corgi Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Coris,Coris,EXACT_SELF,1.0,,products,1
+PRODUCT,Cortex Harness,Cortex Harness,EXACT_SELF,1.0,,products,1
+PRODUCT,Cosine CLI,Cosine CLI,EXACT_SELF,1.0,,products,1
+PRODUCT,Cosine Desktop,Cosine Desktop,EXACT_SELF,1.0,,products,1
+PRODUCT,Cotera,Cotera,EXACT_SELF,1.0,,products,1
+PRODUCT,Coval,Coval,EXACT_SELF,1.0,,products,1
+PRODUCT,Cozmo,Cozmo,EXACT_SELF,1.0,,products,1
+PRODUCT,Crashlytics,Crashlytics,EXACT_SELF,1.0,,products,1
+PRODUCT,Creative Reality™ Studio,Creative Reality™ Studio,EXACT_SELF,1.0,,products,1
+PRODUCT,CreativeMode,CreativeMode,EXACT_SELF,1.0,,products,1
+PRODUCT,Credal,Credal,EXACT_SELF,1.0,,products,1
+PRODUCT,Crimson,Crimson,EXACT_SELF,1.0,,products,1
+PRODUCT,Crimson TNG,Crimson TNG,EXACT_SELF,1.0,,products,1
+PRODUCT,Cryptoasset,Cryptoasset,EXACT_SELF,1.0,,products,1
+PRODUCT,Cuckoo,Cuckoo,EXACT_SELF,1.0,,products,1
+PRODUCT,Custom evals and training datasets,Custom evals and training datasets,EXACT_SELF,1.0,,products,1
+PRODUCT,Cyan,Cyan,EXACT_SELF,1.0,,products,1
+PRODUCT,Cyber Insurance,Cyber Insurance,EXACT_SELF,1.0,,products,1
+PRODUCT,Cyberdesk,Cyberdesk,EXACT_SELF,1.0,,products,1
+PRODUCT,Cyclon,Cyclon,EXACT_SELF,1.0,,products,1
+PRODUCT,DMEM,DMEM,EXACT_SELF,1.0,,products,1
+PRODUCT,DMEM/F12,DMEM/F12,EXACT_SELF,1.0,,products,1
+PRODUCT,Dailybot,Dailybot,EXACT_SELF,1.0,,products,1
+PRODUCT,Daqstra API,Daqstra API,EXACT_SELF,1.0,,products,1
+PRODUCT,Daqstra Edge,Daqstra Edge,EXACT_SELF,1.0,,products,1
+PRODUCT,Daqstra Hub,Daqstra Hub,EXACT_SELF,1.0,,products,1
+PRODUCT,Dart,Dart,EXACT_SELF,1.0,,products,1
+PRODUCT,Dartboard,Dartboard,EXACT_SELF,1.0,,products,1
+PRODUCT,Darwin,Darwin,EXACT_SELF,1.0,,products,1
+PRODUCT,Darwin Robotics,Darwin Robotics,EXACT_SELF,1.0,,products,1
+PRODUCT,Darwin model series,Darwin model series,EXACT_SELF,1.0,,products,1
+PRODUCT,Dash,Dash,EXACT_SELF,1.0,,products,1
+PRODUCT,Datafruit,Datafruit,EXACT_SELF,1.0,,products,1
+PRODUCT,Dataset,Dataset,EXACT_SELF,1.0,,products,1
+PRODUCT,Deasy,Deasy,EXACT_SELF,1.0,,products,1
+PRODUCT,Decawork,Decawork,EXACT_SELF,1.0,,products,1
+PRODUCT,Decent,Decent,EXACT_SELF,1.0,,products,1
+PRODUCT,Decisional,Decisional,EXACT_SELF,1.0,,products,1
+PRODUCT,Decohere,Decohere,EXACT_SELF,1.0,,products,1
+PRODUCT,Dedicated AI-Native,Dedicated AI-Native,EXACT_SELF,1.0,,products,1
+PRODUCT,Deep Interactions,Deep Interactions,EXACT_SELF,1.0,,products,1
+PRODUCT,DeepReach,DeepReach,EXACT_SELF,1.0,,products,1
+PRODUCT,DeepSim,DeepSim,EXACT_SELF,1.0,,products,1
+PRODUCT,DeepSource,DeepSource,EXACT_SELF,1.0,,products,1
+PRODUCT,Deepnight,Deepnight,EXACT_SELF,1.0,,products,1
+PRODUCT,Definite,Definite,EXACT_SELF,1.0,,products,1
+PRODUCT,Degla AI,Degla AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Deploy web app,Deploy web app,EXACT_SELF,1.0,,products,1
+PRODUCT,Descript,Descript,EXACT_SELF,1.0,,products,1
+PRODUCT,DesignArena,DesignArena,EXACT_SELF,1.0,,products,1
+PRODUCT,Designbase,Designbase,EXACT_SELF,1.0,,products,1
+PRODUCT,Desktop Recording SDK,Desktop Recording SDK,EXACT_SELF,1.0,,products,1
+PRODUCT,DevLoop,DevLoop,EXACT_SELF,1.0,,products,1
+PRODUCT,Dexterous robotic hands,Dexterous robotic hands,EXACT_SELF,1.0,,products,1
+PRODUCT,Dexto,Dexto,EXACT_SELF,1.0,,products,1
+PRODUCT,Di,Di,EXACT_SELF,1.0,,products,1
+PRODUCT,Diagnostic OS,Diagnostic OS,EXACT_SELF,1.0,,products,1
+PRODUCT,Dialtone,Dialtone,EXACT_SELF,1.0,,products,1
+PRODUCT,Diana,Diana,EXACT_SELF,1.0,,products,1
+PRODUCT,Diffusion Studio,Diffusion Studio,EXACT_SELF,1.0,,products,1
+PRODUCT,DigiEndeavour,DigiEndeavour,EXACT_SELF,1.0,,products,1
+PRODUCT,DigiProcure,DigiProcure,EXACT_SELF,1.0,,products,1
+PRODUCT,DiligenceSquared,DiligenceSquared,EXACT_SELF,1.0,,products,1
+PRODUCT,Directed Edge,Directed Edge,EXACT_SELF,1.0,,products,1
+PRODUCT,Directed Edge E-Commerce Recommendations Service,Directed Edge E-Commerce Recommendations Service,EXACT_SELF,1.0,,products,1
+PRODUCT,Directors & Officers Insurance (D&O),Directors & Officers Insurance (D&O),EXACT_SELF,1.0,,products,1
+PRODUCT,DisputeNinja,DisputeNinja,EXACT_SELF,1.0,,products,1
+PRODUCT,Dock,Dock,EXACT_SELF,1.0,,products,1
+PRODUCT,Docket,Docket,EXACT_SELF,1.0,,products,1
+PRODUCT,Doe,Doe,EXACT_SELF,1.0,,products,1
+PRODUCT,Double,Double,EXACT_SELF,1.0,,products,1
+PRODUCT,Drama Drama,Drama Drama,EXACT_SELF,1.0,,products,1
+PRODUCT,Drama Drama AI Tools,Drama Drama AI Tools,EXACT_SELF,1.0,,products,1
+PRODUCT,Dream3D,Dream3D,EXACT_SELF,1.0,,products,1
+PRODUCT,Dreamscale Deployments,Dreamscale Deployments,EXACT_SELF,1.0,,products,1
+PRODUCT,Drillbit,Drillbit,EXACT_SELF,1.0,,products,1
+PRODUCT,Dropbox,Dropbox,EXACT_SELF,1.0,,products,1
+PRODUCT,DryMerge,DryMerge,EXACT_SELF,1.0,,products,1
+PRODUCT,Duckie,Duckie,EXACT_SELF,1.0,,products,1
+PRODUCT,Duoseq,Duoseq,EXACT_SELF,1.0,,products,1
+PRODUCT,Duoseq Comprehensive Profiling,Duoseq Comprehensive Profiling,EXACT_SELF,1.0,,products,1
+PRODUCT,Duoseq Suite Report,Duoseq Suite Report,EXACT_SELF,1.0,,products,1
+PRODUCT,ESG Partner,ESG Partner,EXACT_SELF,1.0,,products,1
+PRODUCT,EVO,EVO,EXACT_SELF,1.0,,products,1
+PRODUCT,Edexia,Edexia,EXACT_SELF,1.0,,products,1
+PRODUCT,Educato,Educato,EXACT_SELF,1.0,,products,1
+PRODUCT,EffiGov,EffiGov,EXACT_SELF,1.0,,products,1
+PRODUCT,Egocentric,Egocentric,EXACT_SELF,1.0,,products,1
+PRODUCT,Ekho Labs,Ekho Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Electronic Lien,Electronic Lien,EXACT_SELF,1.0,,products,1
+PRODUCT,Elevate,Elevate,EXACT_SELF,1.0,,products,1
+PRODUCT,Elip,Elip,EXACT_SELF,1.0,,products,1
+PRODUCT,Elite Healthcare,Elite Healthcare,EXACT_SELF,1.0,,products,1
+PRODUCT,Ellipsis,Ellipsis,EXACT_SELF,1.0,,products,1
+PRODUCT,Ello,Ello,EXACT_SELF,1.0,,products,1
+PRODUCT,Elyos AI,Elyos AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Embedder,Embedder,EXACT_SELF,1.0,,products,1
+PRODUCT,Empirical,Empirical,EXACT_SELF,1.0,,products,1
+PRODUCT,Empirical Health,Empirical Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Employee Engagement Platform,Employee Engagement Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Entangl,Entangl,EXACT_SELF,1.0,,products,1
+PRODUCT,Enterprise Solutions,Enterprise Solutions,EXACT_SELF,1.0,,products,1
+PRODUCT,Erinys,Erinys,EXACT_SELF,1.0,,products,1
+PRODUCT,Eureka,Eureka,EXACT_SELF,1.0,,products,1
+PRODUCT,EvalRouter,EvalRouter,EXACT_SELF,1.0,,products,1
+PRODUCT,Executor,Executor,EXACT_SELF,1.0,,products,1
+PRODUCT,Executor Cloud,Executor Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,Exosat,Exosat,EXACT_SELF,1.0,,products,1
+PRODUCT,Expense Management,Expense Management,EXACT_SELF,1.0,,products,1
+PRODUCT,Experiential Labs,Experiential Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Fabraix,Fabraix,EXACT_SELF,1.0,,products,1
+PRODUCT,Fabriq,Fabriq,EXACT_SELF,1.0,,products,1
+PRODUCT,Fabryc,Fabryc,EXACT_SELF,1.0,,products,1
+PRODUCT,FactIQ,FactIQ,EXACT_SELF,1.0,,products,1
+PRODUCT,Faraday,Faraday,EXACT_SELF,1.0,,products,1
+PRODUCT,Feldy Field App,Feldy Field App,EXACT_SELF,1.0,,products,1
+PRODUCT,Feldy Measurements,Feldy Measurements,EXACT_SELF,1.0,,products,1
+PRODUCT,Fenrock,Fenrock,EXACT_SELF,1.0,,products,1
+PRODUCT,Fermat,Fermat,EXACT_SELF,1.0,,products,1
+PRODUCT,Fetii,Fetii,EXACT_SELF,1.0,,products,1
+PRODUCT,FeyNoBg,FeyNoBg,EXACT_SELF,1.0,,products,1
+PRODUCT,Ficra,Ficra,EXACT_SELF,1.0,,products,1
+PRODUCT,Field Agents,Field Agents,EXACT_SELF,1.0,,products,1
+PRODUCT,Fieldguide,Fieldguide,EXACT_SELF,1.0,,products,1
+PRODUCT,Fieldproxy,Fieldproxy,EXACT_SELF,1.0,,products,1
+PRODUCT,Filevine,Filevine,EXACT_SELF,1.0,,products,1
+PRODUCT,FinalDose,FinalDose,EXACT_SELF,1.0,,products,1
+PRODUCT,Finto,Finto,EXACT_SELF,1.0,,products,1
+PRODUCT,Firebase,Firebase,EXACT_SELF,1.0,,products,1
+PRODUCT,Firebender,Firebender,EXACT_SELF,1.0,,products,1
+PRODUCT,Firecrawl,Firecrawl,EXACT_SELF,1.0,,products,1
+PRODUCT,Firestore,Firestore,EXACT_SELF,1.0,,products,1
+PRODUCT,FirstQuadrant,FirstQuadrant,EXACT_SELF,1.0,,products,1
+PRODUCT,Firstwork,Firstwork,EXACT_SELF,1.0,,products,1
+PRODUCT,FitnessAI,FitnessAI,EXACT_SELF,1.0,,products,1
+PRODUCT,Flagright,Flagright,EXACT_SELF,1.0,,products,1
+PRODUCT,Flair,Flair,EXACT_SELF,1.0,,products,1
+PRODUCT,Fleetline,Fleetline,EXACT_SELF,1.0,,products,1
+PRODUCT,Flex Subscription,Flex Subscription,EXACT_SELF,1.0,,products,1
+PRODUCT,Flick,Flick,EXACT_SELF,1.0,,products,1
+PRODUCT,Flockjay,Flockjay,EXACT_SELF,1.0,,products,1
+PRODUCT,Floot,Floot,EXACT_SELF,1.0,,products,1
+PRODUCT,Florin,Florin,EXACT_SELF,1.0,,products,1
+PRODUCT,Flow,Flow,EXACT_SELF,1.0,,products,1
+PRODUCT,Flowglad,Flowglad,EXACT_SELF,1.0,,products,1
+PRODUCT,Flowise,Flowise,EXACT_SELF,1.0,,products,1
+PRODUCT,Flows,Flows,EXACT_SELF,1.0,,products,1
+PRODUCT,Flux ARK,Flux ARK,EXACT_SELF,1.0,,products,1
+PRODUCT,Flux Bots,Flux Bots,EXACT_SELF,1.0,,products,1
+PRODUCT,FlyCode,FlyCode,EXACT_SELF,1.0,,products,1
+PRODUCT,Focal,Focal,EXACT_SELF,1.0,,products,1
+PRODUCT,Footprints and symbols,Footprints and symbols,EXACT_SELF,1.0,,products,1
+PRODUCT,Foreman AI,Foreman AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Forma Build,Forma Build,EXACT_SELF,1.0,,products,1
+PRODUCT,Forward,Forward,EXACT_SELF,1.0,,products,1
+PRODUCT,Freebuff,Freebuff,EXACT_SELF,1.0,,products,1
+PRODUCT,Freight brokerage,Freight brokerage,EXACT_SELF,1.0,,products,1
+PRODUCT,Frizzle,Frizzle,EXACT_SELF,1.0,,products,1
+PRODUCT,Frontier AI,Frontier AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Frontrunner,Frontrunner,EXACT_SELF,1.0,,products,1
+PRODUCT,Full Managed Service,Full Managed Service,EXACT_SELF,1.0,,products,1
+PRODUCT,Functional Screening,Functional Screening,EXACT_SELF,1.0,,products,1
+PRODUCT,Fuse,Fuse,EXACT_SELF,1.0,,products,1
+PRODUCT,Future,Future,EXACT_SELF,1.0,,products,1
+PRODUCT,Future Bar,Future Bar,EXACT_SELF,1.0,,products,1
+PRODUCT,Galini,Galini,EXACT_SELF,1.0,,products,1
+PRODUCT,GameEngineBench,GameEngineBench,EXACT_SELF,1.0,,products,1
+PRODUCT,Garage,Garage,EXACT_SELF,1.0,,products,1
+PRODUCT,Gecko,Gecko,EXACT_SELF,1.0,,products,1
+PRODUCT,Gemini Notebook,Gemini Notebook,EXACT_SELF,1.0,,products,1
+PRODUCT,General Liability,General Liability,EXACT_SELF,1.0,,products,1
+PRODUCT,General Liability Insurance,General Liability Insurance,EXACT_SELF,1.0,,products,1
+PRODUCT,GeoAI Operating System,GeoAI Operating System,EXACT_SELF,1.0,,products,1
+PRODUCT,GetCrux,GetCrux,EXACT_SELF,1.0,,products,1
+PRODUCT,Giga,Giga,EXACT_SELF,1.0,,products,1
+PRODUCT,GitCafe,GitCafe,EXACT_SELF,1.0,,products,1
+PRODUCT,Glass,Glass,EXACT_SELF,1.0,,products,1
+PRODUCT,Gleam,Gleam,EXACT_SELF,1.0,,products,1
+PRODUCT,Gleam Agent,Gleam Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,Glide Classic,Glide Classic,EXACT_SELF,1.0,,products,1
+PRODUCT,GlideOS,GlideOS,EXACT_SELF,1.0,,products,1
+PRODUCT,Global Inbox,Global Inbox,EXACT_SELF,1.0,,products,1
+PRODUCT,GoCardless,GoCardless,EXACT_SELF,1.0,,products,1
+PRODUCT,Golf,Golf,EXACT_SELF,1.0,,products,1
+PRODUCT,Goose,Goose,EXACT_SELF,1.0,,products,1
+PRODUCT,GovDash,GovDash,EXACT_SELF,1.0,,products,1
+PRODUCT,Gradon,Gradon,EXACT_SELF,1.0,,products,1
+PRODUCT,Grammar App,Grammar App,EXACT_SELF,1.0,,products,1
+PRODUCT,Grayson,Grayson,EXACT_SELF,1.0,,products,1
+PRODUCT,Greenboard,Greenboard,EXACT_SELF,1.0,,products,1
+PRODUCT,GreenboardGo,GreenboardGo,EXACT_SELF,1.0,,products,1
+PRODUCT,Grep,Grep,EXACT_SELF,1.0,,products,1
+PRODUCT,Greptile,Greptile,EXACT_SELF,1.0,,products,1
+PRODUCT,Grid,Grid,EXACT_SELF,1.0,,products,1
+PRODUCT,Grid Proto,Grid Proto,EXACT_SELF,1.0,,products,1
+PRODUCT,Grocalo,Grocalo,EXACT_SELF,1.0,,products,1
+PRODUCT,Guesty,Guesty,EXACT_SELF,1.0,,products,1
+PRODUCT,Guesty PriceOptimizer,Guesty PriceOptimizer,EXACT_SELF,1.0,,products,1
+PRODUCT,GuestyPay,GuestyPay,EXACT_SELF,1.0,,products,1
+PRODUCT,Gumloop,Gumloop,EXACT_SELF,1.0,,products,1
+PRODUCT,Gusto,Gusto,EXACT_SELF,1.0,,products,1
+PRODUCT,HALE 1.0,HALE 1.0,EXACT_SELF,1.0,,products,1
+PRODUCT,HOAi,HOAi,EXACT_SELF,1.0,,products,1
+PRODUCT,HOAi Voice,HOAi Voice,EXACT_SELF,1.0,,products,1
+PRODUCT,HUD,HUD,EXACT_SELF,1.0,,products,1
+PRODUCT,Handy,Handy,EXACT_SELF,1.0,,products,1
+PRODUCT,Handyman.ai,Handyman.ai,EXACT_SELF,1.0,,products,1
+PRODUCT,Happenstance,Happenstance,EXACT_SELF,1.0,,products,1
+PRODUCT,Harbera,Harbera,EXACT_SELF,1.0,,products,1
+PRODUCT,Haystack,Haystack,EXACT_SELF,1.0,,products,1
+PRODUCT,Heptabase,Heptabase,EXACT_SELF,1.0,,products,1
+PRODUCT,Herdr,Herdr,EXACT_SELF,1.0,,products,1
+PRODUCT,Hippo Scribe,Hippo Scribe,EXACT_SELF,1.0,,products,1
+PRODUCT,HireArt,HireArt,EXACT_SELF,1.0,,products,1
+PRODUCT,Housewarming,Housewarming,EXACT_SELF,1.0,,products,1
+PRODUCT,Hub,Hub,EXACT_SELF,1.0,,products,1
+PRODUCT,Hudson Labs,Hudson Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Hue,Hue,EXACT_SELF,1.0,,products,1
+PRODUCT,Hue SDK,Hue SDK,EXACT_SELF,1.0,,products,1
+PRODUCT,Human Behavior,Human Behavior,EXACT_SELF,1.0,,products,1
+PRODUCT,HumanLayer,HumanLayer,EXACT_SELF,1.0,,products,1
+PRODUCT,Humand,Humand,EXACT_SELF,1.0,,products,1
+PRODUCT,Hyper Online,Hyper Online,EXACT_SELF,1.0,,products,1
+PRODUCT,HyperProbe,HyperProbe,EXACT_SELF,1.0,,products,1
+PRODUCT,Hyperlucky,Hyperlucky,EXACT_SELF,1.0,,products,1
+PRODUCT,Hyperproof,Hyperproof,EXACT_SELF,1.0,,products,1
+PRODUCT,ID Check,ID Check,EXACT_SELF,1.0,,products,1
+PRODUCT,IDR,IDR,EXACT_SELF,1.0,,products,1
+PRODUCT,IMPACT,IMPACT,EXACT_SELF,1.0,,products,1
+PRODUCT,IRX-Honu,IRX-Honu,EXACT_SELF,1.0,,products,1
+PRODUCT,Imaget,Imaget,EXACT_SELF,1.0,,products,1
+PRODUCT,Imagine AI,Imagine AI,EXACT_SELF,1.0,,products,1
+PRODUCT,InVision Precision Cardiac Amyloid,InVision Precision Cardiac Amyloid,EXACT_SELF,1.0,,products,1
+PRODUCT,InVision Precision LVEF,InVision Precision LVEF,EXACT_SELF,1.0,,products,1
+PRODUCT,InVision Precision Reporting,InVision Precision Reporting,EXACT_SELF,1.0,,products,1
+PRODUCT,Inari,Inari,EXACT_SELF,1.0,,products,1
+PRODUCT,IncidentFox,IncidentFox,EXACT_SELF,1.0,,products,1
+PRODUCT,Inconvo,Inconvo,EXACT_SELF,1.0,,products,1
+PRODUCT,InferEdge,InferEdge,EXACT_SELF,1.0,,products,1
+PRODUCT,Inference,Inference,EXACT_SELF,1.0,,products,1
+PRODUCT,Inference API,Inference API,EXACT_SELF,1.0,,products,1
+PRODUCT,Inkbox,Inkbox,EXACT_SELF,1.0,,products,1
+PRODUCT,Innovation-led Growth Operating System,Innovation-led Growth Operating System,EXACT_SELF,1.0,,products,1
+PRODUCT,Inpatient Capacity Solution,Inpatient Capacity Solution,EXACT_SELF,1.0,,products,1
+PRODUCT,InpharmD,InpharmD,EXACT_SELF,1.0,,products,1
+PRODUCT,Inscribe,Inscribe,EXACT_SELF,1.0,,products,1
+PRODUCT,Inspect Robots,Inspect Robots,EXACT_SELF,1.0,,products,1
+PRODUCT,InspectMind,InspectMind,EXACT_SELF,1.0,,products,1
+PRODUCT,InstaShelf,InstaShelf,EXACT_SELF,1.0,,products,1
+PRODUCT,Integuru,Integuru,EXACT_SELF,1.0,,products,1
+PRODUCT,Intelligence Layer,Intelligence Layer,EXACT_SELF,1.0,,products,1
+PRODUCT,Interview,Interview,EXACT_SELF,1.0,,products,1
+PRODUCT,Invertix,Invertix,EXACT_SELF,1.0,,products,1
+PRODUCT,Investment Dashboard,Investment Dashboard,EXACT_SELF,1.0,,products,1
+PRODUCT,Jack.com,Jack.com,EXACT_SELF,1.0,,products,1
+PRODUCT,Job & Agent Index Honeycomb,Job & Agent Index Honeycomb,EXACT_SELF,1.0,,products,1
+PRODUCT,Julius,Julius,EXACT_SELF,1.0,,products,1
+PRODUCT,JustAI,JustAI,EXACT_SELF,1.0,,products,1
+PRODUCT,KASO,KASO,EXACT_SELF,1.0,,products,1
+PRODUCT,KASO Discovery,KASO Discovery,EXACT_SELF,1.0,,products,1
+PRODUCT,Kairos,Kairos,EXACT_SELF,1.0,,products,1
+PRODUCT,Kebra,Kebra,EXACT_SELF,1.0,,products,1
+PRODUCT,Keet,Keet,EXACT_SELF,1.0,,products,1
+PRODUCT,Kenley,Kenley,EXACT_SELF,1.0,,products,1
+PRODUCT,Kernel,Kernel,EXACT_SELF,1.0,,products,1
+PRODUCT,Kestral Project Brain,Kestral Project Brain,EXACT_SELF,1.0,,products,1
+PRODUCT,Keye,Keye,EXACT_SELF,1.0,,products,1
+PRODUCT,Keyframe,Keyframe,EXACT_SELF,1.0,,products,1
+PRODUCT,Kino,Kino,EXACT_SELF,1.0,,products,1
+PRODUCT,KnowBench,KnowBench,EXACT_SELF,1.0,,products,1
+PRODUCT,Knowtex,Knowtex,EXACT_SELF,1.0,,products,1
+PRODUCT,Koliseum,Koliseum,EXACT_SELF,1.0,,products,1
+PRODUCT,Konta,Konta,EXACT_SELF,1.0,,products,1
+PRODUCT,Kue AI for QGIS,Kue AI for QGIS,EXACT_SELF,1.0,,products,1
+PRODUCT,LOIS,LOIS,EXACT_SELF,1.0,,products,1
+PRODUCT,Ladder,Ladder,EXACT_SELF,1.0,,products,1
+PRODUCT,Lanesurf,Lanesurf,EXACT_SELF,1.0,,products,1
+PRODUCT,Langdock API,Langdock API,EXACT_SELF,1.0,,products,1
+PRODUCT,Lantern,Lantern,EXACT_SELF,1.0,,products,1
+PRODUCT,Lantern People,Lantern People,EXACT_SELF,1.0,,products,1
+PRODUCT,Lark,Lark,EXACT_SELF,1.0,,products,1
+PRODUCT,Latent,Latent,EXACT_SELF,1.0,,products,1
+PRODUCT,LaunchFlow,LaunchFlow,EXACT_SELF,1.0,,products,1
+PRODUCT,LaunchFlow Workspace,LaunchFlow Workspace,EXACT_SELF,1.0,,products,1
+PRODUCT,Layup,Layup,EXACT_SELF,1.0,,products,1
+PRODUCT,LeadGenius,LeadGenius,EXACT_SELF,1.0,,products,1
+PRODUCT,Leaping AI,Leaping AI,EXACT_SELF,1.0,,products,1
+PRODUCT,LedgerUp,LedgerUp,EXACT_SELF,1.0,,products,1
+PRODUCT,Lemma,Lemma,EXACT_SELF,1.0,,products,1
+PRODUCT,Lemma MCP,Lemma MCP,EXACT_SELF,1.0,,products,1
+PRODUCT,LemonLime,LemonLime,EXACT_SELF,1.0,,products,1
+PRODUCT,LemonSlice,LemonSlice,EXACT_SELF,1.0,,products,1
+PRODUCT,LemonSlice-2.1,LemonSlice-2.1,EXACT_SELF,1.0,,products,1
+PRODUCT,Lens capture SDK,Lens capture SDK,EXACT_SELF,1.0,,products,1
+PRODUCT,Libra Logs,Libra Logs,EXACT_SELF,1.0,,products,1
+PRODUCT,Libra Robotics,Libra Robotics,EXACT_SELF,1.0,,products,1
+PRODUCT,Lighthouz AI,Lighthouz AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Ligo Biosciences,Ligo Biosciences,EXACT_SELF,1.0,,products,1
+PRODUCT,Lilac,Lilac,EXACT_SELF,1.0,,products,1
+PRODUCT,Lingo.dev,Lingo.dev,EXACT_SELF,1.0,,products,1
+PRODUCT,Linzumi,Linzumi,EXACT_SELF,1.0,,products,1
+PRODUCT,Liquid Compute Index,Liquid Compute Index,EXACT_SELF,1.0,,products,1
+PRODUCT,LiteLLM,LiteLLM,EXACT_SELF,1.0,,products,1
+PRODUCT,Live Map,Live Map,EXACT_SELF,1.0,,products,1
+PRODUCT,Locke,Locke,EXACT_SELF,1.0,,products,1
+PRODUCT,LogosGuard,LogosGuard,EXACT_SELF,1.0,,products,1
+PRODUCT,Lopus,Lopus,EXACT_SELF,1.0,,products,1
+PRODUCT,Lore,Lore,EXACT_SELF,1.0,,products,1
+PRODUCT,Luca IQ,Luca IQ,EXACT_SELF,1.0,,products,1
+PRODUCT,Lucidic AI,Lucidic AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Lumen Sovereign,Lumen Sovereign,EXACT_SELF,1.0,,products,1
+PRODUCT,Lumeria,Lumeria,EXACT_SELF,1.0,,products,1
+PRODUCT,Lumi,Lumi,EXACT_SELF,1.0,,products,1
+PRODUCT,Luminal,Luminal,EXACT_SELF,1.0,,products,1
+PRODUCT,Luna,Luna,EXACT_SELF,1.0,,products,1
+PRODUCT,M1 Mobile Manipulator,M1 Mobile Manipulator,EXACT_SELF,1.0,,products,1
+PRODUCT,MCP Gateway,MCP Gateway,EXACT_SELF,1.0,,products,1
+PRODUCT,MCP Server,MCP Server,EXACT_SELF,1.0,,products,1
+PRODUCT,MDacne,MDacne,EXACT_SELF,1.0,,products,1
+PRODUCT,MDhair,MDhair,EXACT_SELF,1.0,,products,1
+PRODUCT,MISTT,MISTT,EXACT_SELF,1.0,,products,1
+PRODUCT,MPU,MPU,EXACT_SELF,1.0,,products,1
+PRODUCT,MSD-001,MSD-001,EXACT_SELF,1.0,,products,1
+PRODUCT,MadeThis,MadeThis,EXACT_SELF,1.0,,products,1
+PRODUCT,Mage,Mage,EXACT_SELF,1.0,,products,1
+PRODUCT,Magnitude,Magnitude,EXACT_SELF,1.0,,products,1
+PRODUCT,Maingen,Maingen,EXACT_SELF,1.0,,products,1
+PRODUCT,Managed automation,Managed automation,EXACT_SELF,1.0,,products,1
+PRODUCT,Managed transportation,Managed transportation,EXACT_SELF,1.0,,products,1
+PRODUCT,Manifold,Manifold,EXACT_SELF,1.0,,products,1
+PRODUCT,Manny,Manny,EXACT_SELF,1.0,,products,1
+PRODUCT,Marcy,Marcy,EXACT_SELF,1.0,,products,1
+PRODUCT,MarkIt Access,MarkIt Access,EXACT_SELF,1.0,,products,1
+PRODUCT,MarqLaw,MarqLaw,EXACT_SELF,1.0,,products,1
+PRODUCT,MarqVision,MarqVision,EXACT_SELF,1.0,,products,1
+PRODUCT,Marr Labs,Marr Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Mars Auto,Mars Auto,EXACT_SELF,1.0,,products,1
+PRODUCT,Mashgin,Mashgin,EXACT_SELF,1.0,,products,1
+PRODUCT,Mass-manufactured missiles,Mass-manufactured missiles,EXACT_SELF,1.0,,products,1
+PRODUCT,Mastra,Mastra,EXACT_SELF,1.0,,products,1
+PRODUCT,Math vs Zombies,Math vs Zombies,EXACT_SELF,1.0,,products,1
+PRODUCT,Matterport,Matterport,EXACT_SELF,1.0,,products,1
+PRODUCT,Maxi,Maxi,EXACT_SELF,1.0,,products,1
+PRODUCT,Maximal,Maximal,EXACT_SELF,1.0,,products,1
+PRODUCT,Maxxwell,Maxxwell,EXACT_SELF,1.0,,products,1
+PRODUCT,Mecha Health,Mecha Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Mechanistic Reasoning,Mechanistic Reasoning,EXACT_SELF,1.0,,products,1
+PRODUCT,Medium Biosciences,Medium Biosciences,EXACT_SELF,1.0,,products,1
+PRODUCT,Medley,Medley,EXACT_SELF,1.0,,products,1
+PRODUCT,Meeting Bot API,Meeting Bot API,EXACT_SELF,1.0,,products,1
+PRODUCT,Mentra Call,Mentra Call,EXACT_SELF,1.0,,products,1
+PRODUCT,Mentra Live,Mentra Live,EXACT_SELF,1.0,,products,1
+PRODUCT,MentraOS,MentraOS,EXACT_SELF,1.0,,products,1
+PRODUCT,Mesmer,Mesmer,EXACT_SELF,1.0,,products,1
+PRODUCT,MetaTrinity,MetaTrinity,EXACT_SELF,1.0,,products,1
+PRODUCT,Method,Method,EXACT_SELF,1.0,,products,1
+PRODUCT,Meticulate,Meticulate,EXACT_SELF,1.0,,products,1
+PRODUCT,Metreecs,Metreecs,EXACT_SELF,1.0,,products,1
+PRODUCT,Mica,Mica,EXACT_SELF,1.0,,products,1
+PRODUCT,Million,Million,EXACT_SELF,1.0,,products,1
+PRODUCT,Mimos,Mimos,EXACT_SELF,1.0,,products,1
+PRODUCT,MindClick,MindClick,EXACT_SELF,1.0,,products,1
+PRODUCT,MindFort,MindFort,EXACT_SELF,1.0,,products,1
+PRODUCT,MindFort API,MindFort API,EXACT_SELF,1.0,,products,1
+PRODUCT,MindGPT,MindGPT,EXACT_SELF,1.0,,products,1
+PRODUCT,MindSpeech,MindSpeech,EXACT_SELF,1.0,,products,1
+PRODUCT,Minded,Minded,EXACT_SELF,1.0,,products,1
+PRODUCT,Mindee,Mindee,EXACT_SELF,1.0,,products,1
+PRODUCT,MinusX,MinusX,EXACT_SELF,1.0,,products,1
+PRODUCT,Mirage,Mirage,EXACT_SELF,1.0,,products,1
+PRODUCT,Mirrors,Mirrors,EXACT_SELF,1.0,,products,1
+PRODUCT,Mito Concierge,Mito Concierge,EXACT_SELF,1.0,,products,1
+PRODUCT,Mito Health,Mito Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Mo,Mo,EXACT_SELF,1.0,,products,1
+PRODUCT,Moby,Moby,EXACT_SELF,1.0,,products,1
+PRODUCT,Model Safeguards,Model Safeguards,EXACT_SELF,1.0,,products,1
+PRODUCT,Modern,Modern,EXACT_SELF,1.0,,products,1
+PRODUCT,Modus,Modus,EXACT_SELF,1.0,,products,1
+PRODUCT,Monarcha,Monarcha,EXACT_SELF,1.0,,products,1
+PRODUCT,MongoDB Atlas,MongoDB Atlas,EXACT_SELF,1.0,,products,1
+PRODUCT,Monterey AI,Monterey AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Monumint,Monumint,EXACT_SELF,1.0,,products,1
+PRODUCT,Morph,Morph,EXACT_SELF,1.0,,products,1
+PRODUCT,Mosaic,Mosaic,EXACT_SELF,1.0,,products,1
+PRODUCT,MosaicVoice,MosaicVoice,EXACT_SELF,1.0,,products,1
+PRODUCT,Motion,Motion,EXACT_SELF,1.0,,products,1
+PRODUCT,Motives,Motives,EXACT_SELF,1.0,,products,1
+PRODUCT,MultiMatte,MultiMatte,EXACT_SELF,1.0,,products,1
+PRODUCT,Mundo AI,Mundo AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Munito Compute Cloud,Munito Compute Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,Mutiny,Mutiny,EXACT_SELF,1.0,,products,1
+PRODUCT,Mystro,Mystro,EXACT_SELF,1.0,,products,1
+PRODUCT,Native,Native,EXACT_SELF,1.0,,products,1
+PRODUCT,Navi,Navi,EXACT_SELF,1.0,,products,1
+PRODUCT,Navya Network Automated Records Retrieval,Navya Network Automated Records Retrieval,EXACT_SELF,1.0,,products,1
+PRODUCT,NearWave Scanner,NearWave Scanner,EXACT_SELF,1.0,,products,1
+PRODUCT,Nebu,Nebu,EXACT_SELF,1.0,,products,1
+PRODUCT,Nemotron-SuperVL-CQ1.4bit,Nemotron-SuperVL-CQ1.4bit,EXACT_SELF,1.0,,products,1
+PRODUCT,Neodocs Urine ACR Test Kit,Neodocs Urine ACR Test Kit,EXACT_SELF,1.0,,products,1
+PRODUCT,Neural Dosing Platform,Neural Dosing Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,News API,News API,EXACT_SELF,1.0,,products,1
+PRODUCT,Nexus,Nexus,EXACT_SELF,1.0,,products,1
+PRODUCT,Nimbus,Nimbus,EXACT_SELF,1.0,,products,1
+PRODUCT,NinjaQ,NinjaQ,EXACT_SELF,1.0,,products,1
+PRODUCT,Nitrode,Nitrode,EXACT_SELF,1.0,,products,1
+PRODUCT,Non-Provisional Patent Application,Non-Provisional Patent Application,EXACT_SELF,1.0,,products,1
+PRODUCT,Noor,Noor,EXACT_SELF,1.0,,products,1
+PRODUCT,Nori,Nori,EXACT_SELF,1.0,,products,1
+PRODUCT,Norra,Norra,EXACT_SELF,1.0,,products,1
+PRODUCT,Nowadays,Nowadays,EXACT_SELF,1.0,,products,1
+PRODUCT,NuExtract,NuExtract,EXACT_SELF,1.0,,products,1
+PRODUCT,NuExtract3,NuExtract3,EXACT_SELF,1.0,,products,1
+PRODUCT,NuNER,NuNER,EXACT_SELF,1.0,,products,1
+PRODUCT,Nuvane,Nuvane,EXACT_SELF,1.0,,products,1
+PRODUCT,Nuvocargo,Nuvocargo,EXACT_SELF,1.0,,products,1
+PRODUCT,OOAK,OOAK,EXACT_SELF,1.0,,products,1
+PRODUCT,ORO AI,ORO AI,EXACT_SELF,1.0,,products,1
+PRODUCT,OWNY,OWNY,EXACT_SELF,1.0,,products,1
+PRODUCT,Odin,Odin,EXACT_SELF,1.0,,products,1
+PRODUCT,Off-The-Shelf Office Agent Training Dataset,Off-The-Shelf Office Agent Training Dataset,EXACT_SELF,1.0,,products,1
+PRODUCT,Ohm,Ohm,EXACT_SELF,1.0,,products,1
+PRODUCT,Ollama,Ollama,EXACT_SELF,1.0,,products,1
+PRODUCT,Omanta,Omanta,EXACT_SELF,1.0,,products,1
+PRODUCT,Omnara,Omnara,EXACT_SELF,1.0,,products,1
+PRODUCT,OmniSense,OmniSense,EXACT_SELF,1.0,,products,1
+PRODUCT,Omnistrate,Omnistrate,EXACT_SELF,1.0,,products,1
+PRODUCT,OneSchema,OneSchema,EXACT_SELF,1.0,,products,1
+PRODUCT,OneSignal,OneSignal,EXACT_SELF,1.0,,products,1
+PRODUCT,OneSignal AI,OneSignal AI,EXACT_SELF,1.0,,products,1
+PRODUCT,OneSignal Journeys,OneSignal Journeys,EXACT_SELF,1.0,,products,1
+PRODUCT,OneTriangle,OneTriangle,EXACT_SELF,1.0,,products,1
+PRODUCT,Open Source Agent Framework OpenHive,Open Source Agent Framework OpenHive,EXACT_SELF,1.0,,products,1
+PRODUCT,OpenCurriculum,OpenCurriculum,EXACT_SELF,1.0,,products,1
+PRODUCT,OpenTools,OpenTools,EXACT_SELF,1.0,,products,1
+PRODUCT,Openbenchmarks,Openbenchmarks,EXACT_SELF,1.0,,products,1
+PRODUCT,Openclaw,Openclaw,EXACT_SELF,1.0,,products,1
+PRODUCT,Openlayer,Openlayer,EXACT_SELF,1.0,,products,1
+PRODUCT,Openmart,Openmart,EXACT_SELF,1.0,,products,1
+PRODUCT,Openroll,Openroll,EXACT_SELF,1.0,,products,1
+PRODUCT,Opensteer,Opensteer,EXACT_SELF,1.0,,products,1
+PRODUCT,OpsNinja,OpsNinja,EXACT_SELF,1.0,,products,1
+PRODUCT,Orangewood Labs,Orangewood Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Orbio Earth,Orbio Earth,EXACT_SELF,1.0,,products,1
+PRODUCT,Orca,Orca,EXACT_SELF,1.0,,products,1
+PRODUCT,Orchestra,Orchestra,EXACT_SELF,1.0,,products,1
+PRODUCT,Orchid,Orchid,EXACT_SELF,1.0,,products,1
+PRODUCT,Osmanthus,Osmanthus,EXACT_SELF,1.0,,products,1
+PRODUCT,Osmosis,Osmosis,EXACT_SELF,1.0,,products,1
+PRODUCT,OutRival,OutRival,EXACT_SELF,1.0,,products,1
+PRODUCT,Outlit,Outlit,EXACT_SELF,1.0,,products,1
+PRODUCT,Output Labs,Output Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Outship,Outship,EXACT_SELF,1.0,,products,1
+PRODUCT,Overheard,Overheard,EXACT_SELF,1.0,,products,1
+PRODUCT,Overlap,Overlap,EXACT_SELF,1.0,,products,1
+PRODUCT,Overwatch,Overwatch,EXACT_SELF,1.0,,products,1
+PRODUCT,Ovulation Thermometer,Ovulation Thermometer,EXACT_SELF,1.0,,products,1
+PRODUCT,P-JiT,P-JiT,EXACT_SELF,1.0,,products,1
+PRODUCT,PAL Maker,PAL Maker,EXACT_SELF,1.0,,products,1
+PRODUCT,PARES,PARES,EXACT_SELF,1.0,,products,1
+PRODUCT,PMEX Markets,PMEX Markets,EXACT_SELF,1.0,,products,1
+PRODUCT,Pair AI,Pair AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Palisade,Palisade,EXACT_SELF,1.0,,products,1
+PRODUCT,Pally,Pally,EXACT_SELF,1.0,,products,1
+PRODUCT,Paloma,Paloma,EXACT_SELF,1.0,,products,1
+PRODUCT,PandasAI,PandasAI,EXACT_SELF,1.0,,products,1
+PRODUCT,Pango,Pango,EXACT_SELF,1.0,,products,1
+PRODUCT,Papaya,Papaya,EXACT_SELF,1.0,,products,1
+PRODUCT,Parallel,Parallel,EXACT_SELF,1.0,,products,1
+PRODUCT,Parsagon,Parsagon,EXACT_SELF,1.0,,products,1
+PRODUCT,Parsewise,Parsewise,EXACT_SELF,1.0,,products,1
+PRODUCT,Party,Party,EXACT_SELF,1.0,,products,1
+PRODUCT,PatentWatch,PatentWatch,EXACT_SELF,1.0,,products,1
+PRODUCT,PatternFast,PatternFast,EXACT_SELF,1.0,,products,1
+PRODUCT,Pelica Health,Pelica Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Pennant,Pennant,EXACT_SELF,1.0,,products,1
+PRODUCT,Penny,Penny,EXACT_SELF,1.0,,products,1
+PRODUCT,Perceptron ML,Perceptron ML,EXACT_SELF,1.0,,products,1
+PRODUCT,Perioperative Care Coordination Solution,Perioperative Care Coordination Solution,EXACT_SELF,1.0,,products,1
+PRODUCT,Periscope,Periscope,EXACT_SELF,1.0,,products,1
+PRODUCT,Petrarch,Petrarch,EXACT_SELF,1.0,,products,1
+PRODUCT,Petrichor,Petrichor,EXACT_SELF,1.0,,products,1
+PRODUCT,Pharma Market Access Platform,Pharma Market Access Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Phonic-1,Phonic-1,EXACT_SELF,1.0,,products,1
+PRODUCT,Physical AI Bench,Physical AI Bench,EXACT_SELF,1.0,,products,1
+PRODUCT,Pibit AI Underwriting OS,Pibit AI Underwriting OS,EXACT_SELF,1.0,,products,1
+PRODUCT,Pier Finance,Pier Finance,EXACT_SELF,1.0,,products,1
+PRODUCT,PipelineBench,PipelineBench,EXACT_SELF,1.0,,products,1
+PRODUCT,Piris Labs,Piris Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,PlanGrid,PlanGrid,EXACT_SELF,1.0,,products,1
+PRODUCT,Planbase,Planbase,EXACT_SELF,1.0,,products,1
+PRODUCT,Plasticity,Plasticity,EXACT_SELF,1.0,,products,1
+PRODUCT,Platform,Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Pleom,Pleom,EXACT_SELF,1.0,,products,1
+PRODUCT,Ploid,Ploid,EXACT_SELF,1.0,,products,1
+PRODUCT,Pluto,Pluto,EXACT_SELF,1.0,,products,1
+PRODUCT,Plyxl,Plyxl,EXACT_SELF,1.0,,products,1
+PRODUCT,PointOne Review,PointOne Review,EXACT_SELF,1.0,,products,1
+PRODUCT,PointOne Rules,PointOne Rules,EXACT_SELF,1.0,,products,1
+PRODUCT,PointOne Time,PointOne Time,EXACT_SELF,1.0,,products,1
+PRODUCT,Pointhound,Pointhound,EXACT_SELF,1.0,,products,1
+PRODUCT,Pointhound Concierge Service,Pointhound Concierge Service,EXACT_SELF,1.0,,products,1
+PRODUCT,Polymet,Polymet,EXACT_SELF,1.0,,products,1
+PRODUCT,Pomerado,Pomerado,EXACT_SELF,1.0,,products,1
+PRODUCT,Popl,Popl,EXACT_SELF,1.0,,products,1
+PRODUCT,Postal,Postal,EXACT_SELF,1.0,,products,1
+PRODUCT,Praxis,Praxis,EXACT_SELF,1.0,,products,1
+PRODUCT,Praxos,Praxos,EXACT_SELF,1.0,,products,1
+PRODUCT,Precious,Precious,EXACT_SELF,1.0,,products,1
+PRODUCT,Presti,Presti,EXACT_SELF,1.0,,products,1
+PRODUCT,Preswald,Preswald,EXACT_SELF,1.0,,products,1
+PRODUCT,Price Monitoring,Price Monitoring,EXACT_SELF,1.0,,products,1
+PRODUCT,Priceonomics,Priceonomics,EXACT_SELF,1.0,,products,1
+PRODUCT,Pricing,Pricing,EXACT_SELF,1.0,,products,1
+PRODUCT,Primordiant,Primordiant,EXACT_SELF,1.0,,products,1
+PRODUCT,ProhostAI,ProhostAI,EXACT_SELF,1.0,,products,1
+PRODUCT,PromiseAudit,PromiseAudit,EXACT_SELF,1.0,,products,1
+PRODUCT,PromiseBenefits,PromiseBenefits,EXACT_SELF,1.0,,products,1
+PRODUCT,PromisePay,PromisePay,EXACT_SELF,1.0,,products,1
+PRODUCT,PromptLoop,PromptLoop,EXACT_SELF,1.0,,products,1
+PRODUCT,Promptless,Promptless,EXACT_SELF,1.0,,products,1
+PRODUCT,Propaya,Propaya,EXACT_SELF,1.0,,products,1
+PRODUCT,Protect+,Protect+,EXACT_SELF,1.0,,products,1
+PRODUCT,Proven Skincare,Proven Skincare,EXACT_SELF,1.0,,products,1
+PRODUCT,Provisional Patent Application,Provisional Patent Application,EXACT_SELF,1.0,,products,1
+PRODUCT,Pulse,Pulse,EXACT_SELF,1.0,,products,1
+PRODUCT,Pump Save,Pump Save,EXACT_SELF,1.0,,products,1
+PRODUCT,Pump Secure,Pump Secure,EXACT_SELF,1.0,,products,1
+PRODUCT,Pump View,Pump View,EXACT_SELF,1.0,,products,1
+PRODUCT,Pylon,Pylon,EXACT_SELF,1.0,,products,1
+PRODUCT,Pylon Workforce Management,Pylon Workforce Management,EXACT_SELF,1.0,,products,1
+PRODUCT,Pyrite,Pyrite,EXACT_SELF,1.0,,products,1
+PRODUCT,Qlo,Qlo,EXACT_SELF,1.0,,products,1
+PRODUCT,QualGent,QualGent,EXACT_SELF,1.0,,products,1
+PRODUCT,Quantstruct,Quantstruct,EXACT_SELF,1.0,,products,1
+PRODUCT,Quartzy,Quartzy,EXACT_SELF,1.0,,products,1
+PRODUCT,QueryPie ACP,QueryPie ACP,EXACT_SELF,1.0,,products,1
+PRODUCT,QueryPie AI,QueryPie AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Quetzal,Quetzal,EXACT_SELF,1.0,,products,1
+PRODUCT,Quickchat AI,Quickchat AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Quill Bills,Quill Bills,EXACT_SELF,1.0,,products,1
+PRODUCT,Quinn,Quinn,EXACT_SELF,1.0,,products,1
+PRODUCT,Quotain,Quotain,EXACT_SELF,1.0,,products,1
+PRODUCT,REST API,REST API,EXACT_SELF,1.0,,products,1
+PRODUCT,RLHF,RLHF,EXACT_SELF,1.0,,products,1
+PRODUCT,ROSS,ROSS,EXACT_SELF,1.0,,products,1
+PRODUCT,ROVLEX,ROVLEX,EXACT_SELF,1.0,,products,1
+PRODUCT,RPMI 1640,RPMI 1640,EXACT_SELF,1.0,,products,1
+PRODUCT,RTHM,RTHM,EXACT_SELF,1.0,,products,1
+PRODUCT,RTHM Medications,RTHM Medications,EXACT_SELF,1.0,,products,1
+PRODUCT,Radar,Radar,EXACT_SELF,1.0,,products,1
+PRODUCT,Radius,Radius,EXACT_SELF,1.0,,products,1
+PRODUCT,Raindrop,Raindrop,EXACT_SELF,1.0,,products,1
+PRODUCT,Rakuten,Rakuten,EXACT_SELF,1.0,,products,1
+PRODUCT,Ramain,Ramain,EXACT_SELF,1.0,,products,1
+PRODUCT,Rapidfolio,Rapidfolio,EXACT_SELF,1.0,,products,1
+PRODUCT,Rastro,Rastro,EXACT_SELF,1.0,,products,1
+PRODUCT,Rational,Rational,EXACT_SELF,1.0,,products,1
+PRODUCT,Raven,Raven,EXACT_SELF,1.0,,products,1
+PRODUCT,Raven Incident,Raven Incident,EXACT_SELF,1.0,,products,1
+PRODUCT,Raven Knowledge,Raven Knowledge,EXACT_SELF,1.0,,products,1
+PRODUCT,Raven Work,Raven Work,EXACT_SELF,1.0,,products,1
+PRODUCT,Raycaster Eval,Raycaster Eval,EXACT_SELF,1.0,,products,1
+PRODUCT,Reacher,Reacher,EXACT_SELF,1.0,,products,1
+PRODUCT,Readily,Readily,EXACT_SELF,1.0,,products,1
+PRODUCT,Real2Sim2Real Arena,Real2Sim2Real Arena,EXACT_SELF,1.0,,products,1
+PRODUCT,RealAPI,RealAPI,EXACT_SELF,1.0,,products,1
+PRODUCT,RealCall,RealCall,EXACT_SELF,1.0,,products,1
+PRODUCT,RealMeeting,RealMeeting,EXACT_SELF,1.0,,products,1
+PRODUCT,Reaper,Reaper,EXACT_SELF,1.0,,products,1
+PRODUCT,Rebulk CRM,Rebulk CRM,EXACT_SELF,1.0,,products,1
+PRODUCT,Reflex,Reflex,EXACT_SELF,1.0,,products,1
+PRODUCT,Reflex Build,Reflex Build,EXACT_SELF,1.0,,products,1
+PRODUCT,Reflex Cloud,Reflex Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,Reform,Reform,EXACT_SELF,1.0,,products,1
+PRODUCT,Rejoy,Rejoy,EXACT_SELF,1.0,,products,1
+PRODUCT,RejoyGPT,RejoyGPT,EXACT_SELF,1.0,,products,1
+PRODUCT,Relling,Relling,EXACT_SELF,1.0,,products,1
+PRODUCT,Remade,Remade,EXACT_SELF,1.0,,products,1
+PRODUCT,Rent Guarantee,Rent Guarantee,EXACT_SELF,1.0,,products,1
+PRODUCT,Replo,Replo,EXACT_SELF,1.0,,products,1
+PRODUCT,Rescale AI Physics,Rescale AI Physics,EXACT_SELF,1.0,,products,1
+PRODUCT,Rescale Agentic Engineering,Rescale Agentic Engineering,EXACT_SELF,1.0,,products,1
+PRODUCT,Rescale Platform,Rescale Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Resin EDA,Resin EDA,EXACT_SELF,1.0,,products,1
+PRODUCT,Retell AI,Retell AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Revenue Productivity Platform,Revenue Productivity Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Revion,Revion,EXACT_SELF,1.0,,products,1
+PRODUCT,Revnu,Revnu,EXACT_SELF,1.0,,products,1
+PRODUCT,RevvyAI,RevvyAI,EXACT_SELF,1.0,,products,1
+PRODUCT,Revyl,Revyl,EXACT_SELF,1.0,,products,1
+PRODUCT,Reworkd,Reworkd,EXACT_SELF,1.0,,products,1
+PRODUCT,Rima,Rima,EXACT_SELF,1.0,,products,1
+PRODUCT,Rinsed,Rinsed,EXACT_SELF,1.0,,products,1
+PRODUCT,Risklytics,Risklytics,EXACT_SELF,1.0,,products,1
+PRODUCT,Risotto,Risotto,EXACT_SELF,1.0,,products,1
+PRODUCT,River,River,EXACT_SELF,1.0,,products,1
+PRODUCT,Rivet,Rivet,EXACT_SELF,1.0,,products,1
+PRODUCT,Riveter,Riveter,EXACT_SELF,1.0,,products,1
+PRODUCT,Roblox,Roblox,EXACT_SELF,1.0,,products,1
+PRODUCT,Rodeo,Rodeo,EXACT_SELF,1.0,,products,1
+PRODUCT,Rollstack,Rollstack,EXACT_SELF,1.0,,products,1
+PRODUCT,Rome AI,Rome AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Roxels,Roxels,EXACT_SELF,1.0,,products,1
+PRODUCT,RunAnywhere SDKs,RunAnywhere SDKs,EXACT_SELF,1.0,,products,1
+PRODUCT,RunLocal,RunLocal,EXACT_SELF,1.0,,products,1
+PRODUCT,Runtime,Runtime,EXACT_SELF,1.0,,products,1
+PRODUCT,SAIGE,SAIGE,EXACT_SELF,1.0,,products,1
+PRODUCT,SFT,SFT,EXACT_SELF,1.0,,products,1
+PRODUCT,SID-2,SID-2,EXACT_SELF,1.0,,products,1
+PRODUCT,SalaryBox,SalaryBox,EXACT_SELF,1.0,,products,1
+PRODUCT,Salus,Salus,EXACT_SELF,1.0,,products,1
+PRODUCT,Sammy AI,Sammy AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Sandboxes,Sandboxes,EXACT_SELF,1.0,,products,1
+PRODUCT,Sapien,Sapien,EXACT_SELF,1.0,,products,1
+PRODUCT,Sapling,Sapling,EXACT_SELF,1.0,,products,1
+PRODUCT,Scale Labs,Scale Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Scan to BIM,Scan to BIM,EXACT_SELF,1.0,,products,1
+PRODUCT,Scape,Scape,EXACT_SELF,1.0,,products,1
+PRODUCT,Science Exchange,Science Exchange,EXACT_SELF,1.0,,products,1
+PRODUCT,Scoop,Scoop,EXACT_SELF,1.0,,products,1
+PRODUCT,Scope AI,Scope AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Scout,Scout,EXACT_SELF,1.0,,products,1
+PRODUCT,Screenleap,Screenleap,EXACT_SELF,1.0,,products,1
+PRODUCT,Screenpipe,Screenpipe,EXACT_SELF,1.0,,products,1
+PRODUCT,Scritch,Scritch,EXACT_SELF,1.0,,products,1
+PRODUCT,Secoda,Secoda,EXACT_SELF,1.0,,products,1
+PRODUCT,Secoda AI,Secoda AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Security-One-27B,Security-One-27B,EXACT_SELF,1.0,,products,1
+PRODUCT,SellRaze,SellRaze,EXACT_SELF,1.0,,products,1
+PRODUCT,Semantix AI Suite,Semantix AI Suite,EXACT_SELF,1.0,,products,1
+PRODUCT,SendBirdCall,SendBirdCall,EXACT_SELF,1.0,,products,1
+PRODUCT,SendHub,SendHub,EXACT_SELF,1.0,,products,1
+PRODUCT,Sendbird communications API,Sendbird communications API,EXACT_SELF,1.0,,products,1
+PRODUCT,Sendwave Wallet,Sendwave Wallet,EXACT_SELF,1.0,,products,1
+PRODUCT,Sendwave app,Sendwave app,EXACT_SELF,1.0,,products,1
+PRODUCT,Sennu AI,Sennu AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Sense 1,Sense 1,EXACT_SELF,1.0,,products,1
+PRODUCT,SenseAi,SenseAi,EXACT_SELF,1.0,,products,1
+PRODUCT,SenseAi Embedded,SenseAi Embedded,EXACT_SELF,1.0,,products,1
+PRODUCT,Senso,Senso,EXACT_SELF,1.0,,products,1
+PRODUCT,Sentient OS,Sentient OS,EXACT_SELF,1.0,,products,1
+PRODUCT,Service Memory,Service Memory,EXACT_SELF,1.0,,products,1
+PRODUCT,Servo7,Servo7,EXACT_SELF,1.0,,products,1
+PRODUCT,Sherlock,Sherlock,EXACT_SELF,1.0,,products,1
+PRODUCT,Shofo,Shofo,EXACT_SELF,1.0,,products,1
+PRODUCT,Shoptiques,Shoptiques,EXACT_SELF,1.0,,products,1
+PRODUCT,Shortbread,Shortbread,EXACT_SELF,1.0,,products,1
+PRODUCT,Shuttle,Shuttle,EXACT_SELF,1.0,,products,1
+PRODUCT,Sift,Sift,EXACT_SELF,1.0,,products,1
+PRODUCT,Siftly,Siftly,EXACT_SELF,1.0,,products,1
+PRODUCT,Signal platform,Signal platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Silimate,Silimate,EXACT_SELF,1.0,,products,1
+PRODUCT,Silverlake,Silverlake,EXACT_SELF,1.0,,products,1
+PRODUCT,Sim,Sim,EXACT_SELF,1.0,,products,1
+PRODUCT,Sim2World,Sim2World,EXACT_SELF,1.0,,products,1
+PRODUCT,Simantic Bot,Simantic Bot,EXACT_SELF,1.0,,products,1
+PRODUCT,Simbie AI,Simbie AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Simple,Simple,EXACT_SELF,1.0,,products,1
+PRODUCT,Simulithic,Simulithic,EXACT_SELF,1.0,,products,1
+PRODUCT,Sintropix,Sintropix,EXACT_SELF,1.0,,products,1
+PRODUCT,Sitefire,Sitefire,EXACT_SELF,1.0,,products,1
+PRODUCT,Sitefire Agents,Sitefire Agents,EXACT_SELF,1.0,,products,1
+PRODUCT,Sivo Debt Markets,Sivo Debt Markets,EXACT_SELF,1.0,,products,1
+PRODUCT,Sivo Debt as a Service,Sivo Debt as a Service,EXACT_SELF,1.0,,products,1
+PRODUCT,Size Analysis,Size Analysis,EXACT_SELF,1.0,,products,1
+PRODUCT,SkyLink,SkyLink,EXACT_SELF,1.0,,products,1
+PRODUCT,Skymerse,Skymerse,EXACT_SELF,1.0,,products,1
+PRODUCT,Skypher,Skypher,EXACT_SELF,1.0,,products,1
+PRODUCT,Skyvern,Skyvern,EXACT_SELF,1.0,,products,1
+PRODUCT,Sleek,Sleek,EXACT_SELF,1.0,,products,1
+PRODUCT,Slicker,Slicker,EXACT_SELF,1.0,,products,1
+PRODUCT,Slope Transformer,Slope Transformer,EXACT_SELF,1.0,,products,1
+PRODUCT,SlopeScore,SlopeScore,EXACT_SELF,1.0,,products,1
+PRODUCT,SmartSTR™,SmartSTR™,EXACT_SELF,1.0,,products,1
+PRODUCT,Snapshots,Snapshots,EXACT_SELF,1.0,,products,1
+PRODUCT,Soff,Soff,EXACT_SELF,1.0,,products,1
+PRODUCT,Sohar Patient Access Platform,Sohar Patient Access Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Sona8,Sona8,EXACT_SELF,1.0,,products,1
+PRODUCT,Sophys,Sophys,EXACT_SELF,1.0,,products,1
+PRODUCT,Sorcerer,Sorcerer,EXACT_SELF,1.0,,products,1
+PRODUCT,Sourcebot,Sourcebot,EXACT_SELF,1.0,,products,1
+PRODUCT,Sourcy.ai,Sourcy.ai,EXACT_SELF,1.0,,products,1
+PRODUCT,Spade,Spade,EXACT_SELF,1.0,,products,1
+PRODUCT,Sparks,Sparks,EXACT_SELF,1.0,,products,1
+PRODUCT,Spate,Spate,EXACT_SELF,1.0,,products,1
+PRODUCT,Speak,Speak,EXACT_SELF,1.0,,products,1
+PRODUCT,Speck,Speck,EXACT_SELF,1.0,,products,1
+PRODUCT,Speedrun,Speedrun,EXACT_SELF,1.0,,products,1
+PRODUCT,Speko,Speko,EXACT_SELF,1.0,,products,1
+PRODUCT,Spline,Spline,EXACT_SELF,1.0,,products,1
+PRODUCT,Spur,Spur,EXACT_SELF,1.0,,products,1
+PRODUCT,Stacks,Stacks,EXACT_SELF,1.0,,products,1
+PRODUCT,StarSling GPU Runners,StarSling GPU Runners,EXACT_SELF,1.0,,products,1
+PRODUCT,StarSling Review Runners,StarSling Review Runners,EXACT_SELF,1.0,,products,1
+PRODUCT,StarSling Runners,StarSling Runners,EXACT_SELF,1.0,,products,1
+PRODUCT,Starter kit,Starter kit,EXACT_SELF,1.0,,products,1
+PRODUCT,Stateful API Sandboxes,Stateful API Sandboxes,EXACT_SELF,1.0,,products,1
+PRODUCT,Stockline,Stockline,EXACT_SELF,1.0,,products,1
+PRODUCT,Stratospheric ISR UAV,Stratospheric ISR UAV,EXACT_SELF,1.0,,products,1
+PRODUCT,Stratospheric Kamikaze UAV Swarm,Stratospheric Kamikaze UAV Swarm,EXACT_SELF,1.0,,products,1
+PRODUCT,Stratospheric Retrievable Radiosonde,Stratospheric Retrievable Radiosonde,EXACT_SELF,1.0,,products,1
+PRODUCT,Stratum AI,Stratum AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Streak,Streak,EXACT_SELF,1.0,,products,1
+PRODUCT,Structured AI,Structured AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Studio,Studio,EXACT_SELF,1.0,,products,1
+PRODUCT,Studio Cut,Studio Cut,EXACT_SELF,1.0,,products,1
+PRODUCT,Success+,Success+,EXACT_SELF,1.0,,products,1
+PRODUCT,Sully,Sully,EXACT_SELF,1.0,,products,1
+PRODUCT,Sully API,Sully API,EXACT_SELF,1.0,,products,1
+PRODUCT,Sully M1,Sully M1,EXACT_SELF,1.0,,products,1
+PRODUCT,SuperKalam,SuperKalam,EXACT_SELF,1.0,,products,1
+PRODUCT,SuperPenguin,SuperPenguin,EXACT_SELF,1.0,,products,1
+PRODUCT,Superlog,Superlog,EXACT_SELF,1.0,,products,1
+PRODUCT,Superorder,Superorder,EXACT_SELF,1.0,,products,1
+PRODUCT,Superside,Superside,EXACT_SELF,1.0,,products,1
+PRODUCT,Surgical Growth Solution,Surgical Growth Solution,EXACT_SELF,1.0,,products,1
+PRODUCT,Swiftype,Swiftype,EXACT_SELF,1.0,,products,1
+PRODUCT,Swipe,Swipe,EXACT_SELF,1.0,,products,1
+PRODUCT,Synthio Labs,Synthio Labs,EXACT_SELF,1.0,,products,1
+PRODUCT,Syntra,Syntra,EXACT_SELF,1.0,,products,1
+PRODUCT,TREX,TREX,EXACT_SELF,1.0,,products,1
+PRODUCT,Tailor-ED,Tailor-ED,EXACT_SELF,1.0,,products,1
+PRODUCT,Taiv,Taiv,EXACT_SELF,1.0,,products,1
+PRODUCT,Taiv Retail,Taiv Retail,EXACT_SELF,1.0,,products,1
+PRODUCT,Taktile,Taktile,EXACT_SELF,1.0,,products,1
+PRODUCT,Talent Management,Talent Management,EXACT_SELF,1.0,,products,1
+PRODUCT,Talos,Talos,EXACT_SELF,1.0,,products,1
+PRODUCT,TamLabs,TamLabs,EXACT_SELF,1.0,,products,1
+PRODUCT,Tamarind Bio,Tamarind Bio,EXACT_SELF,1.0,,products,1
+PRODUCT,Tavus APIs,Tavus APIs,EXACT_SELF,1.0,,products,1
+PRODUCT,TaxGPT,TaxGPT,EXACT_SELF,1.0,,products,1
+PRODUCT,TaxGPT Cowork,TaxGPT Cowork,EXACT_SELF,1.0,,products,1
+PRODUCT,Tegore,Tegore,EXACT_SELF,1.0,,products,1
+PRODUCT,Tekton Dynamics,Tekton Dynamics,EXACT_SELF,1.0,,products,1
+PRODUCT,Teleoperation,Teleoperation,EXACT_SELF,1.0,,products,1
+PRODUCT,Tell If AI,Tell If AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Tempo,Tempo,EXACT_SELF,1.0,,products,1
+PRODUCT,Tenant Screening Report,Tenant Screening Report,EXACT_SELF,1.0,,products,1
+PRODUCT,Tenor,Tenor,EXACT_SELF,1.0,,products,1
+PRODUCT,TensorTest,TensorTest,EXACT_SELF,1.0,,products,1
+PRODUCT,Terracotta AI,Terracotta AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Terse,Terse,EXACT_SELF,1.0,,products,1
+PRODUCT,The Base,The Base,EXACT_SELF,1.0,,products,1
+PRODUCT,The Rebulk Platform,The Rebulk Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Thera,Thera,EXACT_SELF,1.0,,products,1
+PRODUCT,Theta,Theta,EXACT_SELF,1.0,,products,1
+PRODUCT,Thunder Compute,Thunder Compute,EXACT_SELF,1.0,,products,1
+PRODUCT,Thyme,Thyme,EXACT_SELF,1.0,,products,1
+PRODUCT,Tiger Exchange,Tiger Exchange,EXACT_SELF,1.0,,products,1
+PRODUCT,Tinfoil Chat,Tinfoil Chat,EXACT_SELF,1.0,,products,1
+PRODUCT,Tint,Tint,EXACT_SELF,1.0,,products,1
+PRODUCT,Tiny Countries,Tiny Countries,EXACT_SELF,1.0,,products,1
+PRODUCT,Toothy AI,Toothy AI,EXACT_SELF,1.0,,products,1
+PRODUCT,TovenAI,TovenAI,EXACT_SELF,1.0,,products,1
+PRODUCT,Tower AI,Tower AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Trace,Trace,EXACT_SELF,1.0,,products,1
+PRODUCT,Tracecat,Tracecat,EXACT_SELF,1.0,,products,1
+PRODUCT,Traceforce,Traceforce,EXACT_SELF,1.0,,products,1
+PRODUCT,Trademark,Trademark,EXACT_SELF,1.0,,products,1
+PRODUCT,Trata,Trata,EXACT_SELF,1.0,,products,1
+PRODUCT,Treblo,Treblo,EXACT_SELF,1.0,,products,1
+PRODUCT,Treinta,Treinta,EXACT_SELF,1.0,,products,1
+PRODUCT,Trellus,Trellus,EXACT_SELF,1.0,,products,1
+PRODUCT,Tremi,Tremi,EXACT_SELF,1.0,,products,1
+PRODUCT,Trip planner app,Trip planner app,EXACT_SELF,1.0,,products,1
+PRODUCT,Trope,Trope,EXACT_SELF,1.0,,products,1
+PRODUCT,Truewind,Truewind,EXACT_SELF,1.0,,products,1
+PRODUCT,TrustLoop,TrustLoop,EXACT_SELF,1.0,,products,1
+PRODUCT,TrustedTransport™,TrustedTransport™,EXACT_SELF,1.0,,products,1
+PRODUCT,Tusk,Tusk,EXACT_SELF,1.0,,products,1
+PRODUCT,Tweeks,Tweeks,EXACT_SELF,1.0,,products,1
+PRODUCT,Twilio Segment,Twilio Segment,EXACT_SELF,1.0,,products,1
+PRODUCT,Twine,Twine,EXACT_SELF,1.0,,products,1
+PRODUCT,Typa,Typa,EXACT_SELF,1.0,,products,1
+PRODUCT,Type.ai,Type.ai,EXACT_SELF,1.0,,products,1
+PRODUCT,Typewise,Typewise,EXACT_SELF,1.0,,products,1
+PRODUCT,U.S. Equity ATS,U.S. Equity ATS,EXACT_SELF,1.0,,products,1
+PRODUCT,UMI,UMI,EXACT_SELF,1.0,,products,1
+PRODUCT,UXDuck,UXDuck,EXACT_SELF,1.0,,products,1
+PRODUCT,Unbound,Unbound,EXACT_SELF,1.0,,products,1
+PRODUCT,Unity MCP,Unity MCP,EXACT_SELF,1.0,,products,1
+PRODUCT,Universal Assistant,Universal Assistant,EXACT_SELF,1.0,,products,1
+PRODUCT,Universal-2,Universal-2,EXACT_SELF,1.0,,products,1
+PRODUCT,Unlayer,Unlayer,EXACT_SELF,1.0,,products,1
+PRODUCT,Unsiloed AI,Unsiloed AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Unthread,Unthread,EXACT_SELF,1.0,,products,1
+PRODUCT,Uplane,Uplane,EXACT_SELF,1.0,,products,1
+PRODUCT,Usul,Usul,EXACT_SELF,1.0,,products,1
+PRODUCT,VS Code extension,VS Code extension,EXACT_SELF,1.0,,products,1
+PRODUCT,Vaero,Vaero,EXACT_SELF,1.0,,products,1
+PRODUCT,VanceAI Photo Restorer,VanceAI Photo Restorer,EXACT_SELF,1.0,,products,1
+PRODUCT,VanceAI Productivity Series,VanceAI Productivity Series,EXACT_SELF,1.0,,products,1
+PRODUCT,Vapi,Vapi,EXACT_SELF,1.0,,products,1
+PRODUCT,VectorShift,VectorShift,EXACT_SELF,1.0,,products,1
+PRODUCT,Veles,Veles,EXACT_SELF,1.0,,products,1
+PRODUCT,Velos,Velos,EXACT_SELF,1.0,,products,1
+PRODUCT,Vendora,Vendora,EXACT_SELF,1.0,,products,1
+PRODUCT,Venta AI,Venta AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Venu AI,Venu AI,EXACT_SELF,1.0,,products,1
+PRODUCT,Vera,Vera,EXACT_SELF,1.0,,products,1
+PRODUCT,Verbling,Verbling,EXACT_SELF,1.0,,products,1
+PRODUCT,Verdant,Verdant,EXACT_SELF,1.0,,products,1
+PRODUCT,VergeSense Meridian,VergeSense Meridian,EXACT_SELF,1.0,,products,1
+PRODUCT,Veriff,Veriff,EXACT_SELF,1.0,,products,1
+PRODUCT,Versive,Versive,EXACT_SELF,1.0,,products,1
+PRODUCT,Veryfi OCR API,Veryfi OCR API,EXACT_SELF,1.0,,products,1
+PRODUCT,Vesence,Vesence,EXACT_SELF,1.0,,products,1
+PRODUCT,Vespper DOCX MCP,Vespper DOCX MCP,EXACT_SELF,1.0,,products,1
+PRODUCT,VetRec,VetRec,EXACT_SELF,1.0,,products,1
+PRODUCT,Vetnio,Vetnio,EXACT_SELF,1.0,,products,1
+PRODUCT,Vibe Kanban,Vibe Kanban,EXACT_SELF,1.0,,products,1
+PRODUCT,VibeFlow,VibeFlow,EXACT_SELF,1.0,,products,1
+PRODUCT,Viv,Viv,EXACT_SELF,1.0,,products,1
+PRODUCT,Vocality Health,Vocality Health,EXACT_SELF,1.0,,products,1
+PRODUCT,Vogent Voicelab,Vogent Voicelab,EXACT_SELF,1.0,,products,1
+PRODUCT,Voiceops,Voiceops,EXACT_SELF,1.0,,products,1
+PRODUCT,Vortexify,Vortexify,EXACT_SELF,1.0,,products,1
+PRODUCT,Voxel Energy,Voxel Energy,EXACT_SELF,1.0,,products,1
+PRODUCT,WOZCODE,WOZCODE,EXACT_SELF,1.0,,products,1
+PRODUCT,Wafer Batch,Wafer Batch,EXACT_SELF,1.0,,products,1
+PRODUCT,Wafer Reserved,Wafer Reserved,EXACT_SELF,1.0,,products,1
+PRODUCT,Wafer Serverless,Wafer Serverless,EXACT_SELF,1.0,,products,1
+PRODUCT,Waffle,Waffle,EXACT_SELF,1.0,,products,1
+PRODUCT,Waldium,Waldium,EXACT_SELF,1.0,,products,1
+PRODUCT,Wally,Wally,EXACT_SELF,1.0,,products,1
+PRODUCT,Watchlist Screening,Watchlist Screening,EXACT_SELF,1.0,,products,1
+PRODUCT,Waydev 30B,Waydev 30B,EXACT_SELF,1.0,,products,1
+PRODUCT,Waydev Agent,Waydev Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,Waydev Brain,Waydev Brain,EXACT_SELF,1.0,,products,1
+PRODUCT,Wealth Management,Wealth Management,EXACT_SELF,1.0,,products,1
+PRODUCT,Web Platform,Web Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Web Search Agent,Web Search Agent,EXACT_SELF,1.0,,products,1
+PRODUCT,Weekend,Weekend,EXACT_SELF,1.0,,products,1
+PRODUCT,Whistle,Whistle,EXACT_SELF,1.0,,products,1
+PRODUCT,Willow Scribe,Willow Scribe,EXACT_SELF,1.0,,products,1
+PRODUCT,Willow Voice,Willow Voice,EXACT_SELF,1.0,,products,1
+PRODUCT,Willow for iPhone,Willow for iPhone,EXACT_SELF,1.0,,products,1
+PRODUCT,Winna,Winna,EXACT_SELF,1.0,,products,1
+PRODUCT,Within,Within,EXACT_SELF,1.0,,products,1
+PRODUCT,Wondercraft,Wondercraft,EXACT_SELF,1.0,,products,1
+PRODUCT,Workcell,Workcell,EXACT_SELF,1.0,,products,1
+PRODUCT,Workers IO,Workers IO,EXACT_SELF,1.0,,products,1
+PRODUCT,Workspace,Workspace,EXACT_SELF,1.0,,products,1
+PRODUCT,Writesonic AI Search Visibility Platform,Writesonic AI Search Visibility Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,Wuji Glove,Wuji Glove,EXACT_SELF,1.0,,products,1
+PRODUCT,Wuji Hand 2,Wuji Hand 2,EXACT_SELF,1.0,,products,1
+PRODUCT,XQ 770,XQ 770,EXACT_SELF,1.0,,products,1
+PRODUCT,Yarn,Yarn,EXACT_SELF,1.0,,products,1
+PRODUCT,YouShift,YouShift,EXACT_SELF,1.0,,products,1
+PRODUCT,ZeitMind,ZeitMind,EXACT_SELF,1.0,,products,1
+PRODUCT,Zeitview,Zeitview,EXACT_SELF,1.0,,products,1
+PRODUCT,Zensors,Zensors,EXACT_SELF,1.0,,products,1
+PRODUCT,Zeon System,Zeon System,EXACT_SELF,1.0,,products,1
+PRODUCT,Zeus,Zeus,EXACT_SELF,1.0,,products,1
+PRODUCT,Zomma,Zomma,EXACT_SELF,1.0,,products,1
+PRODUCT,Zorro,Zorro,EXACT_SELF,1.0,,products,1
+PRODUCT,Zudo,Zudo,EXACT_SELF,1.0,,products,1
+PRODUCT,adOS,adOS,EXACT_SELF,1.0,,products,1
+PRODUCT,autarc Office Module,autarc Office Module,EXACT_SELF,1.0,,products,1
+PRODUCT,boxes.dev,boxes.dev,EXACT_SELF,1.0,,products,1
+PRODUCT,eCART™,eCART™,EXACT_SELF,1.0,,products,1
+PRODUCT,eLease,eLease,EXACT_SELF,1.0,,products,1
+PRODUCT,forecasting API,forecasting API,EXACT_SELF,1.0,,products,1
+PRODUCT,jcode,jcode,EXACT_SELF,1.0,,products,1
+PRODUCT,jcode Cloud,jcode Cloud,EXACT_SELF,1.0,,products,1
+PRODUCT,layers,layers,EXACT_SELF,1.0,,products,1
+PRODUCT,mRNA 2.0 Platform,mRNA 2.0 Platform,EXACT_SELF,1.0,,products,1
+PRODUCT,nCompass,nCompass,EXACT_SELF,1.0,,products,1
+PRODUCT,truemetrics,truemetrics,EXACT_SELF,1.0,,products,1
+PRODUCT,unify,unify,EXACT_SELF,1.0,,products,1
+STARTUP,10 By 10,10 By 10,EXACT_SELF,1.0,,startups,1
+STARTUP,20n,20n,EXACT_SELF,1.0,,startups,1
+STARTUP,222,222,EXACT_SELF,1.0,,startups,1
+STARTUP,42Floors,42Floors,EXACT_SELF,1.0,,startups,1
+STARTUP,99dresses,99dresses,EXACT_SELF,1.0,,startups,1
+STARTUP,AI.Fashion,AI.Fashion,EXACT_SELF,1.0,,startups,1
+STARTUP,Abel,Abel,EXACT_SELF,1.0,,startups,1
+STARTUP,Adni,Adni,EXACT_SELF,1.0,,startups,1
+STARTUP,Affil.ai,Affil.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,Agentin AI,Agentin AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Airo Health,Airo Health,EXACT_SELF,1.0,,startups,1
+STARTUP,Aisle50,Aisle50,EXACT_SELF,1.0,,startups,1
+STARTUP,Alara,Alara,EXACT_SELF,1.0,,startups,1
+STARTUP,Algoriz,Algoriz,EXACT_SELF,1.0,,startups,1
+STARTUP,Amiato,Amiato,EXACT_SELF,1.0,,startups,1
+STARTUP,Aqueduct,Aqueduct,EXACT_SELF,1.0,,startups,1
+STARTUP,Arcane,Arcane,EXACT_SELF,1.0,,startups,1
+STARTUP,Ardis AI,Ardis AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Askdata,Askdata,EXACT_SELF,1.0,,startups,1
+STARTUP,Atla,Atla,EXACT_SELF,1.0,,startups,1
+STARTUP,"Autoresearch, Inc.","Autoresearch, Inc.",EXACT_SELF,1.0,,startups,1
+STARTUP,Axelrod,Axelrod,EXACT_SELF,1.0,,startups,1
+STARTUP,Axial,Axial,EXACT_SELF,1.0,,startups,1
+STARTUP,BarSense,BarSense,EXACT_SELF,1.0,,startups,1
+STARTUP,Baseline AI,Baseline AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Baserun,Baserun,EXACT_SELF,1.0,,startups,1
+STARTUP,Bicycle AI,Bicycle AI,EXACT_SELF,1.0,,startups,1
+STARTUP,BookSolid,BookSolid,EXACT_SELF,1.0,,startups,1
+STARTUP,Booth AI,Booth AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Brace,Brace,EXACT_SELF,1.0,,startups,1
+STARTUP,Branch AI,Branch AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Brighterway,Brighterway,EXACT_SELF,1.0,,startups,1
+STARTUP,Browser Buddy,Browser Buddy,EXACT_SELF,1.0,,startups,1
+STARTUP,CAPSULE,CAPSULE,EXACT_SELF,1.0,,startups,1
+STARTUP,CORE,CORE,EXACT_SELF,1.0,,startups,1
+STARTUP,Candor,Candor,EXACT_SELF,1.0,,startups,1
+STARTUP,CareMessage,CareMessage,EXACT_SELF,1.0,,startups,1
+STARTUP,Carsabi,Carsabi,EXACT_SELF,1.0,,startups,1
+STARTUP,Cartpole,Cartpole,EXACT_SELF,1.0,,startups,1
+STARTUP,Caviar,Caviar,EXACT_SELF,1.0,,startups,1
+STARTUP,Cerrion,Cerrion,EXACT_SELF,1.0,,startups,1
+STARTUP,Chute,Chute,EXACT_SELF,1.0,,startups,1
+STARTUP,Clutch,Clutch,EXACT_SELF,1.0,,startups,1
+STARTUP,CoArena,CoArena,EXACT_SELF,1.0,,startups,1
+STARTUP,CodeParrot AI,CodeParrot AI,EXACT_SELF,1.0,,startups,1
+STARTUP,CodeViz,CodeViz,EXACT_SELF,1.0,,startups,1
+STARTUP,Contour,Contour,EXACT_SELF,1.0,,startups,1
+STARTUP,Couple,Couple,EXACT_SELF,1.0,,startups,1
+STARTUP,Cryptoseal,Cryptoseal,EXACT_SELF,1.0,,startups,1
+STARTUP,DAGWorks Inc.,DAGWorks Inc.,EXACT_SELF,1.0,,startups,1
+STARTUP,Dabble,Dabble,EXACT_SELF,1.0,,startups,1
+STARTUP,DataSuite,DataSuite,EXACT_SELF,1.0,,startups,1
+STARTUP,Dataherald,Dataherald,EXACT_SELF,1.0,,startups,1
+STARTUP,Dawn Industries,Dawn Industries,EXACT_SELF,1.0,,startups,1
+STARTUP,Debteye,Debteye,EXACT_SELF,1.0,,startups,1
+STARTUP,Decipher AI,Decipher AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Dev Tools AI,Dev Tools AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Documents.Me,Documents.Me,EXACT_SELF,1.0,,startups,1
+STARTUP,Downlink,Downlink,EXACT_SELF,1.0,,startups,1
+STARTUP,Draft The Record,Draft The Record,EXACT_SELF,1.0,,startups,1
+STARTUP,DreamRP,DreamRP,EXACT_SELF,1.0,,startups,1
+STARTUP,Dubjoy,Dubjoy,EXACT_SELF,1.0,,startups,1
+STARTUP,Ecliptor,Ecliptor,EXACT_SELF,1.0,,startups,1
+STARTUP,EdgeTrace,EdgeTrace,EXACT_SELF,1.0,,startups,1
+STARTUP,Eggnog,Eggnog,EXACT_SELF,1.0,,startups,1
+STARTUP,Elessar,Elessar,EXACT_SELF,1.0,,startups,1
+STARTUP,Embark,Embark,EXACT_SELF,1.0,,startups,1
+STARTUP,Emobi,Emobi,EXACT_SELF,1.0,,startups,1
+STARTUP,Everyme,Everyme,EXACT_SELF,1.0,,startups,1
+STARTUP,Evolvere BioSciences,Evolvere BioSciences,EXACT_SELF,1.0,,startups,1
+STARTUP,FamilyLeaf,FamilyLeaf,EXACT_SELF,1.0,,startups,1
+STARTUP,Farmstead,Farmstead,EXACT_SELF,1.0,,startups,1
+STARTUP,Feather,Feather,EXACT_SELF,1.0,,startups,1
+STARTUP,Fintool,Fintool,EXACT_SELF,1.0,,startups,1
+STARTUP,FirstSupport.ai,FirstSupport.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,Flike,Flike,EXACT_SELF,1.0,,startups,1
+STARTUP,Flowbot,Flowbot,EXACT_SELF,1.0,,startups,1
+STARTUP,Flutter,Flutter,EXACT_SELF,1.0,,startups,1
+STARTUP,Fobo,Fobo,EXACT_SELF,1.0,,startups,1
+STARTUP,Fountain9,Fountain9,EXACT_SELF,1.0,,startups,1
+STARTUP,Freshplum,Freshplum,EXACT_SELF,1.0,,startups,1
+STARTUP,GEn1E Lifesciences,GEn1E Lifesciences,EXACT_SELF,1.0,,startups,1
+STARTUP,Gander,Gander,EXACT_SELF,1.0,,startups,1
+STARTUP,Genius,Genius,EXACT_SELF,1.0,,startups,1
+STARTUP,GiveSpark,GiveSpark,EXACT_SELF,1.0,,startups,1
+STARTUP,Glider,Glider,EXACT_SELF,1.0,,startups,1
+STARTUP,Glisten AI,Glisten AI,EXACT_SELF,1.0,,startups,1
+STARTUP,GloGlo,GloGlo,EXACT_SELF,1.0,,startups,1
+STARTUP,Gluetrail,Gluetrail,EXACT_SELF,1.0,,startups,1
+STARTUP,Godela,Godela,EXACT_SELF,1.0,,startups,1
+STARTUP,Grouper,Grouper,EXACT_SELF,1.0,,startups,1
+STARTUP,HOMLI,HOMLI,EXACT_SELF,1.0,,startups,1
+STARTUP,HackPad,HackPad,EXACT_SELF,1.0,,startups,1
+STARTUP,Helix Nanotechnologies,Helix Nanotechnologies,EXACT_SELF,1.0,,startups,1
+STARTUP,Hipmob,Hipmob,EXACT_SELF,1.0,,startups,1
+STARTUP,IRBC,IRBC,EXACT_SELF,1.0,,startups,1
+STARTUP,Illume Labs,Illume Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,Innate,Innate,EXACT_SELF,1.0,,startups,1
+STARTUP,Interlock,Interlock,EXACT_SELF,1.0,,startups,1
+STARTUP,Interstate,Interstate,EXACT_SELF,1.0,,startups,1
+STARTUP,Invaria,Invaria,EXACT_SELF,1.0,,startups,1
+STARTUP,Jasmine Energy,Jasmine Energy,EXACT_SELF,1.0,,startups,1
+STARTUP,JustSpotted,JustSpotted,EXACT_SELF,1.0,,startups,1
+STARTUP,Keystroke,Keystroke,EXACT_SELF,1.0,,startups,1
+STARTUP,Kips Health,Kips Health,EXACT_SELF,1.0,,startups,1
+STARTUP,Kraftful,Kraftful,EXACT_SELF,1.0,,startups,1
+STARTUP,Kunduz,Kunduz,EXACT_SELF,1.0,,startups,1
+STARTUP,Kura AI,Kura AI,EXACT_SELF,1.0,,startups,1
+STARTUP,LVL6,LVL6,EXACT_SELF,1.0,,startups,1
+STARTUP,Lantern,Lantern,EXACT_SELF,1.0,,startups,1
+STARTUP,LendUp,LendUp,EXACT_SELF,1.0,,startups,1
+STARTUP,Liva AI,Liva AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Loom,Loom,EXACT_SELF,1.0,,startups,1
+STARTUP,Lotas,Lotas,EXACT_SELF,1.0,,startups,1
+STARTUP,Lumona,Lumona,EXACT_SELF,1.0,,startups,1
+STARTUP,Lynx,Lynx,EXACT_SELF,1.0,,startups,1
+STARTUP,Lysto,Lysto,EXACT_SELF,1.0,,startups,1
+STARTUP,Magicflow 𐂂,Magicflow 𐂂,EXACT_SELF,1.0,,startups,1
+STARTUP,Marft,Marft,EXACT_SELF,1.0,,startups,1
+STARTUP,MarketBrief,MarketBrief,EXACT_SELF,1.0,,startups,1
+STARTUP,Maya Labs,Maya Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,MediSearch,MediSearch,EXACT_SELF,1.0,,startups,1
+STARTUP,Melder,Melder,EXACT_SELF,1.0,,startups,1
+STARTUP,Mentum,Mentum,EXACT_SELF,1.0,,startups,1
+STARTUP,Milo,Milo,EXACT_SELF,1.0,,startups,1
+STARTUP,Mine,Mine,EXACT_SELF,1.0,,startups,1
+STARTUP,Minefold,Minefold,EXACT_SELF,1.0,,startups,1
+STARTUP,Miso,Miso,EXACT_SELF,1.0,,startups,1
+STARTUP,Mixy,Mixy,EXACT_SELF,1.0,,startups,1
+STARTUP,Mocha,Mocha,EXACT_SELF,1.0,,startups,1
+STARTUP,Mochi,Mochi,EXACT_SELF,1.0,,startups,1
+STARTUP,Mystic,Mystic,EXACT_SELF,1.0,,startups,1
+STARTUP,Nara,Nara,EXACT_SELF,1.0,,startups,1
+STARTUP,Ndea,Ndea,EXACT_SELF,1.0,,startups,1
+STARTUP,No Cap,No Cap,EXACT_SELF,1.0,,startups,1
+STARTUP,Notte,Notte,EXACT_SELF,1.0,,startups,1
+STARTUP,Nova,Nova,EXACT_SELF,1.0,,startups,1
+STARTUP,Nozomio,Nozomio,EXACT_SELF,1.0,,startups,1
+STARTUP,Nuntius,Nuntius,EXACT_SELF,1.0,,startups,1
+STARTUP,Omni,Omni,EXACT_SELF,1.0,,startups,1
+STARTUP,OneStop,OneStop,EXACT_SELF,1.0,,startups,1
+STARTUP,OpenPipe,OpenPipe,EXACT_SELF,1.0,,startups,1
+STARTUP,Optilly/Installmonetizer,Optilly/Installmonetizer,EXACT_SELF,1.0,,startups,1
+STARTUP,Orca Client,Orca Client,EXACT_SELF,1.0,,startups,1
+STARTUP,Overeasy,Overeasy,EXACT_SELF,1.0,,startups,1
+STARTUP,Overfit,Overfit,EXACT_SELF,1.0,,startups,1
+STARTUP,PRINCEPS,PRINCEPS,EXACT_SELF,1.0,,startups,1
+STARTUP,Panelytic,Panelytic,EXACT_SELF,1.0,,startups,1
+STARTUP,PayDragon,PayDragon,EXACT_SELF,1.0,,startups,1
+STARTUP,Pearson Labs,Pearson Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,Percept.AI,Percept.AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Perceptive Technologies,Perceptive Technologies,EXACT_SELF,1.0,,startups,1
+STARTUP,Percival,Percival,EXACT_SELF,1.0,,startups,1
+STARTUP,"PerfectBit, Inc.","PerfectBit, Inc.",EXACT_SELF,1.0,,startups,1
+STARTUP,Perseus,Perseus,EXACT_SELF,1.0,,startups,1
+STARTUP,Phiar,Phiar,EXACT_SELF,1.0,,startups,1
+STARTUP,Philon,Philon,EXACT_SELF,1.0,,startups,1
+STARTUP,PhoneSys,PhoneSys,EXACT_SELF,1.0,,startups,1
+STARTUP,PillarPlus,PillarPlus,EXACT_SELF,1.0,,startups,1
+STARTUP,Pit.AI,Pit.AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Playground,Playground,EXACT_SELF,1.0,,startups,1
+STARTUP,Point API,Point API,EXACT_SELF,1.0,,startups,1
+STARTUP,Polished,Polished,EXACT_SELF,1.0,,startups,1
+STARTUP,PoplarML,PoplarML,EXACT_SELF,1.0,,startups,1
+STARTUP,Pops,Pops,EXACT_SELF,1.0,,startups,1
+STARTUP,Pragmatic Leaders (Ankai Inc),Pragmatic Leaders (Ankai Inc),EXACT_SELF,1.0,,startups,1
+STARTUP,Praxim,Praxim,EXACT_SELF,1.0,,startups,1
+STARTUP,Preloop,Preloop,EXACT_SELF,1.0,,startups,1
+STARTUP,Pretzel AI,Pretzel AI,EXACT_SELF,1.0,,startups,1
+STARTUP,ProSights,ProSights,EXACT_SELF,1.0,,startups,1
+STARTUP,Proliferate,Proliferate,EXACT_SELF,1.0,,startups,1
+STARTUP,Proxino,Proxino,EXACT_SELF,1.0,,startups,1
+STARTUP,Pulpix,Pulpix,EXACT_SELF,1.0,,startups,1
+STARTUP,Quad,Quad,EXACT_SELF,1.0,,startups,1
+STARTUP,Quadrant Eye,Quadrant Eye,EXACT_SELF,1.0,,startups,1
+STARTUP,Quary,Quary,EXACT_SELF,1.0,,startups,1
+STARTUP,Query Vary,Query Vary,EXACT_SELF,1.0,,startups,1
+STARTUP,RGI Labs,RGI Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,RadMate AI,RadMate AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Rain Neuromorphics,Rain Neuromorphics,EXACT_SELF,1.0,,startups,1
+STARTUP,RankScience,RankScience,EXACT_SELF,1.0,,startups,1
+STARTUP,Reduced Energy Microsystems,Reduced Energy Microsystems,EXACT_SELF,1.0,,startups,1
+STARTUP,Reforged Labs,Reforged Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,Resonance,Resonance,EXACT_SELF,1.0,,startups,1
+STARTUP,Revery AI,Revery AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Rovr,Rovr,EXACT_SELF,1.0,,startups,1
+STARTUP,RowFlow,RowFlow,EXACT_SELF,1.0,,startups,1
+STARTUP,Rubber Ducky Labs,Rubber Ducky Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,SBX Robotics,SBX Robotics,EXACT_SELF,1.0,,startups,1
+STARTUP,Safer Management,Safer Management,EXACT_SELF,1.0,,startups,1
+STARTUP,SalesSift,SalesSift,EXACT_SELF,1.0,,startups,1
+STARTUP,ScopeAI,ScopeAI,EXACT_SELF,1.0,,startups,1
+STARTUP,Scribe,Scribe,EXACT_SELF,1.0,,startups,1
+STARTUP,Seerslab,Seerslab,EXACT_SELF,1.0,,startups,1
+STARTUP,Semantics3,Semantics3,EXACT_SELF,1.0,,startups,1
+STARTUP,"Sendme, Inc","Sendme, Inc",EXACT_SELF,1.0,,startups,1
+STARTUP,SenpAI.GG,SenpAI.GG,EXACT_SELF,1.0,,startups,1
+STARTUP,Sensei,Sensei,EXACT_SELF,1.0,,startups,1
+STARTUP,Sentiyen,Sentiyen,EXACT_SELF,1.0,,startups,1
+STARTUP,Serra,Serra,EXACT_SELF,1.0,,startups,1
+STARTUP,SharpestMinds,SharpestMinds,EXACT_SELF,1.0,,startups,1
+STARTUP,Shepherd,Shepherd,EXACT_SELF,1.0,,startups,1
+STARTUP,Shepherd Robotics,Shepherd Robotics,EXACT_SELF,1.0,,startups,1
+STARTUP,Sigma,Sigma,EXACT_SELF,1.0,,startups,1
+STARTUP,SlidePay,SlidePay,EXACT_SELF,1.0,,startups,1
+STARTUP,Slik,Slik,EXACT_SELF,1.0,,startups,1
+STARTUP,Socialcam,Socialcam,EXACT_SELF,1.0,,startups,1
+STARTUP,Sola,Sola,EXACT_SELF,1.0,,startups,1
+STARTUP,Solari AI,Solari AI,EXACT_SELF,1.0,,startups,1
+STARTUP,SolidStage,SolidStage,EXACT_SELF,1.0,,startups,1
+STARTUP,Sourceress,Sourceress,EXACT_SELF,1.0,,startups,1
+STARTUP,Spellbrush,Spellbrush,EXACT_SELF,1.0,,startups,1
+STARTUP,Spoken,Spoken,EXACT_SELF,1.0,,startups,1
+STARTUP,Spott,Spott,EXACT_SELF,1.0,,startups,1
+STARTUP,Squire.ai,Squire.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,StarJar,StarJar,EXACT_SELF,1.0,,startups,1
+STARTUP,Stellon Labs,Stellon Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,Storia AI,Storia AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Strong Compute,Strong Compute,EXACT_SELF,1.0,,startups,1
+STARTUP,Stypi,Stypi,EXACT_SELF,1.0,,startups,1
+STARTUP,Sublime Black,Sublime Black,EXACT_SELF,1.0,,startups,1
+STARTUP,Sweep,Sweep,EXACT_SELF,1.0,,startups,1
+STARTUP,Symplex,Symplex,EXACT_SELF,1.0,,startups,1
+STARTUP,Synvivia,Synvivia,EXACT_SELF,1.0,,startups,1
+STARTUP,T3 Chat,T3 Chat,EXACT_SELF,1.0,,startups,1
+STARTUP,Talc,Talc,EXACT_SELF,1.0,,startups,1
+STARTUP,Talking Computers,Talking Computers,EXACT_SELF,1.0,,startups,1
+STARTUP,Talkray (TiKL),Talkray (TiKL),EXACT_SELF,1.0,,startups,1
+STARTUP,TaoFi,TaoFi,EXACT_SELF,1.0,,startups,1
+STARTUP,Tara AI,Tara AI,EXACT_SELF,1.0,,startups,1
+STARTUP,TectoAI,TectoAI,EXACT_SELF,1.0,,startups,1
+STARTUP,Tenyks,Tenyks,EXACT_SELF,1.0,,startups,1
+STARTUP,The Agentic Data Co.,The Agentic Data Co.,EXACT_SELF,1.0,,startups,1
+STARTUP,The Muse,The Muse,EXACT_SELF,1.0,,startups,1
+STARTUP,Theneo,Theneo,EXACT_SELF,1.0,,startups,1
+STARTUP,Thorntale,Thorntale,EXACT_SELF,1.0,,startups,1
+STARTUP,TigerEye,TigerEye,EXACT_SELF,1.0,,startups,1
+STARTUP,Tilt,Tilt,EXACT_SELF,1.0,,startups,1
+STARTUP,Tivara,Tivara,EXACT_SELF,1.0,,startups,1
+STARTUP,Toma,Toma,EXACT_SELF,1.0,,startups,1
+STARTUP,Touchmark,Touchmark,EXACT_SELF,1.0,,startups,1
+STARTUP,TraceRoot.AI,TraceRoot.AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Traces,Traces,EXACT_SELF,1.0,,startups,1
+STARTUP,True3D,True3D,EXACT_SELF,1.0,,startups,1
+STARTUP,Truva,Truva,EXACT_SELF,1.0,,startups,1
+STARTUP,Two Dots,Two Dots,EXACT_SELF,1.0,,startups,1
+STARTUP,Understood Care,Understood Care,EXACT_SELF,1.0,,startups,1
+STARTUP,Vathys,Vathys,EXACT_SELF,1.0,,startups,1
+STARTUP,Vizly,Vizly,EXACT_SELF,1.0,,startups,1
+STARTUP,Void,Void,EXACT_SELF,1.0,,startups,1
+STARTUP,Vorelios,Vorelios,EXACT_SELF,1.0,,startups,1
+STARTUP,VoxOps AI,VoxOps AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Warpfy,Warpfy,EXACT_SELF,1.0,,startups,1
+STARTUP,Wavedash,Wavedash,EXACT_SELF,1.0,,startups,1
+STARTUP,Weave,Weave,EXACT_SELF,1.0,,startups,1
+STARTUP,Webhound,Webhound,EXACT_SELF,1.0,,startups,1
+STARTUP,Well Principled,Well Principled,EXACT_SELF,1.0,,startups,1
+STARTUP,Windsor,Windsor,EXACT_SELF,1.0,,startups,1
+STARTUP,WireOver,WireOver,EXACT_SELF,1.0,,startups,1
+STARTUP,Wordware,Wordware,EXACT_SELF,1.0,,startups,1
+STARTUP,Xeol,Xeol,EXACT_SELF,1.0,,startups,1
+STARTUP,Y Combinator,Y Combinator,EXACT_SELF,1.0,,startups,1
+STARTUP,Yhat,Yhat,EXACT_SELF,1.0,,startups,1
+STARTUP,YouLearn,YouLearn,EXACT_SELF,1.0,,startups,1
+STARTUP,YourMechanic,YourMechanic,EXACT_SELF,1.0,,startups,1
+STARTUP,Yuma AI,Yuma AI,EXACT_SELF,1.0,,startups,1
+STARTUP,Zenbox,Zenbox,EXACT_SELF,1.0,,startups,1
+STARTUP,Zep AI,Zep AI,EXACT_SELF,1.0,,startups,1
+STARTUP,ZeroPath,ZeroPath,EXACT_SELF,1.0,,startups,1
+STARTUP,Zeroframe,Zeroframe,EXACT_SELF,1.0,,startups,1
+STARTUP,Zettascale Computing,Zettascale Computing,EXACT_SELF,1.0,,startups,1
+STARTUP,Zigfu,Zigfu,EXACT_SELF,1.0,,startups,1
+STARTUP,Zillabyte,Zillabyte,EXACT_SELF,1.0,,startups,1
+STARTUP,Zipio,Zipio,EXACT_SELF,1.0,,startups,1
+STARTUP,Zumo Labs,Zumo Labs,EXACT_SELF,1.0,,startups,1
+STARTUP,a0.dev,a0.dev,EXACT_SELF,1.0,,startups,1
+STARTUP,aSim,aSim,EXACT_SELF,1.0,,startups,1
+STARTUP,antimattr,antimattr,EXACT_SELF,1.0,,startups,1
+STARTUP,attimet,attimet,EXACT_SELF,1.0,,startups,1
+STARTUP,authzed,authzed,EXACT_SELF,1.0,,startups,1
+STARTUP,camelAI,camelAI,EXACT_SELF,1.0,,startups,1
+STARTUP,ego,ego,EXACT_SELF,1.0,,startups,1
+STARTUP,garten,garten,EXACT_SELF,1.0,,startups,1
+STARTUP,goodfin,goodfin,EXACT_SELF,1.0,,startups,1
+STARTUP,hardware intelligence,hardware intelligence,EXACT_SELF,1.0,,startups,1
+STARTUP,iCracked,iCracked,EXACT_SELF,1.0,,startups,1
+STARTUP,kapa.ai,kapa.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,kater.ai,kater.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,neoncoral,neoncoral,EXACT_SELF,1.0,,startups,1
+STARTUP,"numericcal, inc.","numericcal, inc.",EXACT_SELF,1.0,,startups,1
+STARTUP,rekursiv.ai,rekursiv.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,rex.fit,rex.fit,EXACT_SELF,1.0,,startups,1
+STARTUP,sudocode,sudocode,EXACT_SELF,1.0,,startups,1
+STARTUP,throxy,throxy,EXACT_SELF,1.0,,startups,1
+STARTUP,truthsystems,truthsystems,EXACT_SELF,1.0,,startups,1
+STARTUP,vly.ai,vly.ai,EXACT_SELF,1.0,,startups,1
+STARTUP,winfunc,winfunc,EXACT_SELF,1.0,,startups,1
+STARTUP,zaz⚡️os,zaz⚡️os,EXACT_SELF,1.0,,startups,1
+STARTUP,Ångström AI,Ångström AI,EXACT_SELF,1.0,,startups,1

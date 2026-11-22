@@ -167,12 +167,46 @@ Locked-in decisions that resolve the Step 1 ambiguities.
 ### LLM fallback chain (updated — supersedes Phase 3 brief)
 - **No DeepSeek, no paid APIs.**
 - The fallback chain is **config-driven**: a YAML list of tiers.
-- **Default chain: Gemini Flash -> Groq Llama.**
+- **Chain (config-driven, 2026-11-22): Gemini Flash-Lite -> NVIDIA Nemotron ->
+  Groq gpt-oss-120b -> Groq gpt-oss-20b** (see "Products run (final facts)").
 - A **DeepSeek tier may exist in config but is disabled by default** and is
   skipped when no key is present.
 - `DEEPSEEK_API_KEY` is **optional** (removed from required env vars).
 - Tiers with a missing key are **skipped**.
 - Tests use a **mock LLM tier** that can simulate **429, 413, and invalid JSON**.
+
+### Products run (final facts, 2026-11-22)
+- **Target met: 1,143 products** across 851 startups (cumulative over the day's
+  runs). Pricing distribution after the trial-vs-free-tier audit: **null 831,
+  FREEMIUM 182, PAID 109, ENTERPRISE 14, FREE 7**. Zero empty URLs, zero
+  duplicate (startup, product) rows.
+- **Tiers used (fallback order):** `gemini-flash-lite` (`gemini-3.1-flash-lite`)
+  → `nvidia` → `groq-oss-120b` (`openai/gpt-oss-120b`) → `groq-oss`
+  (`openai/gpt-oss-20b`). Mistral stays configured-but-disabled.
+- **NVIDIA tier** (`config/llm.yaml`): generic OpenAI-compatible provider,
+  `base_url https://integrate.api.nvidia.com/v1/chat/completions`, model
+  **`nvidia/nemotron-3.5-lightning-30b-a3b`** (30B MoE ~3B active; the only
+  catalog model that reliably answers inside the tier timeout — gemma-4-31b-it,
+  glm-5.3-flash and mistral-large-4 all cold-start past 30–55s). It is verbose
+  (a reasoning channel counts toward output): **~1.9k input / ~3.8k output tokens
+  per call**, latency ~5–25s. `max_output_tokens` raised to **4096** so the
+  reasoning channel can't truncate the JSON to empty. NVIDIA exposes no
+  rate-limit headers, so `rpm_limit` is a conservative 20.
+- **Daily caps hit:** Gemini free tier (per-minute + daily request cap → long
+  cooldowns); **Groq shared TPD = 200,000 tokens/day** across both gpt-oss
+  models (429 `tokens per day (TPD)` with multi-minute `try again`). Parked tiers
+  persist in SQLite (`tier_state`).
+- **All-tiers-parked deadlock (fixed):** a provider call that hangs past the
+  fetcher's HTTP timeout had **no orchestrator-level deadline**; with every other
+  tier daily-capped there was no fallback, so one hung NVIDIA call wedged the
+  whole run (no CPU, no sockets, no progress). Fix: (1) every `provider.complete`
+  is wrapped in `asyncio.wait_for(timeout=call_deadline_s)` (config default 90s)
+  → a hung call becomes an ordinary ProviderDown/fallback; (2) empty/null content
+  is treated as `BadOutput` (repair-retry + fallback, never raises from
+  `extract()`); (3) a **progress watchdog** in the products pipeline
+  (`--watchdog-timeout-s`, default 300s) defers the pending startups and exits
+  cleanly if no startup finishes in that window. Regression tests:
+  `tests/test_orchestrator_deadlock.py`, `tests/test_pipeline_watchdog.py`.
 
 ### Uniqueness
 - Startup = canonical name.
@@ -223,11 +257,31 @@ Locked-in decisions that resolve the Step 1 ambiguities.
   bare generic word.
 - **Mapping log:** `entity_map` table (UNIQUE entity_type+raw_name) + 
   `data/entity_mapping_log.csv` (non-trivial first; identity matches labelled
-  EXACT_SELF). Built over a consistent COPY of state.db (`state_copy.db`, via the
-  SQLite backup API) + `state_news.db` jobs, both read-only; live data untouched.
+  EXACT_SELF). Built over the single consolidated `data/state.db` (read-only),
+  which now also holds jobs/news; live raw data untouched.
 - **Exporter hooks** (`src/resolver/hooks.py`) canonicalize job company / startup
-  entityName / product startupName with a `*_raw` extra column — defined but NOT
-  wired into live exports yet; the DB keeps raw values.
+  entityName / product startupName with a `*_raw` extra column. **Wired into the
+  submission bundle (Step 15)** via `src/export/resolve_map.py` (one shared
+  resolver for all tabs); the DB still keeps raw values.
+
+### Export bundle (Step 15)
+- **Single DB:** `data/state_news.db` was consolidated into `data/state.db`
+  (tables news/jobs/seen_items/source_state, INSERT OR IGNORE); the old DBs are
+  archived under `scratch/archived/`. Every pipeline CLI defaults to
+  `data/state.db` (Google Sheets API export dropped — import CSVs by hand).
+- **`python -m src.export.bundle [--out submission]`** writes six CSV tabs +
+  matching JSONL + `IMPORT.md`: Startups, Products, Research Papers, Jobs, News,
+  Entity Mapping Log. Resolver applied at export (canonical replaces the field,
+  `*_raw` kept). Jobs/News freshness enforced at bundle time (24h). CSV text
+  cells capped at 45,000 chars (" [truncated]"); JSONL keeps full text. Two
+  startups resolving to one canonical STOPS the bundle. `--run-signals` ingests
+  news+jobs first; HN jobs only with `--with-llm-sources` (`--max-llm-calls`,
+  default 30).
+- **`python -m src.export.validate`** (also run by bundle) → `VALIDATION.md`:
+  row-count minimums, duplicate keys, source URLs, Pydantic re-validation,
+  referential integrity, field completeness, freshness, entity-log counts,
+  cell-length + UTF-8. **`python -m src.export.spotcheck --n 10`** prints random
+  rows per tab.
 
 ### Deviations from original schema (needed to satisfy decisions)
 - **PRODUCT** gains `content.name` (product name) — required to make

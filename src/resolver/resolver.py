@@ -120,7 +120,7 @@ class Resolver:
         self._dnm: set[frozenset[str]] = set()
         for pair in seed.get("do_not_merge") or []:
             if len(pair) == 2:
-                a, b = compact_key(pair[0]), compact_key(pair[1])
+                a, b = self._key(pair[0]), self._key(pair[1])
                 if a and b:
                     self._dnm.add(frozenset({a, b}))
 
@@ -137,9 +137,49 @@ class Resolver:
         for row in product_rows or []:
             self._add_product_table_row(row)
 
+    # ---------- resolver key ----------
+    def _key(self, raw: str) -> str:
+        """Resolver-only compact key. Builds on normalize_name (unchanged, so the
+        startups/products dedup keys it feeds are untouched) and additionally:
+          * drops a single leading article "the",
+          * drops standalone "and" joiners,
+          * peels a TRAILING legal suffix from config (self.legal_suffixes) only
+            while it is the last token AND the remaining compact key is >= 4 chars,
+          * collapses a trailing run of single letters that joins into a known
+            legal suffix ("l l c" -> "llc", "s a s" -> "sas", "p b c" -> "pbc",
+            "i n c" -> "inc") and strips it, again only if >= 4 chars remain. A
+            single trailing letter that is part of a name ("Vitamin C", "Team A")
+            is never stripped.
+        """
+        norm = normalize_name(raw)
+        if not norm:
+            return ""
+        tokens = [t for t in norm.split(" ") if t]
+        if len(tokens) > 1 and tokens[0] == "the":
+            tokens = tokens[1:]
+        tokens = [t for t in tokens if t != "and"] or tokens
+        suffixes = self.legal_suffixes or set()
+
+        # Dotted abbreviation: a trailing run of >= 2 single-letter tokens that
+        # joins into a known suffix (from "L.L.C." / "S.A.S." / "P.B.C.").
+        i = len(tokens)
+        while i > 0 and len(tokens[i - 1]) == 1:
+            i -= 1
+        trailing_singles = tokens[i:]
+        if len(trailing_singles) >= 2:
+            joined = "".join(trailing_singles)
+            if joined in suffixes and len("".join(tokens[:i])) >= 4:
+                tokens = tokens[:i]
+
+        # Whole-word trailing legal suffix ("... SAS", "... Company").
+        while (len(tokens) > 1 and tokens[-1] in suffixes
+               and len("".join(tokens[:-1])) >= 4):
+            tokens.pop()
+        return "".join(tokens)
+
     # ---------- index builders ----------
     def _add_startup_key(self, raw: str, canonical: str, alias: str | None = None) -> None:
-        ck = compact_key(raw)
+        ck = self._key(raw)
         if not ck:
             return
         self._exact.setdefault(ck, (canonical, alias or raw))
@@ -147,7 +187,7 @@ class Resolver:
 
     def _add_product_key(self, startup: str, canonical: str, raw: str,
                          alias: str | None = None) -> None:
-        ck = compact_key(raw)
+        ck = self._key(raw)
         if not ck:
             return
         self._prod_exact.setdefault((startup, ck), (canonical, alias or raw))
@@ -158,7 +198,7 @@ class Resolver:
         nn = normalize_name(row.canonical)
         if nn:
             self._tbl_name.setdefault(nn, row.canonical)
-            self._tbl_fuzzy.append((compact_key(row.canonical), row.canonical, row.canonical))
+            self._tbl_fuzzy.append((self._key(row.canonical), row.canonical, row.canonical))
         if row.domain:
             d = registrable_domain(row.domain)
             if d:
@@ -167,7 +207,7 @@ class Resolver:
     def _add_product_table_row(self, row: TableRow) -> None:
         if not row.startup:
             return
-        ck = compact_key(row.canonical)
+        ck = self._key(row.canonical)
         if not ck:
             return
         key = (row.startup, ck)
@@ -188,7 +228,7 @@ class Resolver:
         if not raw:
             return Resolution("", NEW_ENTITY, None, None)
 
-        ck = compact_key(raw)
+        ck = self._key(raw)
 
         # 1. exact on compact key
         if ck and ck in self._exact:
@@ -220,7 +260,7 @@ class Resolver:
         raw = (raw_name or "").strip()
         if not raw:
             return Resolution("", NEW_ENTITY, None, None)
-        ck = compact_key(raw)
+        ck = self._key(raw)
 
         startup_canon: Optional[str] = None
         if startup:

@@ -2,6 +2,7 @@
 .env
 .env.*
 !.env.example
+secrets/
 
 # Python
 __pycache__/
@@ -24,14 +25,26 @@ htmlcov/
 venv/
 env/
 
-# Local data / state (keep only the empty directory skeletons)
+# Databases / local state
+*.db
+*.db-journal
+*.sqlite*
+
+# Local data (generated artifacts; keep only the directory skeletons)
 data/*
 !data/.gitkeep
 !data/logs/
 data/logs/*
 !data/logs/.gitkeep
-*.db
-*.sqlite*
+data/cache/
+data/*.csv
+data/*.jsonl
+
+# Submission bundle: commit the CSVs + reports, never the full-text JSONL
+submission/*.jsonl
+
+# Logs
+*.log
 
 # Playwright (report + downloaded browser caches)
 playwright-report/
@@ -39,7 +52,7 @@ playwright-report/
 ms-playwright/
 .cache/ms-playwright/
 
-# Recon scratch — throwaway probes (see scratch/README.md); findings live in docs/
+# Recon scratch — throwaway probes; findings live in docs/
 scratch/
 
 # OS / editor

@@ -26,10 +26,11 @@ max_wait_s: 120
 # gemini-3.1-flash-lite answers in ~2-3s (2x under 20s). NOTE: the two Groq
 # models share one account-level free daily budget (TPD ~ shared), so Gemini
 # (separate provider budget) is the real parallel-capacity fallback.
-# Tier order = fallback order for the product run (2026-11-22):
-# gemini-flash-lite -> mistral(if verified) -> groq-oss-120b -> groq-oss.
-# Gemini first spreads load onto a separate provider budget before spending the
-# shared Groq daily token pool. Parking logic (max_wait_s) still applies.
+# Tier order = fallback order for the product run (2026-11-22, updated):
+# gemini-flash-lite -> nvidia -> groq-oss-120b -> groq-oss.
+# Gemini and both Groq tiers are capped until their daily resets (cooldowns are
+# persisted in SQLite), so the run skips them and uses NVIDIA, which has a fresh,
+# separate daily budget. Parking logic (max_wait_s) still applies to all tiers.
 tiers:
   # 1) Separate provider budget -> real parallel capacity; put first to spare the
   # shared Groq daily token pool. gemini-3.1-flash-lite answered 2x (~1.8s/3.1s).
@@ -44,7 +45,30 @@ tiers:
     tpm_limit: 1000000        # Gemini free tier generous on tokens; headers override
     timeout_s: 20
 
-  # 2) Mistral: DISABLED 2026-11-22 — key is valid but the workspace has
+  # 2) NVIDIA API catalog (integrate.api.nvidia.com, OpenAI-compatible). Enabled
+  # 2026-11-22. Model chosen by listing /v1/models (33 models) and live-testing:
+  # the larger instruct models (google/gemma-4-31b-it, z-ai/glm-5.3-flash,
+  # mistralai/mistral-large-4) all COLD-START past a 30-55s timeout (would trip
+  # our circuit breaker before warming); nemotron-3.5-lightning-30b-a3b (30B MoE,
+  # ~3B active, latency-optimized) is the only one that reliably answers within
+  # the tier timeout (~5-17s), returns valid grounded JSON, and honors
+  # response_format json_object. It is verbose (emits a reasoning channel that
+  # counts toward max_tokens), so max_output_tokens is raised to 4096 to avoid
+  # truncation-to-empty at the old hard 2048 cap. No documented RPM/TPM in the
+  # response headers (only x-request-id), so rpm_limit is set conservatively.
+  - name: nvidia
+    provider: openai
+    base_url: https://integrate.api.nvidia.com/v1/chat/completions
+    model: nvidia/nemotron-3.5-lightning-30b-a3b
+    api_key_env: NVIDIA_API_KEY
+    enabled: true
+    max_input_tokens: 8000
+    max_output_tokens: 4096   # headroom for Nemotron's verbose reasoning channel
+    rpm_limit: 20             # conservative: NVIDIA exposes no rate-limit headers
+    tpm_limit: 500000         # provisional; no header to override from
+    timeout_s: 30
+
+  # 3) Mistral: DISABLED 2026-11-22 — key is valid but the workspace has
   # x-ratelimit-limit-req-minute: 0 (no API request allowance; 429 code 1300
   # "Rate limit exceeded"). Needs activation/billing on la Plateforme. Kept
   # configured so it can be re-enabled once the account is provisioned.
@@ -60,7 +84,7 @@ tiers:
     tpm_limit: 500000     # provisional; overridden from response headers at runtime
     timeout_s: 30
 
-  # 3) Highest-quality Groq model. reasoning_effort=low halves output tokens
+  # 4) Highest-quality Groq model. reasoning_effort=low halves output tokens
   # (518 -> 261 on the same input) with JSON + evidence still valid.
   - name: groq-oss-120b
     provider: groq
@@ -75,7 +99,7 @@ tiers:
     tpm_limit: 7000          # headers override (x-ratelimit-limit-tokens)
     timeout_s: 20
 
-  # 4) Same family, smaller/cheaper; shares the Groq account daily budget.
+  # 5) Same family, smaller/cheaper; shares the Groq account daily budget.
   - name: groq-oss
     provider: groq
     model: openai/gpt-oss-20b

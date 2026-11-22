@@ -73,6 +73,18 @@ BLOCK_MARKERS: Sequence[str] = (
 )
 
 
+def detect_block(status: int, body_head: str) -> bool:
+    """Shared challenge/block detection (used by AsyncFetcher and BrowserFetcher).
+
+    A hard 403/503, or any known Cloudflare/Datadome/captcha marker in the first
+    few KB of the body, counts as a challenge. We never try to solve it.
+    """
+    if status in (403, 503):
+        return True
+    low = (body_head or "").lower()
+    return any(marker in low for marker in BLOCK_MARKERS)
+
+
 # ---------------------------------------------------------------------------
 # Result type
 # ---------------------------------------------------------------------------
@@ -89,6 +101,8 @@ class FetchResult:
     from_cache: bool = False
     blocked: bool = False
     error: Optional[str] = None
+    # True when the HTML came from a rendered browser page (BrowserFetcher).
+    rendered: bool = False
     # Deviation (documented): extra convenience field populated by fetch_json().
     json: Any = None
 
@@ -337,10 +351,7 @@ class AsyncFetcher:
 
     @staticmethod
     def _is_blocked(status: int, body_head: str) -> bool:
-        if status in (403, 503):
-            return True
-        low = body_head.lower()
-        return any(marker in low for marker in BLOCK_MARKERS)
+        return detect_block(status, body_head)
 
     # ---- core request ----
     async def _request(

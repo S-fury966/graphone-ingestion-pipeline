@@ -118,6 +118,26 @@ cases:
   - {raw: "Vercel Labs",                type: STARTUP, expect: NEW_ENTITY, kind: negative}
   - {raw: "Pinecone Health",            type: STARTUP, expect: NEW_ENTITY, kind: negative}
 
+  # ============ REGRESSION: legal-suffix + leading-"the" fixes (2026-11-22) ====
+  - {raw: "Mistral AI SAS",             type: STARTUP, expect: "Mistral AI", kind: positive}
+  - {raw: "The Anthropic Company",      type: STARTUP, expect: "Anthropic", kind: positive}
+  - {raw: "Hugging Face, Inc.",         type: STARTUP, expect: "Hugging Face", kind: positive}
+  - {raw: "Scale-AI",                   type: STARTUP, expect: "Scale AI", kind: positive}
+  - {raw: "Mistral.ai",                 type: STARTUP, expect: "Mistral AI", kind: positive}
+  - {raw: "Databricks, Inc",            type: STARTUP, expect: "Databricks", kind: positive}
+  - {raw: "Stability.ai",               type: STARTUP, expect: "Stability AI", kind: positive}
+  - {raw: "The OpenAI Inc",             type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "OpenAI L.L.C.",              type: STARTUP, expect: "OpenAI", kind: positive}   # dotted abbreviation
+  - {raw: "Mistral S.A.S.",             type: STARTUP, expect: "Mistral AI", kind: positive}  # dotted abbreviation
+  - {raw: "Anthropic P.B.C.",           type: STARTUP, expect: "Anthropic", kind: positive}   # dotted abbreviation
+  - {raw: "Vitamin C",                  type: STARTUP, expect: NEW_ENTITY, kind: negative}   # trailing single letter = part of name
+  - {raw: "Team A",                     type: STARTUP, expect: NEW_ENTITY, kind: negative}   # trailing single letter = part of name
+  - {raw: "Anthropologie",              type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Cohere Technologies",        type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Hugging Face Hotels",        type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Perplexity Games",           type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Open Source Initiative",     type: STARTUP, expect: NEW_ENTITY, kind: negative}
+
   # ======================= POSITIVES (PRODUCT) =======================
   - {raw: "Chat GPT",     type: PRODUCT, startup: "OpenAI",        expect: "ChatGPT", kind: positive}
   - {raw: "Chat-GPT",     type: PRODUCT, startup: "OpenAI, Inc.",  expect: "ChatGPT", kind: positive}

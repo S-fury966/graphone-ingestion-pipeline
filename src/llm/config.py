@@ -52,6 +52,12 @@ class LLMConfig(BaseModel):
     # On a 429 whose reset time exceeds this, do NOT sleep: mark the tier
     # exhausted_until = now + reset and fall to the next tier immediately.
     max_wait_s: float = Field(gt=0, default=120)
+    # Hard backstop deadline (seconds) around every provider call. The fetcher's
+    # own HTTP timeout is the first line of defence; this wraps provider.complete
+    # in asyncio.wait_for so a call that hangs past it (e.g. a wedged per-domain
+    # slot or a stuck connection) can never park a worker forever. Set generously
+    # above the largest tier timeout_s so it only fires on a true hang.
+    call_deadline_s: float = Field(gt=0, default=90)
     tiers: List[TierConfig] = Field(default_factory=list)
 
 

@@ -38,3 +38,16 @@ legal_suffixes:
   - company
   - holdings
   - group
+  # Added 2026-11-22. The resolver key strips one of these only when it is the
+  # LAST token and the remaining compact key is >= 4 chars, so short real names
+  # are never gutted. "spa" (It. Società per Azioni) is intentionally OMITTED:
+  # "spa" legitimately ends wellness/hospitality names ("Serenity Spa").
+  - sas     # Fr. Société par Actions Simplifiée
+  - sasu    # Fr. SAS Unipersonnelle (single shareholder)
+  - sarl    # Fr./Lux. Société à Responsabilité Limitée
+  - nv      # Du./Be. Naamloze Vennootschap
+  - oy      # Fi. Osakeyhtiö (2 chars, but guarded by the >=4-remaining rule)
+  - pte     # Sg. Private Limited ("Pte Ltd")
+  - llp     # Limited Liability Partnership
+  - srl     # It./Es. Società a Responsabilità Limitata
+  - pbc     # US Public Benefit Corporation (e.g. "Anthropic PBC")

@@ -6,8 +6,9 @@ a canonical name, writes one row per distinct raw string with an occurrence
 count, and exports data/entity_mapping_log.csv (non-trivial mappings first).
 
 The source tables are read ONLY; raw values are never modified. The real run
-operates on a consistent COPY of the live state.db plus state_news.db (read
-only), so a concurrently-writing pipeline is never touched.
+operates on a consistent COPY of the live state.db (now the single consolidated
+DB, which also holds jobs/news), so a concurrently-writing pipeline is never
+touched.
 """
 from __future__ import annotations
 
@@ -169,8 +170,8 @@ def main() -> None:
     ap.add_argument("--state-db", default="data/state.db",
                     help="Live DB with startups/products (copied, read-only).")
     ap.add_argument("--state-copy", default="data/state_copy.db")
-    ap.add_argument("--news-db", default="data/state_news.db",
-                    help="DB with jobs (opened read-only).")
+    ap.add_argument("--news-db", default="data/state.db",
+                    help="DB with jobs (opened read-only; consolidated into state.db).")
     ap.add_argument("--seed", default="config/seed_entities.yaml")
     ap.add_argument("--config", default="config/resolver.yaml")
     ap.add_argument("--out", default="data/entity_mapping_log.csv")

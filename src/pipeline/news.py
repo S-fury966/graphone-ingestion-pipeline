@@ -23,7 +23,7 @@ import asyncio
 import csv
 import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -35,8 +35,9 @@ from pydantic import ValidationError
 
 from ..common.config import SourceConfig, load_sources
 from ..common.dates import check_clock_skew, parse_date, utc_now
-from ..common.freshness import (Snapshot, content_hash, decide,
-                                snapshot_continuity, url_hash)
+from ..common.freshness import (INFERRED_FRESH, VERIFIED_FRESH, Snapshot,
+                                content_hash, decide, snapshot_continuity,
+                                url_hash)
 from ..common.logging import get_logger
 from ..crawler.article_dates import extract_publication_date
 from ..crawler.fetcher import AsyncFetcher
@@ -47,6 +48,8 @@ log = get_logger("pipeline.news")
 
 CSV_PATH = "data/news.csv"
 JSONL_PATH = "data/news.jsonl"
+REJECTED_CSV_PATH = "data/news_rejected.csv"
+DEFAULT_MAX_ITEMS_PER_SOURCE = 40
 
 # Extra, non-schema columns stored in SQLite and appended to the exports.
 EXTRA_COLS = ("freshness_status", "date_source")
@@ -162,6 +165,26 @@ class Stats:
     stored: int = 0
     invalid: int = 0
     fetch_errors: int = 0
+    # Per-source breakdown: Counter keyed by "seen", VERIFIED_FRESH, INFERRED_FRESH,
+    # and "rejected:<reason>". Plus a flat list of rejected items for the CSV.
+    per_source: "defaultdict[str, Counter]" = field(
+        default_factory=lambda: defaultdict(Counter))
+    rejected: List[dict] = field(default_factory=list)
+
+
+def _record_rejection(stats: Stats, source_name: str, item: "FeedItem",
+                      reason: str, now_iso: str) -> None:
+    """Count a rejection per-source and keep the row for news_rejected.csv."""
+    stats.per_source[source_name][f"rejected:{reason}"] += 1
+    stats.rejected.append({
+        "source": source_name,
+        "url": getattr(item, "link", "") or "",
+        "title": getattr(item, "title", "") or "",
+        "published_raw": (getattr(item, "published_raw", None)
+                          or getattr(item, "updated_raw", None) or ""),
+        "reason": reason,
+        "checked_at": now_iso,
+    })
 
 
 def _news_dict(item: FeedItem, decision, full_text: str, now_iso: str,
@@ -185,7 +208,8 @@ def _news_dict(item: FeedItem, decision, full_text: str, now_iso: str,
 
 async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConfig,
                          stats: Stats, now: datetime, window_hours: int,
-                         clock_checked: dict, dry_run: bool = False) -> None:
+                         clock_checked: dict, dry_run: bool = False,
+                         max_items_per_source: int = DEFAULT_MAX_ITEMS_PER_SOURCE) -> None:
     fetch_started = utc_now()  # snapshot time == when the fetch started
     res = await fetcher.fetch_text(str(source.base_url), respect_robots=True)
 
@@ -209,6 +233,10 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
             "source": source.name, "reason": str(exc)}})
         return
 
+    # Cap how many items we pull from a single source per run.
+    if max_items_per_source and len(items) > max_items_per_source:
+        items = items[:max_items_per_source]
+
     for it in items:  # stash source name for the record builder
         it._source_name = source.name  # type: ignore[attr-defined]
 
@@ -222,27 +250,41 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
 
     for it in items:
         if not it.link or not it.title:
+            _record_rejection(stats, source.name, it, "missing_link_or_title",
+                              now.isoformat())
             continue
         stats.by_source[source.name] += 1
+        stats.per_source[source.name]["seen"] += 1
         uh = url_hash(it.link)
 
-        # 1) publication date from the feed (publication field only, unless the
-        #    source explicitly allows the modified date to stand in).
-        pub_raw = it.published_raw
-        if not pub_raw and source.updated_is_published:
-            pub_raw = it.updated_raw
-        candidate = parse_date(pub_raw, now=now, source_tz=source.source_tz)
-        if candidate is not None and candidate.source is None:
-            candidate.source = "feed_published"
+        article_authority = source.date_authority == "article"
+        min_chars = source.min_text_chars
 
-        # 2) full text (feed body first) + article crawl for text/date backfill.
-        full_text = strip_html(it.body_html) if source.full_text_in_feed else ""
-        need_date = not (candidate is not None and candidate.ok and candidate.verifiable)
-        if source.article_crawl and (need_date or not full_text):
+        # 1) publication date. For article-authority sources (e.g. Hacker News)
+        #    the feed date is the SUBMISSION time, never publication, so we start
+        #    with no candidate and take the date only from the article page.
+        if article_authority:
+            candidate = None
+        else:
+            pub_raw = it.published_raw
+            if not pub_raw and source.updated_is_published:
+                pub_raw = it.updated_raw
+            candidate = parse_date(pub_raw, now=now, source_tz=source.source_tz)
+            if candidate is not None and candidate.source is None:
+                candidate.source = "feed_published"
+
+        # 2) text + article crawl. Crawl when a date is still needed, when the
+        #    feed text is below the minimum, or always for article-authority.
+        feed_text = strip_html(it.body_html) if source.full_text_in_feed else ""
+        article_text = ""
+        need_date = article_authority or not (
+            candidate is not None and candidate.ok and candidate.verifiable)
+        need_text = len(feed_text) < min_chars
+        if (source.article_crawl or article_authority or need_text) and (
+                need_date or need_text or not feed_text):
             art = await fetcher.fetch_text(it.link, respect_robots=True)
             if art.ok and not art.blocked and art.text:
-                if not full_text:
-                    full_text = _article_text(art.text)
+                article_text = _article_text(art.text)
                 if need_date:
                     hit = extract_publication_date(art.text, it.link, now=now)
                     if hit is not None:
@@ -251,15 +293,26 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
                 log.info("article crawl skipped/blocked", extra={"extra": {
                     "source": source.name, "url": it.link, "status": art.status,
                     "blocked": art.blocked}})
-        if not full_text:
-            full_text = strip_html(it.body_html) or it.title
 
-        # 3) AI relevance filter (general-tech / discovery sources).
-        if source.ai_filter and not is_ai_relevant(f"{it.title} {full_text}"):
-            stats.ai_filtered += 1
+        # 3) minimum-text rule (Step 11): prefer the article text, else the feed
+        #    text; each must reach min_text_chars, otherwise reject NO_TEXT.
+        full_text = ""
+        for cand_text in (article_text, feed_text):
+            if len(cand_text) >= min_chars:
+                full_text = cand_text
+                break
+        if not full_text:
+            stats.decisions["NO_TEXT"] += 1
+            _record_rejection(stats, source.name, it, "NO_TEXT", now.isoformat())
             continue
 
-        # 4) freshness decision (pure Python; LLM never involved).
+        # 4) AI relevance filter (general-tech / discovery sources).
+        if source.ai_filter and not is_ai_relevant(f"{it.title} {full_text}"):
+            stats.ai_filtered += 1
+            _record_rejection(stats, source.name, it, "ai_filtered", now.isoformat())
+            continue
+
+        # 5) freshness decision (pure Python; LLM never involved).
         chash = content_hash(full_text)
         existing_first_seen = db.get_first_seen(uh)
         first_seen_at = (parse_date(existing_first_seen, now=now).dt
@@ -273,13 +326,25 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
             seen_url_before=seen_url_before,
             seen_content_before=db.is_seen_content(chash),
             first_seen_at=first_seen_at, prev_snapshot=prev,
-            continuity_ok=continuity_ok, now=now, window_hours=window_hours)
+            continuity_ok=continuity_ok, now=now, window_hours=window_hours,
+            allow_snapshot=not article_authority)
         stats.decisions[decision.status] += 1
 
+        if article_authority:
+            log.info("article-authority decision", extra={"extra": {
+                "source": source.name, "url": it.link,
+                "feed_created_at": it.published_raw,
+                "article_date": candidate.dt.isoformat()
+                if (candidate and candidate.dt) else None,
+                "article_date_source": candidate.source if candidate else None,
+                "status": decision.status}})
+
         if not decision.accepted:
+            _record_rejection(stats, source.name, it, decision.status, now.isoformat())
             continue
         stats.date_sources[decision.date_source] += 1
         if db.news_exists(uh):
+            _record_rejection(stats, source.name, it, "duplicate_in_db", now.isoformat())
             continue
 
         now_iso = now.isoformat()
@@ -292,12 +357,14 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
             News.model_validate(record)
         except ValidationError as exc:
             stats.invalid += 1
+            _record_rejection(stats, source.name, it, "invalid_record", now.isoformat())
             log.warning("invalid NEWS record skipped", extra={"extra": {
                 "source": source.name, "url": it.link, "reason": str(exc)[:200]}})
             continue
 
         if dry_run:
             stats.stored += 1
+            stats.per_source[source.name][decision.freshness_status] += 1
             continue
         row = {
             "url_hash": uh, "url": it.link, "title": it.title, "author": it.author,
@@ -311,6 +378,7 @@ async def process_source(db: Database, fetcher: AsyncFetcher, source: SourceConf
         if db.insert_news(row):
             db.mark_seen(uh, chash, source.name, first_seen_at.isoformat())
             stats.stored += 1
+            stats.per_source[source.name][decision.freshness_status] += 1
 
     # 5) snapshot saved ONLY after a fully successful fetch+parse.
     if not dry_run:
@@ -374,6 +442,33 @@ def export(db: Database) -> int:
     return len(rows)
 
 
+def export_rejected(stats: Stats, path: Optional[str] = None) -> int:
+    """Always write data/news_rejected.csv (header even when empty)."""
+    path = path or REJECTED_CSV_PATH
+    Path("data").mkdir(parents=True, exist_ok=True)
+    cols = ["source", "url", "title", "published_raw", "reason", "checked_at"]
+    with open(path, "w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=cols)
+        w.writeheader()
+        w.writerows(stats.rejected)
+    log.info("exported news rejections", extra={"extra": {
+        "rows": len(stats.rejected), "csv": path}})
+    return len(stats.rejected)
+
+
+def _per_source_summary(stats: Stats) -> dict:
+    out = {}
+    for src, c in stats.per_source.items():
+        rej = {k.split(":", 1)[1]: v for k, v in c.items() if k.startswith("rejected:")}
+        out[src] = {
+            "seen": c.get("seen", 0),
+            "VERIFIED_FRESH": c.get(VERIFIED_FRESH, 0),
+            "INFERRED_FRESH": c.get(INFERRED_FRESH, 0),
+            "rejected": rej,
+        }
+    return out
+
+
 async def run(args: argparse.Namespace) -> None:
     now = utc_now()
     log.info("RUN now (UTC)", extra={"extra": {"now": now.isoformat(),
@@ -393,7 +488,8 @@ async def run(args: argparse.Namespace) -> None:
             try:
                 await process_source(db, fetcher, src, stats, now,
                                      args.window_hours, clock_checked,
-                                     dry_run=args.dry_run)
+                                     dry_run=args.dry_run,
+                                     max_items_per_source=args.max_items_per_source)
             except Exception as exc:  # noqa: BLE001 - one source must not kill the run
                 stats.fetch_errors += 1
                 log.warning("source crashed", extra={"extra": {
@@ -401,16 +497,19 @@ async def run(args: argparse.Namespace) -> None:
 
     if not args.dry_run:
         export(db)
+        export_rejected(stats)
 
     log.info("NEWS RUN SUMMARY", extra={"extra": {
         "now": now.isoformat(),
         "sources": [s.name for s in sources],
         "items_by_source": dict(stats.by_source),
+        "per_source": _per_source_summary(stats),
         "decisions": dict(stats.decisions),
         "accepted_date_sources": dict(stats.date_sources),
         "ai_filtered_out": stats.ai_filtered,
         "stored": stats.stored,
         "invalid": stats.invalid,
+        "rejected_total": len(stats.rejected),
         "fetch_errors": stats.fetch_errors,
         "llm_calls": 0,  # news is fully deterministic; no LLM in this pipeline
         "total_news_in_db": db.count_news()}})
@@ -421,6 +520,9 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="NEWS ingestion pipeline (Phase II)")
     p.add_argument("--limit", type=int, default=None, help="max sources to process")
     p.add_argument("--window-hours", type=int, default=24, help="freshness window")
+    p.add_argument("--max-items-per-source", type=int,
+                   default=DEFAULT_MAX_ITEMS_PER_SOURCE,
+                   help="cap items pulled from each source per run")
     p.add_argument("--db", default="data/state.db", help="SQLite path")
     p.add_argument("--dry-run", action="store_true", help="do not persist/export")
     return p

@@ -99,6 +99,9 @@ sources:
     ai_filter: true
     full_text_in_feed: false
     article_crawl: true
+    # HN created_at is the SUBMISSION time, not publication: take the date only
+    # from the linked article; no article date => FRESHNESS_UNPROVABLE.
+    date_authority: article
 
   # ---- NEWS backups (disabled) ----
   # The Decoder — AI-pure, but robots DISALLOWS /feed/; reach articles another

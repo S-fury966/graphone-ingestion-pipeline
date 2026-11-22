@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 from urllib.parse import urljoin, urlsplit
 
 import yaml
@@ -31,6 +31,8 @@ ROBOTS = "robots_disallowed"
 HTTP_ERROR = "http_error"
 NO_WEBSITE = "no_website"
 PARKED = "parked"
+RENDERED_OK = "rendered_ok"        # was js_only, a browser render recovered the text
+STILL_JS_ONLY = "still_js_only"    # rendered but still too little text
 
 
 @dataclass
@@ -108,8 +110,15 @@ def find_pricing_links(html: str, base_url: str) -> List[str]:
     return out
 
 
-async def crawl_startup(fetcher: AsyncFetcher, slug: str, website: Optional[str]) -> CrawlResult:
-    """Fetch homepage, then (at most) a pricing page. Classify the outcome."""
+async def crawl_startup(fetcher: AsyncFetcher, slug: str, website: Optional[str],
+                        browser: Optional["Any"] = None) -> CrawlResult:
+    """Fetch homepage, then (at most) a pricing page. Classify the outcome.
+
+    When `browser` (a BrowserFetcher) is given and the homepage comes back
+    js_only (too little server HTML), escalate that page through the browser —
+    the L1 rung of the anti-bot ladder (policy auto). A challenge on the
+    rendered page is reported as blocked (no retry, no bypass).
+    """
     if not website:
         return CrawlResult(slug, NO_WEBSITE)
 
@@ -125,18 +134,32 @@ async def crawl_startup(fetcher: AsyncFetcher, slug: str, website: Optional[str]
 
     final_home = res.final_url or home_url
     home_text = _visible_text(res.text)
+    home_html = res.text
+    fetched = 1
+    rendered = False
 
     # Parked / domain-for-sale page: no LLM call, no product.
     if is_parked(final_home, home_text):
         return CrawlResult(slug, PARKED, pages_fetched=1,
                            error="parked / domain-for-sale page")
 
-    pages: List[Tuple[str, str]] = [(final_home, home_text)]
-    html_pages: List[Tuple[str, str]] = [(final_home, res.text)]
-    fetched = 1
+    # Anti-bot ladder L1: js_only homepage + a browser available -> render it.
+    if browser is not None and len(home_text) < JS_ONLY_MIN_CHARS:
+        rr = await browser.fetch(final_home, respect_robots=True)
+        fetched += 1
+        if rr.blocked:
+            return CrawlResult(slug, BLOCKED, pages_fetched=fetched,
+                               error="blocked_by_challenge on rendered page")
+        if rr.ok and rr.text:
+            home_html = rr.text
+            home_text = _visible_text(rr.text)
+            rendered = True
 
-    # Discover a pricing page on the homepage; else try /pricing once.
-    candidates = find_pricing_links(res.text, final_home)
+    pages: List[Tuple[str, str]] = [(final_home, home_text)]
+    html_pages: List[Tuple[str, str]] = [(final_home, home_html)]
+
+    # Discover a pricing page on the homepage HTML; else try /pricing once.
+    candidates = find_pricing_links(home_html, final_home)
     if not candidates:
         candidates = [urljoin(final_home, "/pricing")]
 
@@ -153,6 +176,9 @@ async def crawl_startup(fetcher: AsyncFetcher, slug: str, website: Optional[str]
                 break  # one good pricing page is enough
 
     combined_len = sum(len(t) for _, t in pages)
-    status = JS_ONLY if combined_len < JS_ONLY_MIN_CHARS else OK
+    if rendered:
+        status = RENDERED_OK if combined_len >= JS_ONLY_MIN_CHARS else STILL_JS_ONLY
+    else:
+        status = JS_ONLY if combined_len < JS_ONLY_MIN_CHARS else OK
     return CrawlResult(slug, status, pages=pages, pages_fetched=fetched,
                        html_pages=html_pages)

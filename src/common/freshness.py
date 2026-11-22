@@ -88,6 +88,7 @@ def decide(
     continuity_ok: bool,
     now: Optional[datetime] = None,
     window_hours: int = 24,
+    allow_snapshot: bool = True,
 ) -> FreshnessDecision:
     """Decide freshness for a single item. See module docstring for the states.
 
@@ -118,7 +119,17 @@ def decide(
             evidence=f"published {candidate.dt.isoformat()} older than {window_hours}h",
         )
 
-    # (b) No usable timestamp -> snapshot heuristic. The first run for a source
+    # (b) No usable timestamp. For sources whose publication date must come from
+    # the article itself (date_authority: article), the snapshot heuristic is
+    # disallowed — appearing in the feed proves submission, not publication.
+    if not allow_snapshot:
+        return FreshnessDecision(
+            status=FRESHNESS_UNPROVABLE,
+            evidence="no article publication date; snapshot inference disabled "
+                     "for this source (feed date is not a publication date)",
+        )
+
+    # Otherwise fall back to the snapshot heuristic. The first run for a source
     # has no prior complete snapshot: record a baseline and emit nothing.
     if not prev_snapshot.exists:
         return FreshnessDecision(

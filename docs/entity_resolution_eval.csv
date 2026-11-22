@@ -1,0 +1,135 @@
+# SYNTHETIC ENTITY-RESOLVER EVAL CORPUS — labelled test cases, expected vs actual (NOT live data)
+entity_type,raw_name,startup_context,kind,expected,actual_canonical,actual_method,actual_score,pass
+STARTUP,"OpenAI, Inc.",,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,Open AI,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,open-ai,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,OPENAI,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,openai.com,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,https://www.openai.com/careers,,positive,OpenAI,OpenAI,DOMAIN,1.0000,PASS
+STARTUP,The OpenAI,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,"Anthropic, PBC",,positive,Anthropic,Anthropic,EXACT,1.0000,PASS
+STARTUP,anthropic.com,,positive,Anthropic,Anthropic,EXACT,1.0000,PASS
+STARTUP,Anthropc,,positive,Anthropic,Anthropic,FUZZY,0.9412,PASS
+STARTUP,DeepMind,,positive,Google DeepMind,Google DeepMind,EXACT,1.0000,PASS
+STARTUP,Deep Mind,,positive,Google DeepMind,Google DeepMind,EXACT,1.0000,PASS
+STARTUP,Google Deepmind,,positive,Google DeepMind,Google DeepMind,EXACT,1.0000,PASS
+STARTUP,cohere.ai,,positive,Cohere,Cohere,EXACT,1.0000,PASS
+STARTUP,https://cohere.com,,positive,Cohere,Cohere,DOMAIN,1.0000,PASS
+STARTUP,Mistral,,positive,Mistral AI,Mistral AI,EXACT,1.0000,PASS
+STARTUP,mistral.ai,,positive,Mistral AI,Mistral AI,EXACT,1.0000,PASS
+STARTUP,HuggingFace,,positive,Hugging Face,Hugging Face,EXACT,1.0000,PASS
+STARTUP,Hugging-Face,,positive,Hugging Face,Hugging Face,EXACT,1.0000,PASS
+STARTUP,Hügging Face,,positive,Hugging Face,Hugging Face,EXACT,1.0000,PASS
+STARTUP,huggingface.co,,positive,Hugging Face,Hugging Face,EXACT,1.0000,PASS
+STARTUP,Perplexity,,positive,Perplexity AI,Perplexity AI,EXACT,1.0000,PASS
+STARTUP,perplexity.ai,,positive,Perplexity AI,Perplexity AI,EXACT,1.0000,PASS
+STARTUP,Perplexty,,positive,Perplexity AI,Perplexity AI,FUZZY,0.9474,PASS
+STARTUP,ScaleAI,,positive,Scale AI,Scale AI,EXACT,1.0000,PASS
+STARTUP,"Scale AI, Inc.",,positive,Scale AI,Scale AI,EXACT,1.0000,PASS
+STARTUP,scale.com,,positive,Scale AI,Scale AI,EXACT,1.0000,PASS
+STARTUP,"Databricks, Inc.",,positive,Databricks,Databricks,EXACT,1.0000,PASS
+STARTUP,Data bricks,,positive,Databricks,Databricks,EXACT,1.0000,PASS
+STARTUP,Databrics,,positive,Databricks,Databricks,FUZZY,0.9474,PASS
+STARTUP,StabilityAI,,positive,Stability AI,Stability AI,EXACT,1.0000,PASS
+STARTUP,RunwayML,,positive,Runway,Runway,EXACT,1.0000,PASS
+STARTUP,Runway ML,,positive,Runway,Runway,EXACT,1.0000,PASS
+STARTUP,Eleven Labs,,positive,ElevenLabs,ElevenLabs,EXACT,1.0000,PASS
+STARTUP,11Labs,,positive,ElevenLabs,ElevenLabs,EXACT,1.0000,PASS
+STARTUP,Mid Journey,,positive,Midjourney,Midjourney,EXACT,1.0000,PASS
+STARTUP,Jasper AI,,positive,Jasper,Jasper,EXACT,1.0000,PASS
+STARTUP,CharacterAI,,positive,Character.AI,Character.AI,EXACT,1.0000,PASS
+STARTUP,Character AI,,positive,Character.AI,Character.AI,EXACT,1.0000,PASS
+STARTUP,Inflection,,positive,Inflection AI,Inflection AI,EXACT,1.0000,PASS
+STARTUP,Assembly AI,,positive,AssemblyAI,AssemblyAI,EXACT,1.0000,PASS
+STARTUP,Deep Gram,,positive,Deepgram,Deepgram,EXACT,1.0000,PASS
+STARTUP,TogetherAI,,positive,Together AI,Together AI,EXACT,1.0000,PASS
+STARTUP,Any Scale,,positive,Anyscale,Anyscale,EXACT,1.0000,PASS
+STARTUP,Weights and Biases,,positive,Weights & Biases,Weights & Biases,EXACT,1.0000,PASS
+STARTUP,W&B,,positive,Weights & Biases,Weights & Biases,EXACT,1.0000,PASS
+STARTUP,Lang Chain,,positive,LangChain,LangChain,EXACT,1.0000,PASS
+STARTUP,Pine Cone,,positive,Pinecone,Pinecone,EXACT,1.0000,PASS
+STARTUP,ChromaDB,,positive,Chroma,Chroma,EXACT,1.0000,PASS
+STARTUP,Llama Index,,positive,LlamaIndex,LlamaIndex,EXACT,1.0000,PASS
+STARTUP,GPT Index,,positive,LlamaIndex,LlamaIndex,EXACT,1.0000,PASS
+STARTUP,Modal Labs,,positive,Modal,Modal,EXACT,1.0000,PASS
+STARTUP,Base Ten,,positive,Baseten,Baseten,EXACT,1.0000,PASS
+STARTUP,Cursor AI,,positive,Cursor,Cursor,EXACT,1.0000,PASS
+STARTUP,Anysphere,,positive,Cursor,Cursor,EXACT,1.0000,PASS
+STARTUP,Notion Labs,,positive,Notion,Notion,EXACT,1.0000,PASS
+STARTUP,Glean AI,,positive,Glean,Glean,EXACT,1.0000,PASS
+STARTUP,Harvey AI,,positive,Harvey,Harvey,EXACT,1.0000,PASS
+STARTUP,Suno AI,,positive,Suno,Suno,EXACT,1.0000,PASS
+STARTUP,Pika Labs,,positive,Pika,Pika,EXACT,1.0000,PASS
+STARTUP,Writer AI,,positive,Writer,Writer,EXACT,1.0000,PASS
+STARTUP,Deep L,,positive,DeepL,DeepL,EXACT,1.0000,PASS
+STARTUP,Nvidia,,positive,NVIDIA,NVIDIA,EXACT,1.0000,PASS
+STARTUP,NVIDIA Corporation,,positive,NVIDIA,NVIDIA,EXACT,1.0000,PASS
+STARTUP,Meta AI,,positive,Meta,Meta,EXACT,1.0000,PASS
+STARTUP,"Meta Platforms, Inc.",,positive,Meta,Meta,EXACT,1.0000,PASS
+STARTUP,x.ai,,positive,xAI,xAI,EXACT,1.0000,PASS
+STARTUP,X AI,,positive,xAI,xAI,EXACT,1.0000,PASS
+STARTUP,Samba Nova,,positive,SambaNova,SambaNova,EXACT,1.0000,PASS
+STARTUP,Cerebras Systems,,positive,Cerebras,Cerebras,EXACT,1.0000,PASS
+STARTUP,ContextualAI,,positive,Contextual AI,Contextual AI,EXACT,1.0000,PASS
+STARTUP,Generally Intelligent,,positive,Imbue,Imbue,EXACT,1.0000,PASS
+STARTUP,Sierra AI,,positive,Sierra,Sierra,EXACT,1.0000,PASS
+STARTUP,Hume,,positive,Hume AI,Hume AI,EXACT,1.0000,PASS
+STARTUP,Cohere Health,,negative,NEW_ENTITY,Cohere Health,NEW_ENTITY,,PASS
+STARTUP,Scale Venture Partners,,negative,NEW_ENTITY,Scale Venture Partners,NEW_ENTITY,,PASS
+STARTUP,Harvey Nash,,negative,NEW_ENTITY,Harvey Nash,NEW_ENTITY,,PASS
+STARTUP,Sierra Ventures,,negative,NEW_ENTITY,Sierra Ventures,NEW_ENTITY,,PASS
+STARTUP,Together Labs,,negative,NEW_ENTITY,Together Labs,NEW_ENTITY,,PASS
+STARTUP,Luma,,negative,NEW_ENTITY,Luma,NEW_ENTITY,,PASS
+STARTUP,Runway Financial,,negative,NEW_ENTITY,Runway Financial,NEW_ENTITY,,PASS
+STARTUP,Jasper Health,,negative,NEW_ENTITY,Jasper Health,NEW_ENTITY,,PASS
+STARTUP,Character,,negative,NEW_ENTITY,Character,NEW_ENTITY,,PASS
+STARTUP,Adept Technology,,negative,NEW_ENTITY,Adept Technology,NEW_ENTITY,,PASS
+STARTUP,Grok,,negative,NEW_ENTITY,Grok,NEW_ENTITY,,PASS
+STARTUP,Synthesis,,negative,NEW_ENTITY,Synthesis,NEW_ENTITY,,PASS
+STARTUP,Glean Health,,negative,NEW_ENTITY,Glean Health,NEW_ENTITY,,PASS
+STARTUP,The Writer Agency,,negative,NEW_ENTITY,The Writer Agency,NEW_ENTITY,,PASS
+STARTUP,Scale,,negative,NEW_ENTITY,Scale,NEW_ENTITY,,PASS
+STARTUP,Pi,,negative,NEW_ENTITY,Pi,NEW_ENTITY,,PASS
+STARTUP,Command,,negative,NEW_ENTITY,Command,NEW_ENTITY,,PASS
+STARTUP,Comet,,negative,NEW_ENTITY,Comet,NEW_ENTITY,,PASS
+STARTUP,OpenAI Health,,negative,NEW_ENTITY,OpenAI Health,NEW_ENTITY,,PASS
+STARTUP,Anthropic Health,,negative,NEW_ENTITY,Anthropic Health,NEW_ENTITY,,PASS
+STARTUP,Scale AI Ventures,,negative,NEW_ENTITY,Scale AI Ventures,NEW_ENTITY,,PASS
+STARTUP,Deepmind Health,,negative,NEW_ENTITY,Deepmind Health,NEW_ENTITY,,PASS
+STARTUP,Mistral Pharma,,negative,NEW_ENTITY,Mistral Pharma,NEW_ENTITY,,PASS
+STARTUP,Perplexica,,negative,NEW_ENTITY,Perplexica,NEW_ENTITY,,PASS
+STARTUP,Notion Health,,negative,NEW_ENTITY,Notion Health,NEW_ENTITY,,PASS
+STARTUP,Linear B,,negative,NEW_ENTITY,Linear B,NEW_ENTITY,,PASS
+STARTUP,Vercel Labs,,negative,NEW_ENTITY,Vercel Labs,NEW_ENTITY,,PASS
+STARTUP,Pinecone Health,,negative,NEW_ENTITY,Pinecone Health,NEW_ENTITY,,PASS
+STARTUP,Mistral AI SAS,,positive,Mistral AI,Mistral AI,EXACT,1.0000,PASS
+STARTUP,The Anthropic Company,,positive,Anthropic,Anthropic,EXACT,1.0000,PASS
+STARTUP,"Hugging Face, Inc.",,positive,Hugging Face,Hugging Face,EXACT,1.0000,PASS
+STARTUP,Scale-AI,,positive,Scale AI,Scale AI,EXACT,1.0000,PASS
+STARTUP,Mistral.ai,,positive,Mistral AI,Mistral AI,EXACT,1.0000,PASS
+STARTUP,"Databricks, Inc",,positive,Databricks,Databricks,EXACT,1.0000,PASS
+STARTUP,Stability.ai,,positive,Stability AI,Stability AI,EXACT,1.0000,PASS
+STARTUP,The OpenAI Inc,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,OpenAI L.L.C.,,positive,OpenAI,OpenAI,EXACT,1.0000,PASS
+STARTUP,Mistral S.A.S.,,positive,Mistral AI,Mistral AI,EXACT,1.0000,PASS
+STARTUP,Anthropic P.B.C.,,positive,Anthropic,Anthropic,EXACT,1.0000,PASS
+STARTUP,Vitamin C,,negative,NEW_ENTITY,Vitamin C,NEW_ENTITY,,PASS
+STARTUP,Team A,,negative,NEW_ENTITY,Team A,NEW_ENTITY,,PASS
+STARTUP,Anthropologie,,negative,NEW_ENTITY,Anthropologie,NEW_ENTITY,,PASS
+STARTUP,Cohere Technologies,,negative,NEW_ENTITY,Cohere Technologies,NEW_ENTITY,,PASS
+STARTUP,Hugging Face Hotels,,negative,NEW_ENTITY,Hugging Face Hotels,NEW_ENTITY,,PASS
+STARTUP,Perplexity Games,,negative,NEW_ENTITY,Perplexity Games,NEW_ENTITY,,PASS
+STARTUP,Open Source Initiative,,negative,NEW_ENTITY,Open Source Initiative,NEW_ENTITY,,PASS
+PRODUCT,Chat GPT,OpenAI,positive,ChatGPT,ChatGPT,EXACT,1.0000,PASS
+PRODUCT,Chat-GPT,"OpenAI, Inc.",positive,ChatGPT,ChatGPT,EXACT,1.0000,PASS
+PRODUCT,GPT4,OpenAI,positive,GPT-4,GPT-4,EXACT,1.0000,PASS
+PRODUCT,Claude AI,Anthropic,positive,Claude,Claude,EXACT,1.0000,PASS
+PRODUCT,claude.ai,Anthropic,positive,Claude,Claude,EXACT,1.0000,PASS
+PRODUCT,StableDiffusion,Stability AI,positive,Stable Diffusion,Stable Diffusion,EXACT,1.0000,PASS
+PRODUCT,stable-diffusion,StabilityAI,positive,Stable Diffusion,Stable Diffusion,EXACT,1.0000,PASS
+PRODUCT,Ray,Anyscale,positive,Ray,Ray,EXACT,1.0000,PASS
+PRODUCT,LLaMA,Meta,positive,Llama,Llama,EXACT,1.0000,PASS
+PRODUCT,Mixtral,Mistral,positive,Mixtral,Mixtral,EXACT,1.0000,PASS
+PRODUCT,NotionAI,Notion,positive,Notion AI,Notion AI,EXACT,1.0000,PASS
+PRODUCT,Claude,OpenAI,negative,NEW_ENTITY,Claude,NEW_ENTITY,,PASS
+PRODUCT,Gemini,OpenAI,negative,NEW_ENTITY,Gemini,NEW_ENTITY,,PASS
