@@ -1,0 +1,34 @@
+{
+ "jobs": [
+  {
+   "absolute_url": "https://boards.greenhouse.io/anthropic/1",
+   "company_name": "Anthropic",
+   "title": "Software Engineer",
+   "first_published": "2026-11-22T06:00:00+00:00",
+   "updated_at": "2026-11-22T06:00:00+00:00",
+   "location": {
+    "name": "San Francisco, CA"
+   },
+   "departments": [
+    {
+     "name": "Engineering"
+    }
+   ]
+  },
+  {
+   "absolute_url": "https://boards.greenhouse.io/anthropic/2",
+   "company_name": "Anthropic",
+   "title": "Recruiter",
+   "first_published": "2026-11-10T00:00:00+00:00",
+   "updated_at": "2026-11-22T12:00:00+00:00",
+   "location": {
+    "name": "Remote"
+   },
+   "departments": [
+    {
+     "name": "People"
+    }
+   ]
+  }
+ ]
+}

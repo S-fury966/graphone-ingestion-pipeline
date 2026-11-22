@@ -1,0 +1,38 @@
+{
+ "data": [
+  {
+   "url": "https://arbeitnow.com/j/ml-eng",
+   "company_name": "NeuralCo",
+   "title": "Machine Learning Engineer",
+   "created_at": 1795327200,
+   "remote": true,
+   "location": "Berlin",
+   "tags": [
+    "ml",
+    "python"
+   ]
+  },
+  {
+   "url": "https://arbeitnow.com/j/ai-old",
+   "company_name": "OldAI",
+   "title": "AI Researcher",
+   "created_at": 1794268800,
+   "remote": false,
+   "location": "Munich",
+   "tags": [
+    "ai"
+   ]
+  },
+  {
+   "url": "https://arbeitnow.com/j/plumber",
+   "company_name": "PipeCo",
+   "title": "Senior Plumber",
+   "created_at": 1795327200,
+   "remote": false,
+   "location": "Hamburg",
+   "tags": [
+    "trades"
+   ]
+  }
+ ]
+}

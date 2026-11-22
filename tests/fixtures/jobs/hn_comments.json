@@ -1,0 +1,22 @@
+{
+ "hits": [
+  {
+   "objectID": "1001",
+   "parent_id": 999,
+   "created_at": "2026-11-22T06:00:00Z",
+   "comment_text": "<p>Acme AI | Senior ML Engineer | Remote (US) | We build LLM tools. Apply at acme.ai</p>"
+  },
+  {
+   "objectID": "1002",
+   "parent_id": 999,
+   "created_at": "2026-11-22T06:00:00Z",
+   "comment_text": "<p>Just a general discussion comment, not a job posting at all.</p>"
+  },
+  {
+   "objectID": "1003",
+   "parent_id": 1001,
+   "created_at": "2026-11-22T06:00:00Z",
+   "comment_text": "<p>reply, not top-level</p>"
+  }
+ ]
+}

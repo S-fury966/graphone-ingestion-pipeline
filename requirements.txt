@@ -1,0 +1,13 @@
+pydantic>=2
+aiohttp
+playwright
+python-dotenv
+pyyaml
+rapidfuzz
+beautifulsoup4
+lxml
+dateparser
+tenacity
+gspread
+pytest
+pytest-asyncio

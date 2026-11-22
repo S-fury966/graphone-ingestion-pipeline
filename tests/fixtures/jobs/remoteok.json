@@ -1,0 +1,30 @@
+[
+ {
+  "legal": "By using this API you agree..."
+ },
+ {
+  "id": "1",
+  "url": "https://remoteok.com/l/1",
+  "company": "DataCorp",
+  "position": "Data Scientist",
+  "date": "2026-11-22T06:00:00+00:00",
+  "epoch": 1795327200,
+  "location": "Worldwide",
+  "tags": [
+   "data",
+   "ml"
+  ]
+ },
+ {
+  "id": "2",
+  "url": "https://remoteok.com/l/2",
+  "company": "StaleCo",
+  "position": "NLP Engineer",
+  "date": "2026-11-10T00:00:00+00:00",
+  "epoch": 1794268800,
+  "location": "Remote",
+  "tags": [
+   "nlp"
+  ]
+ }
+]

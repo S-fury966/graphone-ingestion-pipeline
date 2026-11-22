@@ -1,0 +1,35 @@
+# AI-company ATS job boards (Step 12). Slugs VERIFIED with one live request on
+# 2026-11-22; non-responding slugs were dropped. `company` is the display name
+# taken from the Greenhouse board API response, or set by hand for Ashby (whose
+# posting API returns no company name) — never guessed from the slug.
+#
+# These are COMPLETE listings (the API returns all currently-open jobs), so the
+# freshness snapshot heuristic treats a successful full fetch as continuity.
+
+greenhouse:
+  - { slug: anthropic,   company: "Anthropic" }
+  - { slug: scaleai,     company: "Scale AI" }
+  - { slug: databricks,  company: "Databricks" }
+  - { slug: stabilityai, company: "Stability AI" }
+  - { slug: assemblyai,  company: "AssemblyAI" }
+  - { slug: imbue,       company: "Imbue" }
+
+ashby:
+  - { slug: cursor,      company: "Cursor" }
+  - { slug: cohere,      company: "Cohere" }
+  - { slug: elevenlabs,  company: "ElevenLabs" }
+  - { slug: ramp,        company: "Ramp" }
+  - { slug: runway,      company: "Runway" }
+  - { slug: perplexity,  company: "Perplexity" }
+  - { slug: suno,        company: "Suno" }
+  - { slug: modal,       company: "Modal" }
+  - { slug: baseten,     company: "Baseten" }
+  - { slug: anyscale,    company: "Anyscale" }
+  - { slug: sierra,      company: "Sierra" }
+  - { slug: writer,      company: "Writer" }
+  - { slug: synthesia,   company: "Synthesia" }
+  - { slug: pika,        company: "Pika" }
+  - { slug: deepgram,    company: "Deepgram" }
+  - { slug: notion,      company: "Notion" }
+  - { slug: linear,      company: "Linear" }
+  - { slug: character,   company: "Character.AI" }

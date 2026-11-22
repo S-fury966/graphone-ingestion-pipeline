@@ -1,0 +1,136 @@
+# Labelled evaluation corpus for the entity resolver (Step 13).
+#
+# Each case:
+#   raw     : the input string
+#   type    : STARTUP | PRODUCT
+#   startup : (PRODUCT only) the owning startup context, if known
+#   expect  : the canonical we must return, or NEW_ENTITY
+#   kind    : positive (a variant that MUST merge) | negative (MUST NOT merge)
+#
+# Metrics (computed by test_resolver.py):
+#   recall    = correct merges / expected positive merges   (require >= 0.90)
+#   precision = 1 - wrong merges / all negative cases        (require 1.0)
+
+cases:
+  # ======================= POSITIVES (STARTUP) =======================
+  - {raw: "OpenAI, Inc.",               type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "Open AI",                    type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "open-ai",                    type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "OPENAI",                     type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "openai.com",                 type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "https://www.openai.com/careers", type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "The OpenAI",                 type: STARTUP, expect: "OpenAI", kind: positive}
+  - {raw: "Anthropic, PBC",             type: STARTUP, expect: "Anthropic", kind: positive}
+  - {raw: "anthropic.com",              type: STARTUP, expect: "Anthropic", kind: positive}
+  - {raw: "Anthropc",                   type: STARTUP, expect: "Anthropic", kind: positive}   # 1-char typo
+  - {raw: "DeepMind",                   type: STARTUP, expect: "Google DeepMind", kind: positive}
+  - {raw: "Deep Mind",                  type: STARTUP, expect: "Google DeepMind", kind: positive}
+  - {raw: "Google Deepmind",            type: STARTUP, expect: "Google DeepMind", kind: positive}
+  - {raw: "cohere.ai",                  type: STARTUP, expect: "Cohere", kind: positive}
+  - {raw: "https://cohere.com",         type: STARTUP, expect: "Cohere", kind: positive}
+  - {raw: "Mistral",                    type: STARTUP, expect: "Mistral AI", kind: positive}
+  - {raw: "mistral.ai",                 type: STARTUP, expect: "Mistral AI", kind: positive}
+  - {raw: "HuggingFace",                type: STARTUP, expect: "Hugging Face", kind: positive}
+  - {raw: "Hugging-Face",               type: STARTUP, expect: "Hugging Face", kind: positive}
+  - {raw: "Hügging Face",               type: STARTUP, expect: "Hugging Face", kind: positive}   # accent
+  - {raw: "huggingface.co",             type: STARTUP, expect: "Hugging Face", kind: positive}
+  - {raw: "Perplexity",                 type: STARTUP, expect: "Perplexity AI", kind: positive}
+  - {raw: "perplexity.ai",              type: STARTUP, expect: "Perplexity AI", kind: positive}
+  - {raw: "Perplexty",                  type: STARTUP, expect: "Perplexity AI", kind: positive}   # typo
+  - {raw: "ScaleAI",                    type: STARTUP, expect: "Scale AI", kind: positive}
+  - {raw: "Scale AI, Inc.",             type: STARTUP, expect: "Scale AI", kind: positive}
+  - {raw: "scale.com",                  type: STARTUP, expect: "Scale AI", kind: positive}
+  - {raw: "Databricks, Inc.",           type: STARTUP, expect: "Databricks", kind: positive}
+  - {raw: "Data bricks",                type: STARTUP, expect: "Databricks", kind: positive}
+  - {raw: "Databrics",                  type: STARTUP, expect: "Databricks", kind: positive}   # typo
+  - {raw: "StabilityAI",                type: STARTUP, expect: "Stability AI", kind: positive}
+  - {raw: "RunwayML",                   type: STARTUP, expect: "Runway", kind: positive}
+  - {raw: "Runway ML",                  type: STARTUP, expect: "Runway", kind: positive}
+  - {raw: "Eleven Labs",                type: STARTUP, expect: "ElevenLabs", kind: positive}
+  - {raw: "11Labs",                     type: STARTUP, expect: "ElevenLabs", kind: positive}
+  - {raw: "Mid Journey",                type: STARTUP, expect: "Midjourney", kind: positive}
+  - {raw: "Jasper AI",                  type: STARTUP, expect: "Jasper", kind: positive}
+  - {raw: "CharacterAI",                type: STARTUP, expect: "Character.AI", kind: positive}
+  - {raw: "Character AI",               type: STARTUP, expect: "Character.AI", kind: positive}
+  - {raw: "Inflection",                 type: STARTUP, expect: "Inflection AI", kind: positive}
+  - {raw: "Assembly AI",                type: STARTUP, expect: "AssemblyAI", kind: positive}
+  - {raw: "Deep Gram",                  type: STARTUP, expect: "Deepgram", kind: positive}
+  - {raw: "TogetherAI",                 type: STARTUP, expect: "Together AI", kind: positive}
+  - {raw: "Any Scale",                  type: STARTUP, expect: "Anyscale", kind: positive}
+  - {raw: "Weights and Biases",         type: STARTUP, expect: "Weights & Biases", kind: positive}
+  - {raw: "W&B",                        type: STARTUP, expect: "Weights & Biases", kind: positive}
+  - {raw: "Lang Chain",                 type: STARTUP, expect: "LangChain", kind: positive}
+  - {raw: "Pine Cone",                  type: STARTUP, expect: "Pinecone", kind: positive}
+  - {raw: "ChromaDB",                   type: STARTUP, expect: "Chroma", kind: positive}
+  - {raw: "Llama Index",                type: STARTUP, expect: "LlamaIndex", kind: positive}
+  - {raw: "GPT Index",                  type: STARTUP, expect: "LlamaIndex", kind: positive}   # alias
+  - {raw: "Modal Labs",                 type: STARTUP, expect: "Modal", kind: positive}
+  - {raw: "Base Ten",                   type: STARTUP, expect: "Baseten", kind: positive}
+  - {raw: "Cursor AI",                  type: STARTUP, expect: "Cursor", kind: positive}
+  - {raw: "Anysphere",                  type: STARTUP, expect: "Cursor", kind: positive}   # alias
+  - {raw: "Notion Labs",                type: STARTUP, expect: "Notion", kind: positive}
+  - {raw: "Glean AI",                   type: STARTUP, expect: "Glean", kind: positive}
+  - {raw: "Harvey AI",                  type: STARTUP, expect: "Harvey", kind: positive}
+  - {raw: "Suno AI",                    type: STARTUP, expect: "Suno", kind: positive}
+  - {raw: "Pika Labs",                  type: STARTUP, expect: "Pika", kind: positive}
+  - {raw: "Writer AI",                  type: STARTUP, expect: "Writer", kind: positive}
+  - {raw: "Deep L",                     type: STARTUP, expect: "DeepL", kind: positive}
+  - {raw: "Nvidia",                     type: STARTUP, expect: "NVIDIA", kind: positive}
+  - {raw: "NVIDIA Corporation",         type: STARTUP, expect: "NVIDIA", kind: positive}
+  - {raw: "Meta AI",                    type: STARTUP, expect: "Meta", kind: positive}
+  - {raw: "Meta Platforms, Inc.",       type: STARTUP, expect: "Meta", kind: positive}
+  - {raw: "x.ai",                       type: STARTUP, expect: "xAI", kind: positive}
+  - {raw: "X AI",                       type: STARTUP, expect: "xAI", kind: positive}
+  - {raw: "Samba Nova",                 type: STARTUP, expect: "SambaNova", kind: positive}
+  - {raw: "Cerebras Systems",           type: STARTUP, expect: "Cerebras", kind: positive}
+  - {raw: "ContextualAI",               type: STARTUP, expect: "Contextual AI", kind: positive}
+  - {raw: "Generally Intelligent",      type: STARTUP, expect: "Imbue", kind: positive}   # alias
+  - {raw: "Sierra AI",                  type: STARTUP, expect: "Sierra", kind: positive}
+  - {raw: "Hume",                       type: STARTUP, expect: "Hume AI", kind: positive}
+
+  # ======================= NEGATIVES (STARTUP) =======================
+  - {raw: "Cohere Health",              type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Scale Venture Partners",     type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Harvey Nash",                type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Sierra Ventures",            type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Together Labs",              type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Luma",                       type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Runway Financial",           type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Jasper Health",              type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Character",                  type: STARTUP, expect: NEW_ENTITY, kind: negative}   # generic word
+  - {raw: "Adept Technology",           type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Grok",                       type: STARTUP, expect: NEW_ENTITY, kind: negative}   # vs Groq
+  - {raw: "Synthesis",                  type: STARTUP, expect: NEW_ENTITY, kind: negative}   # vs Synthesia
+  - {raw: "Glean Health",               type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "The Writer Agency",          type: STARTUP, expect: NEW_ENTITY, kind: negative}   # do_not_merge
+  - {raw: "Scale",                      type: STARTUP, expect: NEW_ENTITY, kind: negative}   # generic prefix
+  - {raw: "Pi",                         type: STARTUP, expect: NEW_ENTITY, kind: negative}   # short/generic
+  - {raw: "Command",                    type: STARTUP, expect: NEW_ENTITY, kind: negative}   # product word, not a startup
+  - {raw: "Comet",                      type: STARTUP, expect: NEW_ENTITY, kind: negative}   # unknown
+  - {raw: "OpenAI Health",              type: STARTUP, expect: NEW_ENTITY, kind: negative}   # prefix of OpenAI
+  - {raw: "Anthropic Health",           type: STARTUP, expect: NEW_ENTITY, kind: negative}   # prefix of Anthropic
+  - {raw: "Scale AI Ventures",          type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Deepmind Health",            type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Mistral Pharma",             type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Perplexica",                 type: STARTUP, expect: NEW_ENTITY, kind: negative}   # looks like Perplexity
+  - {raw: "Notion Health",              type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Linear B",                   type: STARTUP, expect: NEW_ENTITY, kind: negative}   # margin vs Linear
+  - {raw: "Vercel Labs",                type: STARTUP, expect: NEW_ENTITY, kind: negative}
+  - {raw: "Pinecone Health",            type: STARTUP, expect: NEW_ENTITY, kind: negative}
+
+  # ======================= POSITIVES (PRODUCT) =======================
+  - {raw: "Chat GPT",     type: PRODUCT, startup: "OpenAI",        expect: "ChatGPT", kind: positive}
+  - {raw: "Chat-GPT",     type: PRODUCT, startup: "OpenAI, Inc.",  expect: "ChatGPT", kind: positive}
+  - {raw: "GPT4",         type: PRODUCT, startup: "OpenAI",        expect: "GPT-4", kind: positive}
+  - {raw: "Claude AI",    type: PRODUCT, startup: "Anthropic",     expect: "Claude", kind: positive}
+  - {raw: "claude.ai",    type: PRODUCT, startup: "Anthropic",     expect: "Claude", kind: positive}
+  - {raw: "StableDiffusion", type: PRODUCT, startup: "Stability AI", expect: "Stable Diffusion", kind: positive}
+  - {raw: "stable-diffusion", type: PRODUCT, startup: "StabilityAI", expect: "Stable Diffusion", kind: positive}
+  - {raw: "Ray",          type: PRODUCT, startup: "Anyscale",      expect: "Ray", kind: positive}
+  - {raw: "LLaMA",        type: PRODUCT, startup: "Meta",          expect: "Llama", kind: positive}
+  - {raw: "Mixtral",      type: PRODUCT, startup: "Mistral",       expect: "Mixtral", kind: positive}
+  - {raw: "NotionAI",     type: PRODUCT, startup: "Notion",        expect: "Notion AI", kind: positive}
+
+  # ======================= NEGATIVES (PRODUCT) =======================
+  - {raw: "Claude",       type: PRODUCT, startup: "OpenAI",        expect: NEW_ENTITY, kind: negative}  # wrong startup
+  - {raw: "Gemini",       type: PRODUCT, startup: "OpenAI",        expect: NEW_ENTITY, kind: negative}  # Gemini is DeepMind's

@@ -1,0 +1,308 @@
+# =====================================================================
+# MOCKED seed list for the GraphOne entity-resolution assignment (Step 13).
+#
+# This is a hand-curated, MOCK canonical database of well-known AI companies,
+# used only to canonicalize scraped name variants. It is NOT scraped and is not
+# authoritative; it exists so the resolver has a stable set of known entities.
+#
+# Per entry:
+#   canonical : the exact official spelling (the output name)
+#   domain    : primary registrable domain (used by the domain-match layer)
+#   aliases   : realistic MESSY variants a real data source could emit
+#               (casing/spacing/hyphens/legal suffixes/punctuation/domains).
+#               Aliases are deliberately TIGHT — never a bare generic word that
+#               another company could also use ("character", "writer", "scale").
+#   products  : optional; 2-3 well-known products, each with its own aliases.
+#
+# `do_not_merge` (bottom) lists similar-but-DIFFERENT names that must never be
+# merged. Reviewed by hand.
+# =====================================================================
+
+seed_entities:
+  - canonical: OpenAI
+    domain: openai.com
+    aliases: ["OpenAI, Inc.", "Open AI", "open-ai", "OPENAI", "openai.com", "OpenAI Inc"]
+    products:
+      - canonical: ChatGPT
+        aliases: ["Chat GPT", "chatgpt", "Chat-GPT"]
+      - canonical: GPT-4
+        aliases: ["GPT4", "gpt-4", "GPT 4"]
+      - canonical: DALL-E
+        aliases: ["DALLE", "Dall-E", "dall e"]
+
+  - canonical: Anthropic
+    domain: anthropic.com
+    aliases: ["Anthropic, PBC", "Anthropic PBC", "anthropic.com"]
+    products:
+      - canonical: Claude
+        aliases: ["Claude AI", "claude.ai"]
+
+  - canonical: Google DeepMind
+    domain: deepmind.com
+    aliases: ["DeepMind", "Deep Mind", "Google Deepmind", "deepmind.com"]
+    products:
+      - canonical: Gemini
+        aliases: ["Google Gemini"]
+      - canonical: AlphaFold
+        aliases: ["Alpha Fold"]
+
+  - canonical: Cohere
+    domain: cohere.com
+    aliases: ["Cohere, Inc.", "cohere.com", "cohere.ai"]
+    products:
+      - canonical: Command
+        aliases: ["Cohere Command"]
+
+  - canonical: Mistral AI
+    domain: mistral.ai
+    aliases: ["Mistral", "mistral.ai", "Mistral A.I."]
+    products:
+      - canonical: Le Chat
+        aliases: ["LeChat"]
+      - canonical: Mixtral
+        aliases: ["mixtral"]
+
+  - canonical: Hugging Face
+    domain: huggingface.co
+    aliases: ["HuggingFace", "Hugging-Face", "hugging face", "huggingface.co"]
+    products:
+      - canonical: Transformers
+        aliases: ["HuggingFace Transformers", "hf transformers"]
+
+  - canonical: Perplexity AI
+    domain: perplexity.ai
+    aliases: ["Perplexity", "perplexity.ai", "Perplexity.AI"]
+
+  - canonical: Scale AI
+    domain: scale.com
+    aliases: ["Scale AI, Inc.", "ScaleAI", "scale.com", "Scale A.I."]
+
+  - canonical: Databricks
+    domain: databricks.com
+    aliases: ["Databricks, Inc.", "databricks.com", "Data bricks"]
+    products:
+      - canonical: MLflow
+        aliases: ["ML flow", "mlflow"]
+
+  - canonical: Stability AI
+    domain: stability.ai
+    aliases: ["StabilityAI", "stability.ai", "Stability A.I."]
+    products:
+      - canonical: Stable Diffusion
+        aliases: ["StableDiffusion", "stable-diffusion"]
+
+  - canonical: Runway
+    domain: runwayml.com
+    aliases: ["RunwayML", "Runway ML", "runwayml.com", "Runway AI"]
+    products:
+      - canonical: Gen-3
+        aliases: ["Gen 3", "Gen3"]
+
+  - canonical: ElevenLabs
+    domain: elevenlabs.io
+    aliases: ["Eleven Labs", "eleven-labs", "elevenlabs.io", "11Labs"]
+
+  - canonical: Midjourney
+    domain: midjourney.com
+    aliases: ["Mid Journey", "midjourney.com", "Mid-Journey"]
+
+  - canonical: Jasper
+    domain: jasper.ai
+    aliases: ["Jasper AI", "jasper.ai", "Jasper.ai"]
+
+  - canonical: Character.AI
+    domain: character.ai
+    aliases: ["CharacterAI", "Character AI", "character.ai", "c.ai"]
+
+  - canonical: Inflection AI
+    domain: inflection.ai
+    aliases: ["Inflection", "inflection.ai", "Inflection A.I."]
+    products:
+      - canonical: Pi
+        aliases: ["Inflection Pi"]
+
+  - canonical: Adept AI
+    domain: adept.ai
+    aliases: ["Adept", "adept.ai", "Adept AI Labs"]
+
+  - canonical: AssemblyAI
+    domain: assemblyai.com
+    aliases: ["Assembly AI", "assemblyai.com", "Assembly-AI"]
+
+  - canonical: Deepgram
+    domain: deepgram.com
+    aliases: ["Deep Gram", "deepgram.com", "Deepgram, Inc."]
+
+  - canonical: Together AI
+    domain: together.ai
+    aliases: ["Together", "TogetherAI", "together.ai", "Together Computer"]
+
+  - canonical: Anyscale
+    domain: anyscale.com
+    aliases: ["Any Scale", "anyscale.com", "Anyscale, Inc."]
+    products:
+      - canonical: Ray
+        aliases: ["Ray framework"]
+
+  - canonical: Weights & Biases
+    domain: wandb.ai
+    aliases: ["Weights and Biases", "W&B", "wandb", "wandb.ai", "Weights&Biases"]
+
+  - canonical: LangChain
+    domain: langchain.com
+    aliases: ["Lang Chain", "langchain.com", "LangChain, Inc."]
+    products:
+      - canonical: LangSmith
+        aliases: ["Lang Smith"]
+
+  - canonical: Pinecone
+    domain: pinecone.io
+    aliases: ["Pine Cone", "pinecone.io", "Pinecone Systems"]
+
+  - canonical: Weaviate
+    domain: weaviate.io
+    aliases: ["weaviate.io", "Weaviate B.V."]
+
+  - canonical: Chroma
+    domain: trychroma.com
+    aliases: ["ChromaDB", "Chroma DB", "trychroma.com"]
+
+  - canonical: LlamaIndex
+    domain: llamaindex.ai
+    aliases: ["Llama Index", "llamaindex.ai", "GPT Index"]
+
+  - canonical: Replicate
+    domain: replicate.com
+    aliases: ["replicate.com", "Replicate, Inc."]
+
+  - canonical: Modal
+    domain: modal.com
+    aliases: ["Modal Labs", "modal.com", "modal-labs"]
+
+  - canonical: Baseten
+    domain: baseten.co
+    aliases: ["Base Ten", "baseten.co", "Baseten, Inc."]
+
+  - canonical: Cursor
+    domain: cursor.com
+    aliases: ["Cursor AI", "Anysphere", "cursor.com", "Cursor (Anysphere)"]
+
+  - canonical: Notion
+    domain: notion.so
+    aliases: ["Notion Labs", "notion.so", "Notion Labs, Inc."]
+    products:
+      - canonical: Notion AI
+        aliases: ["NotionAI"]
+
+  - canonical: Glean
+    domain: glean.com
+    aliases: ["Glean AI", "glean.com", "Glean Technologies"]
+
+  - canonical: Harvey
+    domain: harvey.ai
+    aliases: ["Harvey AI", "harvey.ai", "Harvey.ai"]
+
+  - canonical: Suno
+    domain: suno.com
+    aliases: ["Suno AI", "suno.com", "Suno, Inc."]
+
+  - canonical: Pika
+    domain: pika.art
+    aliases: ["Pika Labs", "pika.art", "PikaLabs"]
+
+  - canonical: Synthesia
+    domain: synthesia.io
+    aliases: ["synthesia.io", "Synthesia Limited"]
+
+  - canonical: Writer
+    domain: writer.com
+    aliases: ["Writer AI", "writer.com", "Writer, Inc."]
+
+  - canonical: Grammarly
+    domain: grammarly.com
+    aliases: ["grammarly.com", "Grammarly, Inc."]
+
+  - canonical: DeepL
+    domain: deepl.com
+    aliases: ["Deep L", "deepl.com", "DeepL SE"]
+
+  - canonical: NVIDIA
+    domain: nvidia.com
+    aliases: ["Nvidia", "nvidia.com", "NVIDIA Corporation", "nVIDIA"]
+    products:
+      - canonical: CUDA
+        aliases: ["cuda"]
+
+  - canonical: Meta
+    domain: ai.meta.com
+    aliases: ["Meta AI", "Meta Platforms", "Meta Platforms, Inc."]
+    products:
+      - canonical: Llama
+        aliases: ["LLaMA", "Meta Llama"]
+      - canonical: PyTorch
+        aliases: ["Py Torch", "pytorch"]
+
+  - canonical: xAI
+    domain: x.ai
+    aliases: ["x.ai", "X AI", "xAI Corp"]
+    products:
+      - canonical: Grok
+        aliases: ["Grok AI"]
+
+  - canonical: Groq
+    domain: groq.com
+    aliases: ["groq.com", "Groq, Inc."]
+
+  - canonical: Cerebras
+    domain: cerebras.net
+    aliases: ["Cerebras Systems", "cerebras.net", "cerebras.ai"]
+
+  - canonical: SambaNova
+    domain: sambanova.ai
+    aliases: ["Samba Nova", "sambanova.ai", "SambaNova Systems"]
+
+  - canonical: Vercel
+    domain: vercel.com
+    aliases: ["vercel.com", "Vercel, Inc."]
+    products:
+      - canonical: v0
+        aliases: ["v0.dev", "v zero"]
+
+  - canonical: Linear
+    domain: linear.app
+    aliases: ["linear.app", "Linear Orbit, Inc."]
+
+  - canonical: Contextual AI
+    domain: contextual.ai
+    aliases: ["ContextualAI", "contextual.ai", "Contextual A.I."]
+
+  - canonical: Imbue
+    domain: imbue.com
+    aliases: ["imbue.com", "Imbue, Inc.", "Generally Intelligent"]
+
+  - canonical: Sierra
+    domain: sierra.ai
+    aliases: ["Sierra AI", "sierra.ai", "Sierra Technologies"]
+
+  - canonical: Hume AI
+    domain: hume.ai
+    aliases: ["Hume", "hume.ai", "Hume AI, Inc."]
+
+# Similar-but-DIFFERENT names that must NEVER be merged. Each pair is two names
+# that look close (shared word, prefix, or one-character distance) but are
+# different companies / a company vs. a generic word.
+do_not_merge:
+  - ["Cohere", "Cohere Health"]
+  - ["Scale AI", "Scale Venture Partners"]
+  - ["Harvey", "Harvey Nash"]
+  - ["Sierra", "Sierra Ventures"]
+  - ["Together AI", "Together Labs"]
+  - ["Luma AI", "Luma"]
+  - ["Runway", "Runway Financial"]
+  - ["Jasper", "Jasper Health"]
+  - ["Character.AI", "Character"]
+  - ["Adept AI", "Adept Technology"]
+  - ["Groq", "Grok"]
+  - ["Synthesia", "Synthesis"]
+  - ["Glean", "Glean Health"]
+  - ["Writer", "The Writer Agency"]

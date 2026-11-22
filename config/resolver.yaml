@@ -1,0 +1,40 @@
+# Entity-resolver configuration (Step 13). Thresholds and the legal-suffix list
+# live here so the matching policy is tunable without code changes.
+#
+# Precision is valued over recall: a wrong merge (two different companies folded
+# together) is worse than a missed merge. The fuzzy layer only fires when EVERY
+# guard below passes.
+
+fuzzy:
+  # Minimum rapidfuzz ratio (0..1) on the compact key to even consider a merge.
+  min_score: 0.93
+  # Compact keys shorter than this never fuzzy-match (short names collide easily:
+  # "pi", "grok", "groq"). Exact/domain layers still handle short names safely.
+  min_compact_len: 5
+  # The candidate and the query must share the same first compact character.
+  require_same_first_char: true
+  # The best candidate must beat the second-best DIFFERENT canonical by at least
+  # this much, or the match is treated as ambiguous and rejected.
+  min_margin: 0.02
+
+# Trailing legal/entity suffix tokens removed when cleaning a display name for a
+# NEW_ENTITY (and already removed by normalize_name for the compact key). Only
+# TRAILING tokens are stripped; internal words are preserved.
+legal_suffixes:
+  - inc
+  - llc
+  - ltd
+  - corp
+  - co
+  - gmbh
+  - plc
+  - sa
+  - ag
+  - bv
+  - pty
+  - limited
+  - incorporated
+  - corporation
+  - company
+  - holdings
+  - group

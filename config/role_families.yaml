@@ -1,0 +1,97 @@
+# Role-family keyword table (Step 12). A job maps to the FIRST family whose
+# keywords match the ATS department/team name (role_basis=department), else the
+# job title (role_basis=title_match), else "Other" (role_basis=default_other).
+# Keywords are matched as whole words/phrases, case-insensitive. Order matters:
+# families are tried top to bottom, so put more specific families first.
+families:
+  Data:
+    - data scientist
+    - data science
+    - data engineer
+    - data analyst
+    - analytics
+    - machine learning engineer
+    - ml engineer
+    - mlops
+  Research:
+    - research
+    - scientist
+    - research engineer
+    - member of technical staff
+    - applied science
+    - ai research
+  Engineering:
+    - engineer
+    - engineering
+    - developer
+    - software
+    - swe
+    - backend
+    - frontend
+    - full stack
+    - fullstack
+    - infrastructure
+    - devops
+    - security
+    - platform
+    - sre
+    - technical staff
+  Product:
+    - product manager
+    - product management
+    - "product "
+    - program manager
+    - technical program
+  Design:
+    - design
+    - designer
+    - ux
+    - ui
+    - user experience
+    - brand
+  Sales:
+    - sales
+    - account executive
+    - account manager
+    - business development
+    - partnerships
+    - revenue
+    - solutions engineer
+  Marketing:
+    - marketing
+    - growth
+    - content
+    - communications
+    - developer relations
+    - developer advocate
+    - community
+  Customer Support:
+    - support
+    - customer success
+    - customer experience
+    - technical support
+    - onboarding
+  People and Recruiting:
+    - recruit
+    - talent
+    - people
+    - human resources
+    - hr
+    - workplace
+  Finance and Legal:
+    - finance
+    - accounting
+    - legal
+    - counsel
+    - compliance
+    - tax
+    - treasury
+  Operations:
+    - operations
+    - ops
+    - strategy
+    - chief of staff
+    - business operations
+    - supply
+    - logistics
+# "Other" is the implicit fallback (role_basis=default_other); do not list it.

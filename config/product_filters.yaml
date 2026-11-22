@@ -1,0 +1,63 @@
+# Deterministic product-name filters (backstop to the LLM instructions).
+# plan_tiers: names that are pricing tiers, not products. Lowercase compare.
+# A name that exactly matches one of these is rejected UNLESS it also contains
+# the startup's own name (e.g. "Acme Max").
+plan_tiers:
+  - free
+  - pro
+  - plus
+  - max
+  - basic
+  - starter
+  - team
+  - business
+  - premium
+  - standard
+  - extra
+  - perks
+  - individual
+  - personal
+  - enterprise
+  - growth
+  - scale
+  - essentials
+  - advanced
+  - ultimate
+  - lite
+  - hobby
+  - solo
+  - plan
+  - custom
+
+# Per-call input budget for product extraction (tokens). Product names and
+# pricing signals do not need full pages: we keep title/meta/og, headings, the
+# hero and pricing blocks and trim the rest.
+chunk_budget:
+  homepage_tokens: 2500
+  pricing_tokens: 1500
+
+# Parked / domain-for-sale detection. A startup whose site resolves to one of
+# these hosts, or whose page text contains one of these phrases, is marked
+# crawl_status=parked (no LLM call, no product).
+parked_hosts:
+  - domains.atom.com
+  - afternic.com
+  - sedo.com
+  - dan.com
+  - hugedomains.com
+  - bodis.com
+  - uniregistry.com
+  - undeveloped.com
+  - buydomains.com
+  - parkingcrew.net
+  - sedoparking.com
+parked_phrases:
+  - "domain is for sale"
+  - "this domain is for sale"
+  - "buy this domain"
+  - "domain for sale"
+  - "verified domain available"
+  - "is available for purchase"
+  - "this domain name is for sale"
+  - "parked free, courtesy of"
+  - "the owner of this domain"

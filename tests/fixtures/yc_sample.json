@@ -1,0 +1,22 @@
+[
+  {"slug": "openai-x", "name": "OpenAI", "team_size": 500, "website": "https://openai.com",
+   "url": "https://www.ycombinator.com/companies/openai-x", "one_liner": "AGI research.",
+   "batch": "W16", "tags": ["Artificial Intelligence"]},
+  {"slug": "openai-inc", "name": "OpenAI, Inc.", "team_size": 480, "website": "https://openai.com",
+   "url": "https://www.ycombinator.com/companies/openai-inc", "one_liner": null,
+   "batch": null, "tags": []},
+  {"slug": "zeroco", "name": "  ZeroCo  ", "team_size": 0, "website": "https://zero.co",
+   "url": "https://www.ycombinator.com/companies/zeroco", "one_liner": "Zero team.", "tags": []},
+  {"slug": "nullco", "name": "NullCo", "team_size": null, "website": "https://nullco.io",
+   "url": "https://www.ycombinator.com/companies/nullco", "tags": []},
+  {"slug": "strco", "name": "StrCo", "team_size": "12", "website": "https://strco.com",
+   "url": "https://www.ycombinator.com/companies/strco", "tags": []},
+  {"slug": "negco", "name": "NegCo", "team_size": -5, "website": "https://negco.com",
+   "url": "https://www.ycombinator.com/companies/negco", "tags": []},
+  {"slug": "dupdomain-a", "name": "Alpha Brand", "team_size": 10, "website": "https://shared.com",
+   "url": "https://www.ycombinator.com/companies/dupdomain-a", "one_liner": "Alpha.", "tags": []},
+  {"slug": "dupdomain-b", "name": "Beta Brand", "team_size": 3, "website": "http://www.shared.com/path",
+   "url": "https://www.ycombinator.com/companies/dupdomain-b", "tags": []},
+  {"slug": "badweb", "name": "BadWeb", "team_size": 7, "website": "not a url",
+   "url": "https://www.ycombinator.com/companies/badweb", "tags": []}
+]

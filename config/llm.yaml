@@ -1,0 +1,123 @@
+# LLM fallback chain — config-driven, ordered. No paid APIs by default.
+# Default chain: Gemini Flash -> Groq Llama. DeepSeek present but disabled.
+# A tier whose api_key_env is missing is skipped at runtime with a log line.
+#
+# Models were chosen by querying each provider's list-models endpoint AND
+# live-testing generateContent with the real key (2026-11-21):
+#   Gemini -> gemini-3.5-flash  (this key only serves 3.x; 2.x 404, aliases hang)
+#   Groq   -> openai/gpt-oss-20b (Groq no longer offers a general Llama chat
+#             model on this account; its catalog is gpt-oss / qwen / allam).
+# To change either, edit the `model:` line only — no code change.
+
+prompt_version: "2"
+global_concurrency: 8
+max_attempts_per_tier: 2     # for 429 / 5xx within a tier before fallback
+circuit_threshold: 5         # consecutive failures (429 AND 5xx/timeout) -> open circuit
+circuit_cooldown_s: 180      # a few minutes on cooldown
+backoff_base_s: 0.5
+backoff_max_s: 20
+# A 429 whose reset exceeds this (seconds) is treated as a daily/long cap: the
+# tier is parked (persisted in SQLite) and we fall to the next tier instead of
+# sleeping. Keeps a daily-capped Groq from stalling the whole run.
+max_wait_s: 120
+
+# Tier order = fallback order, highest-quality available model first. Verified
+# live 2026-11-22: gpt-oss-120b and gpt-oss-20b both return valid JSON (<700ms);
+# gemini-3.1-flash-lite answers in ~2-3s (2x under 20s). NOTE: the two Groq
+# models share one account-level free daily budget (TPD ~ shared), so Gemini
+# (separate provider budget) is the real parallel-capacity fallback.
+# Tier order = fallback order for the product run (2026-11-22):
+# gemini-flash-lite -> mistral(if verified) -> groq-oss-120b -> groq-oss.
+# Gemini first spreads load onto a separate provider budget before spending the
+# shared Groq daily token pool. Parking logic (max_wait_s) still applies.
+tiers:
+  # 1) Separate provider budget -> real parallel capacity; put first to spare the
+  # shared Groq daily token pool. gemini-3.1-flash-lite answered 2x (~1.8s/3.1s).
+  - name: gemini-flash-lite
+    provider: gemini
+    model: gemini-3.1-flash-lite
+    api_key_env: GEMINI_API_KEY
+    enabled: true
+    max_input_tokens: 24000
+    max_output_tokens: 2048
+    rpm_limit: 15
+    tpm_limit: 1000000        # Gemini free tier generous on tokens; headers override
+    timeout_s: 20
+
+  # 2) Mistral: DISABLED 2026-11-22 — key is valid but the workspace has
+  # x-ratelimit-limit-req-minute: 0 (no API request allowance; 429 code 1300
+  # "Rate limit exceeded"). Needs activation/billing on la Plateforme. Kept
+  # configured so it can be re-enabled once the account is provisioned.
+  - name: mistral
+    provider: openai
+    base_url: https://api.mistral.ai/v1/chat/completions
+    model: mistral-small-latest   # current small instruct model, JSON mode supported
+    api_key_env: MISTRAL_API_KEY
+    enabled: false
+    max_input_tokens: 24000
+    max_output_tokens: 2048
+    rpm_limit: 30
+    tpm_limit: 500000     # provisional; overridden from response headers at runtime
+    timeout_s: 30
+
+  # 3) Highest-quality Groq model. reasoning_effort=low halves output tokens
+  # (518 -> 261 on the same input) with JSON + evidence still valid.
+  - name: groq-oss-120b
+    provider: groq
+    model: openai/gpt-oss-120b
+    api_key_env: GROQ_API_KEY
+    enabled: true
+    reasoning_effort: low
+    max_input_tokens: 8000
+    max_output_tokens: 1024
+    tpm_output_reserve: 1024
+    rpm_limit: 30
+    tpm_limit: 7000          # headers override (x-ratelimit-limit-tokens)
+    timeout_s: 20
+
+  # 4) Same family, smaller/cheaper; shares the Groq account daily budget.
+  - name: groq-oss
+    provider: groq
+    model: openai/gpt-oss-20b
+    api_key_env: GROQ_API_KEY
+    enabled: true
+    reasoning_effort: low
+    max_input_tokens: 8000
+    max_output_tokens: 1024   # real API cap: room for ~3 products with evidence
+    tpm_output_reserve: 1024
+    rpm_limit: 30
+    tpm_limit: 7000           # headers override (x-ratelimit-limit-tokens)
+    timeout_s: 20
+
+  # ---- Disabled fallback: generic OpenAI-compatible tier. Enable by adding the
+  # key to .env; real limits are learned from response headers at runtime. ----
+  - name: cerebras
+    provider: openai
+    base_url: https://api.cerebras.ai/v1/chat/completions
+    model: llama-3.3-70b
+    api_key_env: CEREBRAS_API_KEY
+    enabled: false
+    max_input_tokens: 8000
+    max_output_tokens: 1024
+    rpm_limit: 30
+    timeout_s: 20
+
+  - name: deepseek
+    provider: deepseek
+    model: deepseek-chat
+    api_key_env: DEEPSEEK_API_KEY
+    enabled: false
+    max_input_tokens: 32000
+    max_output_tokens: 2048
+    rpm_limit: 60
+    timeout_s: 30
+
+  - name: mock
+    provider: mock
+    model: mock-1
+    api_key_env: ""
+    enabled: false
+    max_input_tokens: 8000
+    max_output_tokens: 1024
+    rpm_limit: 1000
+    timeout_s: 10

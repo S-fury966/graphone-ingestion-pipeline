@@ -1,0 +1,40 @@
+# AI relevance keywords for non-AI-specific sources (Arbeitnow, RemoteOK news/
+# jobs). Matched as whole words / phrases (case-insensitive) against a title +
+# tags (jobs) or title + text (news). ATS boards of AI companies skip this
+# filter (every role at an AI company is in scope).
+terms:
+  - artificial intelligence
+  - machine learning
+  - deep learning
+  - neural network
+  - large language model
+  - generative ai
+  - computer vision
+  - natural language processing
+  - data scientist
+  - data science
+  - reinforcement learning
+  - speech recognition
+  - recommendation system
+  - mlops
+  - ml infrastructure
+  - ml platform
+  - ai
+  - ml
+  - llm
+  - llms
+  - nlp
+  - genai
+  - gpt
+  - transformer
+  - diffusion
+  - rag
+  - chatbot
+  - agentic
+  - ai agent
+  - prompt engineering
+  - pytorch
+  - tensorflow
+  - hugging face
+  - openai
+  - anthropic

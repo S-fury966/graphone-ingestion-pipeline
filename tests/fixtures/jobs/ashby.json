@@ -1,0 +1,23 @@
+{
+ "apiVersion": "1",
+ "jobs": [
+  {
+   "jobUrl": "https://jobs.ashbyhq.com/cohere/1",
+   "title": "Research Scientist",
+   "publishedAt": "2026-11-22T06:00:00+00:00",
+   "isRemote": true,
+   "department": "Research",
+   "location": "Toronto",
+   "workplaceType": "Remote"
+  },
+  {
+   "jobUrl": "https://jobs.ashbyhq.com/cohere/2",
+   "title": "Account Executive",
+   "publishedAt": "2026-11-10T00:00:00+00:00",
+   "isRemote": false,
+   "department": "Sales",
+   "location": "London",
+   "workplaceType": "Onsite"
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+# Source registry — sources are DATA, not code.
+# Scaling to more sources (and toward 500k+ records) must require only edits
+# here, never code changes.
+#
+# Each source:
+#   name:               unique human label
+#   type:               api | rss | html | js   (how the page is fetched/parsed)
+#   base_url:           root URL for the source
+#   record_types:       which record types this source yields
+#   rate_limit_per_sec: polite per-domain request rate (> 0)
+#   max_concurrency:    max in-flight requests to this source (> 0)
+#   enabled:            include in a run?
+
+sources:
+  # arXiv Atom API — official programmatic endpoint. arXiv asks for ~1 request
+  # every 3 seconds, so rate_limit_per_sec = 0.33 and max_concurrency = 1.
+  - name: arxiv
+    type: api
+    base_url: https://export.arxiv.org/api/query
+    record_types: [RESEARCH_PAPER]
+    rate_limit_per_sec: 0.33
+    max_concurrency: 1
+    enabled: true
+
+  # GitHub REST API — repo existence + star counts (authenticated: 5000 req/hr).
+  - name: github
+    type: api
+    base_url: https://api.github.com
+    record_types: [RESEARCH_PAPER]
+    rate_limit_per_sec: 8.0
+    max_concurrency: 5
+    enabled: true
+
+  # ===================================================================
+  # Phase II — AI NEWS sources (chosen in docs/jobs_news_recon.md).
+  # Dates: feeds carry explicit ISO/RFC-822 dates; the article crawl falls
+  # back to JSON-LD/meta/URL/relative. The LLM never decides dates/freshness.
+  # ===================================================================
+
+  # TechCrunch AI — RSS, explicit +0000 dates, ~150-char excerpt in feed, so
+  # the full article (static HTML) is crawled. robots allows feed + articles.
+  - name: techcrunch-ai
+    type: rss
+    base_url: https://techcrunch.com/category/artificial-intelligence/feed/
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: true
+    full_text_in_feed: false
+    article_crawl: true
+
+  # The Verge AI — Atom; full text in feed; dates carry a US-Eastern offset
+  # (parseable, normalized to UTC). AI section = pre-filtered.
+  - name: verge-ai
+    type: rss
+    base_url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: true
+    full_text_in_feed: true
+    article_crawl: true
+
+  # Ars Technica — general tech, needs an AI keyword filter. Article host 405s
+  # on direct fetch, so use the feed's (partial) content only.
+  - name: ars-technica
+    type: rss
+    base_url: https://feeds.arstechnica.com/arstechnica/index
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: true
+    ai_filter: true
+    full_text_in_feed: true
+    article_crawl: false
+
+  # MIT Technology Review AI — RSS, full text in feed, explicit UTC dates;
+  # high quality, low volume.
+  - name: mit-tech-review-ai
+    type: rss
+    base_url: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: true
+    full_text_in_feed: true
+    article_crawl: true
+
+  # Hacker News (Algolia) — AI story discovery; links out, so crawl the target
+  # (variable sites -> exercises the JSON-LD/meta/relative date path). Needs an
+  # AI relevance check beyond the query.
+  - name: hn-algolia-ai
+    type: api
+    base_url: https://hn.algolia.com/api/v1/search_by_date?query=AI&tags=story&numericFilters=points%3E20&hitsPerPage=100
+    record_types: [NEWS]
+    rate_limit_per_sec: 1.0
+    max_concurrency: 1
+    enabled: true
+    ai_filter: true
+    full_text_in_feed: false
+    article_crawl: true
+
+  # ---- NEWS backups (disabled) ----
+  # The Decoder — AI-pure, but robots DISALLOWS /feed/; reach articles another
+  # way (sitemap/HN) if promoted. Article pages are allowed and show "X ago".
+  - name: the-decoder
+    type: rss
+    base_url: https://the-decoder.com/feed/
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: false
+    article_crawl: true
+
+  # Hugging Face blog — infrequent; feed carries no body, so crawl the post.
+  - name: huggingface-blog
+    type: rss
+    base_url: https://huggingface.co/blog/feed.xml
+    record_types: [NEWS]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: false
+    full_text_in_feed: false
+    article_crawl: true
+
+  # ===================================================================
+  # Phase II — AI JOB sources (Step 12). See docs/jobs_news_recon.md.
+  # ATS board slugs live in config/job_boards.yaml. The LLM never decides
+  # dates or freshness; only HN comment extraction uses it.
+  # ===================================================================
+
+  # Arbeitnow — JSON API; created_at is a unix epoch (publication time), has a
+  # remote boolean + tags. General board -> AI keyword filter.
+  - name: arbeitnow
+    type: api
+    base_url: https://www.arbeitnow.com/api/job-board-api
+    record_types: [JOB]
+    rate_limit_per_sec: 1.0
+    max_concurrency: 1
+    enabled: true
+    ai_filter: true
+    listing_type: chronological
+
+  # RemoteOK — JSON API; date (ISO + epoch) is publication time; all jobs are
+  # remote by nature. General board -> AI keyword filter.
+  - name: remoteok
+    type: api
+    base_url: https://remoteok.com/api
+    record_types: [JOB]
+    rate_limit_per_sec: 1.0
+    max_concurrency: 1
+    enabled: true
+    ai_filter: true
+    listing_type: chronological
+
+  # Greenhouse ATS — per-company boards (config/job_boards.yaml). Public board
+  # API exposes only updated_at (a modified date) -> jobs are UNDATED and use
+  # the snapshot heuristic. Complete listing. AI companies -> all roles.
+  - name: greenhouse
+    type: api
+    base_url: https://boards-api.greenhouse.io
+    record_types: [JOB]
+    rate_limit_per_sec: 4.0
+    max_concurrency: 4
+    enabled: true
+    ai_filter: false
+    listing_type: complete
+
+  # Ashby ATS — per-company boards (config/job_boards.yaml). publishedAt is a
+  # real publication time. Complete listing. AI companies -> all roles.
+  - name: ashby
+    type: api
+    base_url: https://api.ashbyhq.com
+    record_types: [JOB]
+    rate_limit_per_sec: 4.0
+    max_concurrency: 4
+    enabled: true
+    ai_filter: false
+    listing_type: complete
+
+  # Hacker News "Who is hiring?" — Algolia API; top-level comments of the current
+  # monthly thread, comment created_at is publication time. Free-text jobs ->
+  # LLM extraction (excluded by --skip-llm-sources).
+  - name: hn-hiring
+    type: api
+    base_url: https://hn.algolia.com/api/v1/search_by_date
+    record_types: [JOB]
+    rate_limit_per_sec: 1.0
+    max_concurrency: 1
+    enabled: true
+    ai_filter: false
+    listing_type: chronological
+    uses_llm: true
+
+  # We Work Remotely — configured backup (disabled); RSS pins stale featured jobs.
+  - name: weworkremotely
+    type: rss
+    base_url: https://weworkremotely.com/categories/remote-programming-jobs.rss
+    record_types: [JOB]
+    rate_limit_per_sec: 0.5
+    max_concurrency: 1
+    enabled: false
+    ai_filter: true
+    listing_type: chronological

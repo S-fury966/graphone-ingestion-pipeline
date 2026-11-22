@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <title>ArXiv Query</title>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">3</opensearch:totalResults>
+
+  <entry>
+    <id>http://arxiv.org/abs/2401.01234v2</id>
+    <published>2024-01-05T10:00:00Z</published>
+    <title>A Great   Model
+      for Everything</title>
+    <summary>  We present a method. Code is available at
+      https://github.com/Owner/Repo1 and docs follow.  </summary>
+    <author><name>Ada Lovelace</name></author>
+    <author><name>Alan Turing</name></author>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2401.01234v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2401.01234v2" rel="related" type="application/pdf"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/2401.05678v1</id>
+    <published>2024-01-04T08:30:00Z</published>
+    <title>Second Paper</title>
+    <summary>No link in the abstract here.</summary>
+    <author><name>Grace Hopper</name></author>
+    <arxiv:comment>Accepted at NeurIPS; code at https://github.com/foo/bar-baz.git</arxiv:comment>
+    <arxiv:journal_ref>NeurIPS 2024</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2401.05678v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2401.05678v1" rel="related" type="application/pdf"/>
+  </entry>
+
+  <entry>
+    <id>http://arxiv.org/abs/2312.00001v1</id>
+    <published>2023-12-01T00:00:00Z</published>
+    <title>Paper Without Code</title>
+    <summary>A purely theoretical contribution with no repository.</summary>
+    <author><name>Edsger Dijkstra</name></author>
+    <link href="http://arxiv.org/abs/2312.00001v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2312.00001v1" rel="related" type="application/pdf"/>
+  </entry>
+</feed>

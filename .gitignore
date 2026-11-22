@@ -1,0 +1,49 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local data / state (keep only the empty directory skeletons)
+data/*
+!data/.gitkeep
+!data/logs/
+data/logs/*
+!data/logs/.gitkeep
+*.db
+*.sqlite*
+
+# Playwright (report + downloaded browser caches)
+playwright-report/
+.playwright/
+ms-playwright/
+.cache/ms-playwright/
+
+# Recon scratch — throwaway probes (see scratch/README.md); findings live in docs/
+scratch/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
