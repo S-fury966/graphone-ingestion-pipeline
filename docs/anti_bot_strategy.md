@@ -14,8 +14,12 @@ is to behave well, which the shared `AsyncFetcher` already does:
   concurrency — we never flood a host.
 - **Caching + conditional requests** and a hard response-size cap, so we re-ask
   for as little as possible.
-- **A consistent, identifying User-Agent** (`GraphOneBot`), stable within a
-  session — not a rotating disguise.
+- **User-Agent:** robots.txt is evaluated against the `GraphOneBot` agent, and
+  the **browser rung** (L1) sends a consistent, identifying `GraphOneBot/1.0`
+  UA. **Disclosure:** the L0 HTTP fetcher currently *rotates* four realistic
+  browser User-Agents (`random.choice`) — a light, common evasion rather than a
+  consistent identifier. Making L0 send `GraphOneBot` too would be the more
+  honest default and is a one-line change.
 - **robots.txt respected** for every HTML page (official API/RSS endpoints are
   used as their documented access path).
 - **Prefer official APIs, RSS and open datasets** over scraping. This project
