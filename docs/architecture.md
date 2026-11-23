@@ -79,7 +79,7 @@ _Already pointing that way in code_: config-driven YAML sources, per-domain limi
 
 ## 8 · Known limitations
 - Pricing null for 72.7 % of products (no public price; never guessed).
-- Fresh news/jobs counts depend on run time (25 jobs, 9 news at the 2026-11-23T04:46Z snapshot; 24 h gate at export).
+- Fresh news/jobs counts depend on run time (25 jobs, 9 news at the 2026-11-23T06:10Z snapshot; 24 h gate at export; hn-hiring's monthly thread had no comment inside 24 h, so 3 of 5 job boards contributed).
 - Bot-hostile publisher article pages (403/405) are skipped, not bypassed — this lowers the share of HN items with a verifiable article date.
 - Free-tier LLM quotas throttle big runs; raw pages aren't stored, so re-extraction re-crawls.
 - Resolver eval is not blind; only ~20 real non-trivial mappings (mock seed).

@@ -1,6 +1,6 @@
 # Validation report
 
-bundle now (UTC): 2026-11-23T04:53:01.621358+00:00
+bundle now (UTC): 2026-11-23T06:14:30.117749+00:00
 
 
 ## Row counts
@@ -40,9 +40,9 @@ bundle now (UTC): 2026-11-23T04:53:01.621358+00:00
 
 ## Freshness (jobs/news, window 24h at bundle time)
 - [PASS] Jobs: no item older than 24h
-- Jobs: oldest item age = 20.3h; freshness_status = {'VERIFIED_FRESH': 25}
+- Jobs: oldest item age = 21.7h; freshness_status = {'VERIFIED_FRESH': 25}
 - [PASS] News: no item older than 24h
-- News: oldest item age = 22.4h; freshness_status = {'VERIFIED_FRESH': 9}
+- News: oldest item age = 23.8h; freshness_status = {'VERIFIED_FRESH': 9}
 
 ## Entity Mapping Log
 - [PASS] no synthetic eval_corpus rows in the live entity log
@@ -68,6 +68,10 @@ bundle now (UTC): 2026-11-23T04:53:01.621358+00:00
 - [PASS] Entity Mapping Log.csv is valid UTF-8
 - [PASS] Entity Mapping Log.csv max cell <= 45000 (+marker) — max 95 in raw_name
 - Entity Mapping Log.csv: max cell length 95 (col raw_name)
+
+## Job rejection reason codes
+- [PASS] all job rejection reason codes are known
+- counts by code: {'NON_AI': 368, 'DUPLICATE': 25, 'STALE': 3240}
 
 ---
 

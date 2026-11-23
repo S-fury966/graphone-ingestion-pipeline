@@ -2,7 +2,7 @@
 
 Every number below comes from `submission/VALIDATION.md`, the live
 `data/state.db`, or the `config/*.yaml` files — not from memory. **Data snapshot
-(final bundle): 2026-11-23T04:46:03Z.**
+(final bundle): 2026-11-23T06:10:43Z.**
 
 ## Row counts per tab (vs required minimum)
 | Tab | Rows | Minimum | Source |
@@ -24,9 +24,11 @@ From `data/state.db` (`papers`): 1044 papers, **all 1044 have `github_url` and
 
 ## Freshness (jobs/news) at the final bundle
 VALIDATION.md: **Jobs 25 fresh — all VERIFIED_FRESH, 0 INFERRED_FRESH, oldest
-20.2 h.** **News 9 fresh — all VERIFIED_FRESH, 0 INFERRED_FRESH, oldest 22.3 h.**
+21.6 h.** **News 9 fresh — all VERIFIED_FRESH, 0 INFERRED_FRESH, oldest 23.7 h.**
 Window = 24 h, enforced at bundle time. (DB holds 18 news + 35 jobs total; the
-rest were stale at bundle time.)
+rest were stale at bundle time.) Fresh jobs came from **3 of 5 boards**:
+arbeitnow 20, greenhouse 3, ashby 2; remoteok 0 (no fresh AI remote job),
+hn-hiring 0 (all 45 thread comments ≥ 24 h old → gated before the LLM, 0 calls).
 
 ## Sources (config/sources.yaml, config/job_boards.yaml)
 - **Papers:** `arxiv` (API) primary; `github` (API) for repo existence + stars.

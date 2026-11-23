@@ -9,7 +9,7 @@ to canonical form, and exports a six-tab submission bundle.
 Numbers in this README come from `docs/facts.md` (sourced from
 `submission/VALIDATION.md`, the database and the config files).
 
-## Results (data snapshot taken at 2026-11-23T04:46:03Z)
+## Results (data snapshot taken at 2026-11-23T06:10:43Z)
 | Tab | Rows | Required minimum |
 |---|---|---|
 | Startups | 1150 | ≥ 1000 ✅ |
@@ -169,6 +169,12 @@ documented access path), which is why it is not gated by HTML `robots`.
   Techdirt, …) refuse our identifying `GraphOneBot` client, so those items lose
   their article date and are dropped as unprovable/NO_TEXT. This lowers the share
   of HN items with a verifiable article date — an honest cost of not bypassing.
+- **`hn-hiring` only contributes when a comment inside the 24 h window exists.**
+  The monthly "Ask HN: Who is hiring?" thread is posted once a month; at the
+  2026-11-23T06:10Z snapshot its newest comment was **~158 h old**, so all 45
+  comments were gated STALE before any LLM call (0 calls used) and **3 of the 5
+  job boards contributed** the fresh jobs (arbeitnow 20, greenhouse 3, ashby 2;
+  remoteok 0, hn-hiring 0).
 
 ## Importing into Google Sheets
 The six `submission/*.csv` files become the six tabs of one sheet. Step-by-step
