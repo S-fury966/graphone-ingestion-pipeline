@@ -1,15 +1,15 @@
 # Validation report
 
-bundle now (UTC): 2026-11-22T20:35:33.995259+00:00
+bundle now (UTC): 2026-11-23T04:53:01.621358+00:00
 
 
 ## Row counts
 - [PASS] Startups >= 1000 — 1150 rows
 - [PASS] Products >= 1000 — 1143 rows
 - [PASS] Research Papers >= 1000 — 1044 rows
-- Jobs (fresh): 4
-- News (fresh): 3
-- Entity Mapping Log: 2296
+- Jobs (fresh): 25
+- News (fresh): 9
+- Entity Mapping Log: 2309
 
 ## Duplicate keys
 - [PASS] no duplicate startup canonical name
@@ -40,14 +40,14 @@ bundle now (UTC): 2026-11-22T20:35:33.995259+00:00
 
 ## Freshness (jobs/news, window 24h at bundle time)
 - [PASS] Jobs: no item older than 24h
-- Jobs: oldest item age = 19.9h; freshness_status = {'VERIFIED_FRESH': 4}
+- Jobs: oldest item age = 20.3h; freshness_status = {'VERIFIED_FRESH': 25}
 - [PASS] News: no item older than 24h
-- News: oldest item age = 23.5h; freshness_status = {'VERIFIED_FRESH': 3}
+- News: oldest item age = 22.4h; freshness_status = {'VERIFIED_FRESH': 9}
 
 ## Entity Mapping Log
 - [PASS] no synthetic eval_corpus rows in the live entity log
-- real non-trivial mappings (method != EXACT_SELF): 9
-- rows per source_table: {'products,startups': 851, 'jobs': 7, 'products': 1139, 'startups': 299}
+- real non-trivial mappings (method != EXACT_SELF): 20
+- rows per source_table: {'jobs': 20, 'products,startups': 851, 'products': 1139, 'startups': 299}
 
 ## CSV cell length + UTF-8
 - [PASS] Startups.csv is valid UTF-8
@@ -60,14 +60,14 @@ bundle now (UTC): 2026-11-22T20:35:33.995259+00:00
 - [PASS] Research Papers.csv max cell <= 45000 (+marker) — max 5779 in content.authors
 - Research Papers.csv: max cell length 5779 (col content.authors)
 - [PASS] Jobs.csv is valid UTF-8
-- [PASS] Jobs.csv max cell <= 45000 (+marker) — max 115 in source.url
-- Jobs.csv: max cell length 115 (col source.url)
+- [PASS] Jobs.csv max cell <= 45000 (+marker) — max 224 in source.url
+- Jobs.csv: max cell length 224 (col source.url)
 - [PASS] News.csv is valid UTF-8
-- [PASS] News.csv max cell <= 45000 (+marker) — max 7756 in content.full_text
-- News.csv: max cell length 7756 (col content.full_text)
+- [PASS] News.csv max cell <= 45000 (+marker) — max 22144 in content.full_text
+- News.csv: max cell length 22144 (col content.full_text)
 - [PASS] Entity Mapping Log.csv is valid UTF-8
-- [PASS] Entity Mapping Log.csv max cell <= 45000 (+marker) — max 54 in raw_name
-- Entity Mapping Log.csv: max cell length 54 (col raw_name)
+- [PASS] Entity Mapping Log.csv max cell <= 45000 (+marker) — max 95 in raw_name
+- Entity Mapping Log.csv: max cell length 95 (col raw_name)
 
 ---
 

@@ -1,12 +1,23 @@
 entity_type,raw_name,canonical,method,score,matched_alias,source_table,occurrences
+STARTUP,Bjak,Bjak,NEW_ENTITY,,,jobs,4
+STARTUP,DENKweit GmbH,DENKweit,NEW_ENTITY,,,jobs,4
+STARTUP,Theodo,Theodo,NEW_ENTITY,,,jobs,3
+STARTUP,"Ilias Vassiliou & Team / headhunter.digital / Recruiting für Digital, Sales, IT, KI, Automation","Ilias Vassiliou & Team / headhunter.digital / Recruiting für Digital, Sales, IT, KI, Automation",NEW_ENTITY,,,jobs,2
 STARTUP,Jasper.ai,Jasper,EXACT,1.0,Jasper AI,"products,startups",2
 STARTUP,Skdse,Skdse,NEW_ENTITY,,,jobs,2
 STARTUP,Wemolo,Wemolo,NEW_ENTITY,,,jobs,2
 STARTUP,intercom,intercom,NEW_ENTITY,,,jobs,2
 PRODUCT,Jasper,Jasper,NEW_ENTITY,,,products,1
 STARTUP,Agilerobotsse,Agilerobotsse,NEW_ENTITY,,,jobs,1
+STARTUP,Backmarket,Backmarket,NEW_ENTITY,,,jobs,1
+STARTUP,Berenschot Groep B.V.,Berenschot Groep B.V.,NEW_ENTITY,,,jobs,1
 STARTUP,Enpal,Enpal,NEW_ENTITY,,,jobs,1
+STARTUP,ILLUIN Technology,ILLUIN Technology,NEW_ENTITY,,,jobs,1
+STARTUP,ImaginePartners,ImaginePartners,NEW_ENTITY,,,jobs,1
+STARTUP,Makersite GmbH,Makersite,NEW_ENTITY,,,jobs,1
 STARTUP,Packmatic,Packmatic,NEW_ENTITY,,,jobs,1
+STARTUP,Vestiairecollective,Vestiairecollective,NEW_ENTITY,,,jobs,1
+STARTUP,adjoe,adjoe,NEW_ENTITY,,,jobs,1
 STARTUP,caronsale,caronsale,NEW_ENTITY,,,jobs,1
 STARTUP,Acolite,Acolite,EXACT_SELF,1.0,,"products,startups",4
 STARTUP,Aden,Aden,EXACT_SELF,1.0,,"products,startups",4
@@ -97,6 +108,7 @@ STARTUP,Zavo,Zavo,EXACT_SELF,1.0,,"products,startups",4
 STARTUP,Alice.tech,Alice.tech,EXACT_SELF,1.0,,"products,startups",3
 STARTUP,Anakin,Anakin,EXACT_SELF,1.0,,"products,startups",3
 STARTUP,Andi,Andi,EXACT_SELF,1.0,,"products,startups",3
+STARTUP,Anthropic,Anthropic,EXACT_SELF,1.0,Anthropic,jobs,3
 STARTUP,Anto Biosciences,Anto Biosciences,EXACT_SELF,1.0,,"products,startups",3
 STARTUP,Arbital,Arbital,EXACT_SELF,1.0,,"products,startups",3
 STARTUP,Aside,Aside,EXACT_SELF,1.0,,"products,startups",3
@@ -406,6 +418,7 @@ STARTUP,Educato,Educato,EXACT_SELF,1.0,,"products,startups",2
 STARTUP,EffiGov,EffiGov,EXACT_SELF,1.0,,"products,startups",2
 STARTUP,Ekho Labs,Ekho Labs,EXACT_SELF,1.0,,"products,startups",2
 STARTUP,Elevate,Elevate,EXACT_SELF,1.0,,"products,startups",2
+STARTUP,ElevenLabs,ElevenLabs,EXACT_SELF,1.0,ElevenLabs,jobs,2
 STARTUP,Elip AI,Elip AI,EXACT_SELF,1.0,,"products,startups",2
 STARTUP,Elite,Elite,EXACT_SELF,1.0,,"products,startups",2
 STARTUP,Ellipsis,Ellipsis,EXACT_SELF,1.0,,"products,startups",2

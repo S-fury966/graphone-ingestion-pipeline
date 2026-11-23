@@ -59,7 +59,7 @@ The polished, page-limited version is [`../architecture.pdf`](../architecture.pd
 - Layers, first hit wins: **EXACT → DOMAIN → TABLE → FUZZY → NEW_ENTITY** (`src/resolver/resolver.py`).
 - **Precision first**: fuzzy fires only when score ≥ 0.93, compact len ≥ 5, same first char, and a 0.02 margin over the 2nd-best — a wrong merge is worse than a missed one.
 - Applied **at export time** with one shared mapping across tabs; raw values stay in `*_raw` columns; colliding canonicals stop the bundle.
-- **Honest caveat**: the 133-case eval (precision/recall 1.0) is a developer-set corpus including tuning cases — not blind. Only 9 real non-trivial mappings exist because the seed list is a ~50-company mock.
+- **Honest caveat**: the 133-case eval (precision/recall 1.0) is a developer-set corpus including tuning cases — not blind. Only ~20 real non-trivial mappings exist (mostly job-company names → seed canonicals) because the seed list is a ~50-company mock.
 
 ## 6 · Anti-bot ladder
 - **L0** polite `AsyncFetcher` GET; robots respected, and one fixed self-identifying UA `Mozilla/5.0 (compatible; GraphOneBot/1.0)` (no rotating disguise).
@@ -79,6 +79,7 @@ _Already pointing that way in code_: config-driven YAML sources, per-domain limi
 
 ## 8 · Known limitations
 - Pricing null for 72.7 % of products (no public price; never guessed).
-- Fresh news/jobs counts are small and depend on run time (24 h gate at export).
+- Fresh news/jobs counts depend on run time (25 jobs, 9 news at the 2026-11-23T04:46Z snapshot; 24 h gate at export).
+- Bot-hostile publisher article pages (403/405) are skipped, not bypassed — this lowers the share of HN items with a verifiable article date.
 - Free-tier LLM quotas throttle big runs; raw pages aren't stored, so re-extraction re-crawls.
-- Resolver eval is not blind; only 9 real non-trivial mappings (mock seed).
+- Resolver eval is not blind; only ~20 real non-trivial mappings (mock seed).

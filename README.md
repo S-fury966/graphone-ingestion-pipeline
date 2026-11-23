@@ -9,19 +9,20 @@ to canonical form, and exports a six-tab submission bundle.
 Numbers in this README come from `docs/facts.md` (sourced from
 `submission/VALIDATION.md`, the database and the config files).
 
-## Results (last bundle 2026-11-22)
+## Results (data snapshot taken at 2026-11-23T04:46:03Z)
 | Tab | Rows | Required minimum |
 |---|---|---|
 | Startups | 1150 | ≥ 1000 ✅ |
 | Products | 1143 | ≥ 1000 ✅ |
 | Research Papers | 1044 | ≥ 1000 ✅ |
-| Jobs (fresh at bundle) | 4 | — (24 h window) |
-| News (fresh at bundle) | 3 | — (24 h window) |
-| Entity Mapping Log | 2296 | — |
+| Jobs (fresh at bundle) | 25 | — (24 h window) |
+| News (fresh at bundle) | 9 | — (24 h window) |
+| Entity Mapping Log | 2309 | — |
 
-Papers: all 1044 carry a verified `github_url` + star count (911 with > 0 stars,
-150 with ≥ 100). Products pricing: null 831 / FREEMIUM 182 / PAID 109 /
-ENTERPRISE 14 / FREE 7. Tests: **321**.
+Jobs/News are freshness-gated to the last 24 h **at bundle time**, so those two
+counts reflect the snapshot moment above. Papers: all 1044 carry a verified
+`github_url` + star count (911 with > 0 stars, 150 with ≥ 100). Products pricing:
+null 831 / FREEMIUM 182 / PAID 109 / ENTERPRISE 14 / FREE 7. Tests: **322**.
 
 ## Quick start
 ```bash
@@ -144,9 +145,16 @@ documented access path), which is why it is not gated by HTML `robots`.
   `docs/entity_resolution_eval.md` include cases used while tuning the resolver,
   so precision/recall 1.0 measures the tuned behaviour, not held-out
   generalization.
-- **Only 9 real non-trivial entity mappings** exist because the seed list is a
-  mock of ~50 companies; most live names self-match (trivial) rather than
+- **Only ~20 real non-trivial entity mappings** exist (20 at the latest snapshot,
+  mostly job-company names resolving to seed canonicals) because the seed list is
+  a mock of ~50 companies; most live names self-match (trivial) rather than
   collapsing variants.
+- **Publisher article pages that return 403/405 are skipped — we do not bypass
+  blocks.** The HN-news source verifies each item's publication date by fetching
+  the article itself; bot-hostile/paywalled publishers (NYT, Economist, Ars,
+  Techdirt, …) refuse our identifying `GraphOneBot` client, so those items lose
+  their article date and are dropped as unprovable/NO_TEXT. This lowers the share
+  of HN items with a verifiable article date — an honest cost of not bypassing.
 
 ## Importing into Google Sheets
 The six `submission/*.csv` files become the six tabs of one sheet. Step-by-step
