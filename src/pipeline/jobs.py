@@ -453,19 +453,22 @@ async def run(args: argparse.Namespace) -> None:
     if args.skip_llm_sources:
         sources = [s for s in sources if not s.uses_llm]
 
-    orch = None
-    if any(s.uses_llm for s in sources):
-        from ..llm.config import load_llm_config
-        from ..llm.orchestrator import Orchestrator
-        orch = Orchestrator(load_llm_config(), fetcher=None, db=db,
-                            max_calls=args.max_llm_calls)
-
     stats = Stats()
     rejects: List[Reject] = []
     clock = {"done": False, "skew": None}
     fetcher = AsyncFetcher(global_concurrency=max(4, args.concurrency),
                            domain_concurrency=4, rate_limit_per_sec=3.0,
                            respect_robots=True)
+    # The LLM orchestrator needs this fetcher to POST to the provider APIs;
+    # without it every tier's provider is None and HN extraction fails before any
+    # call. Providers only use the fetcher during extract (inside `async with`).
+    orch = None
+    if any(s.uses_llm for s in sources):
+        from ..llm.config import load_llm_config
+        from ..llm.orchestrator import Orchestrator
+        orch = Orchestrator(load_llm_config(), fetcher=fetcher, db=db,
+                            max_calls=args.max_llm_calls)
+
     async with fetcher:
         for src in sources:
             try:

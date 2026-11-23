@@ -42,9 +42,21 @@ def parse_thread(text: str) -> Optional[str]:
 
 
 def _clean(html: str) -> str:
+    """HN comment HTML -> plain text: unescape entities, drop tags, keep line
+    breaks. HN uses <p> as a paragraph separator and <br> as a line break; both
+    become newlines so the pipe-delimited header and the body stay on their own
+    lines for the grounded LLM step."""
     if not html:
         return ""
-    return BeautifulSoup(html, "lxml").get_text(" ", strip=True)
+    soup = BeautifulSoup(html, "lxml")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    for p in soup.find_all("p"):
+        p.insert_before("\n")               # <p> marks a paragraph boundary
+    text = soup.get_text()                   # also unescapes HTML entities
+    lines = [ln.strip() for ln in text.splitlines()]
+    text = re.sub(r"\n{2,}", "\n", "\n".join(lines)).strip()
+    return text
 
 
 def parse_comments(text: str, story_id: str) -> List[JobItem]:

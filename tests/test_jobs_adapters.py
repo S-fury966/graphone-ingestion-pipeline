@@ -58,8 +58,20 @@ def test_hn_thread_and_comments():
     # Both top-level comments kept (parent_id == story); the reply is dropped.
     # The non-job comment is filtered later by the grounded LLM step.
     assert len(comments) == 2
-    assert comments[0].date_field == "comment_created_at"
-    assert "Acme AI" in comments[0].comment_text
+    c = comments[0]
+    # provenance: comment's own created_at + the news.ycombinator permalink
+    assert c.date_field == "comment_created_at"
+    assert c.raw_date == "2026-11-22T06:00:00Z"
+    assert c.url == "https://news.ycombinator.com/item?id=50518905"
+    # HTML -> plain text: tags dropped, entities unescaped, line breaks kept
+    body = c.comment_text
+    assert "<p>" not in body and "<a" not in body and "&amp;" not in body
+    assert "you'll ship" in body.lower()              # &#x27; -> '
+    assert "features across the whole product & take" in body   # &amp; -> &
+    assert "https://acme.ai/jobs/ml" in body          # anchor text kept
+    assert "\n" in body                                # paragraph breaks preserved
+    first_line = body.splitlines()[0]
+    assert first_line.startswith("Acme AI | Senior ML Engineer")
 
 
 # ---- classifiers ----
