@@ -19,9 +19,22 @@ async def server(tmp_path):
     state = {
         "c429": 0, "c500": 0, "secret_hits": 0,
         "inflight": 0, "max_inflight": 0, "rate_times": [],
+        "ua_seen": [], "cua429": 0,
     }
 
     async def ok(_req):
+        return web.Response(text="ok")
+
+    async def ua(req):
+        state["ua_seen"].append(req.headers.get("User-Agent"))
+        return web.Response(text="ok")
+
+    async def ua429(req):
+        # Records the UA on EVERY wire request, including the retry.
+        state["ua_seen"].append(req.headers.get("User-Agent"))
+        state["cua429"] += 1
+        if state["cua429"] == 1:
+            return web.Response(status=429, headers={"Retry-After": "1"}, text="slow")
         return web.Response(text="ok")
 
     async def flaky429(_req):
@@ -74,6 +87,8 @@ async def server(tmp_path):
     app = web.Application()
     app.add_routes([
         web.get("/ok", ok),
+        web.get("/ua", ua),
+        web.get("/ua429", ua429),
         web.get("/flaky429", flaky429),
         web.get("/flaky500", flaky500),
         web.get("/slow", slow),
@@ -220,3 +235,25 @@ async def test_disk_cache_hit(server, tmp_path):
     assert first.from_cache is False
     assert second.from_cache is True
     assert second.text == "ok"
+
+
+async def test_fetcher_sends_only_the_fixed_identifying_ua(server, tmp_path, monkeypatch):
+    """The L0 fetcher must send ONE fixed, self-identifying UA on every wire
+    request (including retries and robots.txt) — never a rotating browser UA."""
+    from src.crawler import fetcher as fetchmod
+    base, state = server
+    assert fetchmod.USER_AGENT == "Mozilla/5.0 (compatible; GraphOneBot/1.0)"
+    # No rotating-UA machinery remains.
+    assert not hasattr(fetchmod, "USER_AGENTS")
+
+    async with make_fetcher(tmp_path) as f:
+        monkeypatch.setattr(f, "_sleep", fast_sleep)   # skip the 429 backoff wait
+        for _ in range(4):
+            await f.fetch_text(f"{base}/ua")
+        r = await f.fetch_text(f"{base}/ua429")         # 429 then 200 -> 2 wire reqs
+        assert r.status == 200
+
+    assert len(state["ua_seen"]) >= 6                   # 4 + 2 (retry counted)
+    assert set(state["ua_seen"]) == {"Mozilla/5.0 (compatible; GraphOneBot/1.0)"}
+    # robots matching uses the same identity.
+    assert f.robots_agent == "GraphOneBot"

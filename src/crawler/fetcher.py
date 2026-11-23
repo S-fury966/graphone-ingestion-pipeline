@@ -51,14 +51,10 @@ DEFAULT_CACHE_TTL = 3600.0
 ROBOTS_AGENT = "GraphOneBot"
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
 
-USER_AGENTS: Sequence[str] = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
-)
+# A single, fixed, self-identifying User-Agent — not a rotating disguise. The
+# product token (GraphOneBot) is also what robots.txt is matched against, so the
+# identity we advertise and the identity we obey are the same.
+USER_AGENT = "Mozilla/5.0 (compatible; GraphOneBot/1.0)"
 
 # Lowercased challenge markers used to flag a blocked/challenge page.
 BLOCK_MARKERS: Sequence[str] = (
@@ -167,7 +163,7 @@ class AsyncFetcher:
         robots_ttl: float = DEFAULT_ROBOTS_TTL,
         cache_dir: str | Path = "data/cache",
         cache_ttl: float = DEFAULT_CACHE_TTL,
-        user_agents: Sequence[str] = USER_AGENTS,
+        user_agent: str = USER_AGENT,
         robots_agent: str = ROBOTS_AGENT,
     ) -> None:
         self.global_concurrency = global_concurrency
@@ -184,7 +180,7 @@ class AsyncFetcher:
         self.robots_ttl = robots_ttl
         self.cache_dir = Path(cache_dir)
         self.cache_ttl = cache_ttl
-        self.user_agents = list(user_agents)
+        self.user_agent = user_agent
         self.robots_agent = robots_agent
 
         # Injectable sleeps so tests run fast / can assert wait times.
@@ -239,7 +235,7 @@ class AsyncFetcher:
 
     def _headers(self, overrides: Optional[Mapping[str, str]]) -> dict[str, str]:
         headers = {
-            "User-Agent": random.choice(self.user_agents),
+            "User-Agent": self.user_agent,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
                       "application/json;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9",

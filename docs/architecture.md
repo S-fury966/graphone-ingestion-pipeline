@@ -62,7 +62,7 @@ The polished, page-limited version is [`../architecture.pdf`](../architecture.pd
 - **Honest caveat**: the 133-case eval (precision/recall 1.0) is a developer-set corpus including tuning cases — not blind. Only 9 real non-trivial mappings exist because the seed list is a ~50-company mock.
 
 ## 6 · Anti-bot ladder
-- **L0** polite `AsyncFetcher` GET (robots respected; sends *rotated* realistic browser User-Agents — a light evasion, disclosed).
+- **L0** polite `AsyncFetcher` GET; robots respected, and one fixed self-identifying UA `Mozilla/5.0 (compatible; GraphOneBot/1.0)` (no rotating disguise).
 - **L1** real headless Chromium render — only if L0 is js_only (< 300 chars) and policy allows; **no stealth, no captcha solving**.
 - **L2** challenge detected → stop (`blocked_by_challenge`), no bypass; the answer is an alternative source. One site is skipped for terms.
 

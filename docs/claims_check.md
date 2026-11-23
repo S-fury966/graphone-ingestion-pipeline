@@ -64,6 +64,7 @@ that implements it. Claims that could not be pointed to were removed or softened
 | Claim | File |
 |---|---|
 | L0 polite GET, robots respected | `src/crawler/fetcher.py` (`_robots_allowed`) |
+| Single fixed identifying UA (no rotation), same identity for robots | `src/crawler/fetcher.py` (`USER_AGENT`, `_headers`, `ROBOTS_AGENT`) |
 | L1 real Chromium render, no stealth/captcha | `src/crawler/browser.py` |
 | L2 stop on challenge, no bypass | `src/crawler/ladder.py`, `src/crawler/fetcher.py` (`detect_block`) |
 | TTL disk cache (conditional-request precursor) | `src/crawler/fetcher.py` (`_cache_read`, `_cache_write`) |
@@ -72,11 +73,14 @@ that implements it. Claims that could not be pointed to were removed or softened
 
 ## Claims removed or softened (could not be fully supported)
 1. **"Consistent `GraphOneBot` User-Agent / not a rotating disguise" (L0).**
-   SOFTENED. The L0 HTTP fetcher sends **rotated** realistic browser UAs
-   (`random.choice`, `src/crawler/fetcher.py:242`). `GraphOneBot` is used only as
-   the robots-matching agent (`ROBOTS_AGENT`) and as the **L1 browser** UA
-   (`src/crawler/browser.py:38`). README, architecture and
-   `docs/anti_bot_strategy.md` were corrected to disclose the L0 rotation.
+   RESOLVED in Step 18a. The L0 fetcher previously rotated browser UAs; it now
+   sends one fixed, self-identifying UA
+   `Mozilla/5.0 (compatible; GraphOneBot/1.0)` (`src/crawler/fetcher.py`
+   `USER_AGENT` + `_headers`), matched against the same `GraphOneBot` robots
+   identity. A regression test
+   (`tests/test_fetcher.py::test_fetcher_sends_only_the_fixed_identifying_ua`)
+   asserts no other UA is ever sent. README, architecture and
+   `docs/anti_bot_strategy.md` now state the single identifying UA.
 2. **"Conditional-request support (ETag/If-Modified-Since) already exists."**
    REMOVED. No such headers are sent (`src/crawler/fetcher.py` has none). The
    architecture now lists conditional requests as *not implemented*; the

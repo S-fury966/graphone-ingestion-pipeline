@@ -116,20 +116,19 @@ source_table and occurrences.
   never invented.
 
 ## Ethics & anti-bot stance
-Be a polite, honest client and prefer official data. `robots.txt` is respected
-for HTML pages (evaluated against the `GraphOneBot` agent) and per-domain rate
-limits are enforced. **Disclosure:** the L0 HTTP fetcher sends *rotated*
-realistic browser User-Agents (`random.choice` over four strings in
-`src/crawler/fetcher.py`) — a light, common evasion, not a consistent identifier;
-the L1 browser rung (`src/crawler/browser.py`) does send a consistent,
-identifying `GraphOneBot/1.0` UA and uses **no stealth plugins, no fingerprint
-spoofing and no captcha solving** — on a challenge it stops
-(`blocked_by_challenge`) and the answer is an alternative source, never a bypass.
-One site documented in the recon notes is skipped because its terms forbid AI
-collection (`docs/anti_bot_strategy.md`, replayed in `scripts/demo_antibot.py`
-without a request). Bulk data comes from sanctioned APIs/feeds; **arXiv is
-accessed through its public API** by design (the documented access path), which
-is why it is not gated by HTML `robots`.
+Be a polite, honest client and prefer official data. Both rungs send **one
+fixed, self-identifying User-Agent** — `Mozilla/5.0 (compatible; GraphOneBot/1.0)`
+at L0 (`src/crawler/fetcher.py`) and `GraphOneBot/1.0` at L1 — never a rotating
+browser disguise. `robots.txt` is respected for HTML pages and matched against
+the same `GraphOneBot` identity, and per-domain rate limits are enforced. The L1
+browser rung (`src/crawler/browser.py`) is a real headless Chromium with **no
+stealth plugins, no fingerprint spoofing and no captcha solving** — on a
+challenge it stops (`blocked_by_challenge`) and the answer is an alternative
+source, never a bypass. One site documented in the recon notes is skipped
+because its terms forbid AI collection (`docs/anti_bot_strategy.md`, replayed in
+`scripts/demo_antibot.py` without a request). Bulk data comes from sanctioned
+APIs/feeds; **arXiv is accessed through its public API** by design (the
+documented access path), which is why it is not gated by HTML `robots`.
 
 ## Known limitations (plainly)
 - **Pricing is null for 72.7 % of products (831/1143).** Most are early-stage YC
