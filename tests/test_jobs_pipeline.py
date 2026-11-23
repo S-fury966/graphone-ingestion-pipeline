@@ -322,3 +322,84 @@ async def test_export_recomputes_freshness(db, tmp_path, monkeypatch):
         assert col in head
     obj = json.loads(Path(tmp_path / "jobs.jsonl").read_text().splitlines()[0])
     assert obj["content"]["title"] == "Eng" and obj["remote_basis"] == "api_flag"
+
+
+# ---- Step 20: pre-LLM freshness gate + distinct reason codes ----
+from src.crawler.jobs import hn_hiring as _HN
+
+
+def _hn_comment(oid, created_at, text="<p>Acme AI | Engineer | Remote | we build AI tools</p>"):
+    return {"objectID": oid, "parent_id": 999, "story_id": 999,
+            "created_at": created_at, "comment_text": text}
+
+
+def _hn_routes(*comments):
+    return {_HN.THREAD_SEARCH: {"text": fx("hn_thread.json")},
+            _HN.comments_url("999", hits=100): {"text": json.dumps({"hits": list(comments)})}}
+
+
+def _hn_src():
+    return src("hn-hiring", base_url="https://hn.algolia.com/api/v1/search_by_date",
+               uses_llm=True, ai_filter=False)
+
+
+async def test_hn_stale_comment_makes_zero_provider_calls(db):
+    # 48h before NOW -> STALE; must be gated BEFORE any LLM call.
+    orch = _mock_orch(script=[])
+    prov = orch.providers["mock"]
+    f = FakeFetcher(_hn_routes(_hn_comment("c1", "2026-11-20T12:00:00Z")))
+    stats, rejects = await _ingest(db, f, _hn_src(), orch=orch)
+    assert prov.calls == 0                       # the LLM was never reached
+    assert stats.rejected["STALE"] == 1
+    assert stats.skipped_pre_llm == 1
+    assert stats.stored == 0
+    assert any(r.reason == "STALE" for r in rejects)
+
+
+async def test_hn_future_and_bad_dates_skip_llm(db):
+    orch = _mock_orch(script=[])
+    prov = orch.providers["mock"]
+    f = FakeFetcher(_hn_routes(
+        _hn_comment("fut", "2027-01-01T00:00:00Z"),      # FUTURE_DATE
+        _hn_comment("bad", "not-a-date"),                # BAD_DATE
+    ))
+    stats, _ = await _ingest(db, f, _hn_src(), orch=orch)
+    assert prov.calls == 0
+    assert stats.rejected["FUTURE_DATE"] == 1
+    assert stats.rejected["BAD_DATE"] == 1
+    assert stats.skipped_pre_llm == 2
+
+
+async def test_hn_budget_exhausted_reason_code(db):
+    cfg = LLMConfig(tiers=[TierConfig(name="mock", provider="mock", model="m",
+                                      enabled=True, max_input_tokens=4000,
+                                      max_output_tokens=512, rpm_limit=1000)])
+    orch = Orchestrator(cfg, providers={"mock": MockProvider(script=[])}, max_calls=0)
+    f = FakeFetcher(_hn_routes(_hn_comment("c1", "2026-11-22T06:00:00Z")))  # fresh
+    stats, rejects = await _ingest(db, f, _hn_src(), orch=orch)
+    assert stats.rejected.get("STALE", 0) == 0          # it IS fresh
+    assert stats.rejected["LLM_BUDGET_EXHAUSTED"] == 1
+    assert "NO_TEXT" not in stats.rejected
+    assert any(r.reason == "LLM_BUDGET_EXHAUSTED" for r in rejects)
+
+
+async def test_hn_extraction_failed_reason_code(db):
+    orch = _mock_orch(script=["not json", "still not json"])  # bad output -> fail
+    prov = orch.providers["mock"]
+    f = FakeFetcher(_hn_routes(_hn_comment("c1", "2026-11-22T06:00:00Z")))  # fresh
+    stats, _ = await _ingest(db, f, _hn_src(), orch=orch)
+    assert prov.calls >= 1                              # the LLM WAS reached (fresh)
+    assert stats.rejected["EXTRACTION_FAILED"] == 1
+    assert "NO_TEXT" not in stats.rejected
+
+
+async def test_hn_empty_text_is_still_no_text(db):
+    orch = _mock_orch(script=[])
+    prov = orch.providers["mock"]
+    # a top-level comment whose body is only HTML whitespace -> empty after clean
+    f = FakeFetcher(_hn_routes(_hn_comment("c1", "2026-11-22T06:00:00Z", text="<p> </p>")))
+    stats, _ = await _ingest(db, f, _hn_src(), orch=orch)
+    # parse_comments drops empty bodies, so it never even becomes an item;
+    # NO_TEXT remains reserved for genuinely empty text and is not misused here.
+    assert prov.calls == 0
+    assert "EXTRACTION_FAILED" not in stats.rejected

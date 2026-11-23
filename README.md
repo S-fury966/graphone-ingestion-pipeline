@@ -116,6 +116,20 @@ source_table and occurrences.
 - **Null over guess.** `pricingModel` is null when there is no evidence; it is
   never invented.
 
+## Job ingest reason codes
+Every rejected job is written to `data/jobs_rejected.csv` with one of these codes
+(single source of truth: `JOB_REASON_CODES` in `src/pipeline/jobs.py`):
+`NON_AI`, `DUPLICATE`, `BAD_DATE`, `FUTURE_DATE`, `STALE`, `FRESHNESS_UNPROVABLE`,
+`UNDATED_BASELINE`, `ROBOTS`, `HTTP_ERROR`, `UNGROUNDED`, `NO_TEXT`,
+`LLM_BUDGET_EXHAUSTED`, `EXTRACTION_FAILED`.
+For the LLM source (HN "Who is hiring"), the **deterministic freshness gate runs
+before any LLM call**: a comment that is `STALE`/`FUTURE_DATE`/`BAD_DATE` is
+rejected and never reaches the orchestrator (counted as `skipped_pre_llm`), so
+the LLM budget is spent only on possibly-fresh comments. `NO_TEXT` is reserved
+for genuinely empty comment text; `LLM_BUDGET_EXHAUSTED` means `--max-llm-calls`
+was reached; `EXTRACTION_FAILED` means the LLM call failed or returned nothing
+usable.
+
 ## Ethics & anti-bot stance
 Be a polite, honest client and prefer official data. Both rungs send **one
 fixed, self-identifying User-Agent** — `Mozilla/5.0 (compatible; GraphOneBot/1.0)`

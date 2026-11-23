@@ -28,9 +28,9 @@ from ..common.ai_keywords import is_ai_relevant
 from ..common.config import SourceConfig, load_sources
 from ..common.dates import (ParsedDate, check_clock_skew, is_fresh, parse_date,
                             utc_now)
-from ..common.freshness import (INFERRED_FRESH, STALE, UNDATED_BASELINE,
-                                VERIFIED_FRESH, Snapshot, content_hash, decide,
-                                snapshot_continuity, url_hash)
+from ..common.freshness import (FRESHNESS_UNPROVABLE, INFERRED_FRESH, STALE,
+                                UNDATED_BASELINE, VERIFIED_FRESH, Snapshot,
+                                content_hash, decide, snapshot_continuity, url_hash)
 from ..common.logging import get_logger
 from ..crawler.fetcher import AsyncFetcher
 from ..crawler.jobs import (JobItem, classify_role, decide_remote,
@@ -50,6 +50,17 @@ R_STALE, R_UNPROVABLE, R_BASELINE = STALE, "FRESHNESS_UNPROVABLE", UNDATED_BASEL
 R_NON_AI, R_NO_TEXT, R_DUP = "NON_AI", "NO_TEXT", "DUPLICATE"
 R_BAD_DATE, R_FUTURE, R_ROBOTS, R_HTTP = "BAD_DATE", "FUTURE_DATE", "ROBOTS", "HTTP_ERROR"
 R_UNGROUNDED = "UNGROUNDED"
+# LLM-source only: distinguish a skipped call (budget) from a failed/empty one.
+# NO_TEXT now means ONLY genuinely empty comment text.
+R_BUDGET, R_EXTRACT_FAILED = "LLM_BUDGET_EXHAUSTED", "EXTRACTION_FAILED"
+
+# Single source of truth for every job rejection reason code (pipeline codes plus
+# the freshness-engine non-accept statuses that also appear as reject reasons).
+JOB_REASON_CODES = (
+    R_NON_AI, R_NO_TEXT, R_DUP, R_BAD_DATE, R_FUTURE, R_ROBOTS, R_HTTP,
+    R_UNGROUNDED, R_BUDGET, R_EXTRACT_FAILED,
+    STALE, FRESHNESS_UNPROVABLE, UNDATED_BASELINE,
+)
 
 
 @dataclass
@@ -59,6 +70,7 @@ class Stats:
     inferred: Counter = field(default_factory=Counter)
     rejected: Counter = field(default_factory=Counter)
     stored: int = 0
+    skipped_pre_llm: int = 0   # LLM-source items rejected by the pre-LLM date gate
 
 
 @dataclass
@@ -122,8 +134,11 @@ async def _hn_fields(item: JobItem, orch, role_table) -> Fields:
     res = await orch.extract(f"hn-job:{url_hash(item.url)}", HNJob,
                              item.comment_text, HN_INSTRUCTIONS)
     if not res.success or not res.data:
+        # Distinguish a skipped call (budget) from a genuine extraction failure.
+        budget = bool(res.error and "budget" in res.error.lower())
         return Fields("", "", False, "default_false", "Other", "default_other",
-                      reject=R_NO_TEXT, detail=res.error or "extract failed")
+                      reject=(R_BUDGET if budget else R_EXTRACT_FAILED),
+                      detail=res.error or "extract failed")
     data = res.data
     company = (data.get("company") or "").strip()
     title = (data.get("title") or "").strip()
@@ -159,6 +174,16 @@ def _job_record_dict(source: SourceConfig, item: JobItem, f: Fields,
     }
 
 
+def _reject(stats: Stats, rejects: List[Reject], item: JobItem,
+            source: SourceConfig, code: str, detail: str = "",
+            pre_llm: bool = False) -> None:
+    stats.rejected[code] += 1
+    if pre_llm:
+        stats.skipped_pre_llm += 1
+    rejects.append(Reject(item.url, source.name, code,
+                          item.date_field or "", item.raw_date or "", detail))
+
+
 async def _process_item(db: Database, source: SourceConfig, item: JobItem,
                         snapshot_key: str, prev: Snapshot, continuity_ok: bool,
                         now: datetime, window: int, stats: Stats,
@@ -183,8 +208,36 @@ async def _process_item(db: Database, source: SourceConfig, item: JobItem,
                                   item.date_field or "", item.raw_date or ""))
             return
 
-    # Field extraction (deterministic, or LLM for HN).
-    if source.uses_llm:
+    uses_llm = source.uses_llm
+
+    # Publication date (deterministic; the LLM is NEVER consulted here). Parsed
+    # up-front so the freshness gate can run BEFORE any LLM call for HN.
+    candidate: Optional[ParsedDate] = None
+    if item.raw_date:
+        candidate = parse_date(item.raw_date, now=now, source_tz=source.source_tz)
+        if candidate is None:
+            _reject(stats, rejects, item, source, R_BAD_DATE, "unparseable",
+                    pre_llm=uses_llm)
+            return
+        if candidate.status == "FUTURE_DATE":
+            _reject(stats, rejects, item, source, R_FUTURE,
+                    candidate.dt.isoformat(), pre_llm=uses_llm)
+            return
+        candidate.source = item.date_field
+
+    # Pre-LLM freshness gate (LLM sources): a trusted timestamp outside the 24h
+    # window is STALE and must NEVER reach the orchestrator. The LLM still does
+    # not decide freshness — this is the same deterministic rule decide() uses.
+    if (uses_llm and candidate is not None and candidate.ok and candidate.verifiable
+            and not is_fresh(candidate, now, window)):
+        _reject(stats, rejects, item, source, STALE,
+                f"published {candidate.dt.isoformat()} older than {window}h",
+                pre_llm=True)
+        return
+
+    # Field extraction (deterministic, or LLM for HN — only for items that pass
+    # the gate above, so the LLM budget is spent only on possibly-fresh items).
+    if uses_llm:
         f = await _hn_fields(item, orch, role_table)
         if f.reject:
             stats.rejected[f.reject] += 1
@@ -193,23 +246,6 @@ async def _process_item(db: Database, source: SourceConfig, item: JobItem,
             return
     else:
         f = _deterministic_fields(item, role_table)
-
-    # Publication date (deterministic; LLM is never consulted here).
-    candidate: Optional[ParsedDate] = None
-    if item.raw_date:
-        candidate = parse_date(item.raw_date, now=now, source_tz=source.source_tz)
-        if candidate is None:
-            stats.rejected[R_BAD_DATE] += 1
-            rejects.append(Reject(item.url, source.name, R_BAD_DATE,
-                                  item.date_field or "", item.raw_date, "unparseable"))
-            return
-        if candidate.status == "FUTURE_DATE":
-            stats.rejected[R_FUTURE] += 1
-            rejects.append(Reject(item.url, source.name, R_FUTURE,
-                                  item.date_field or "", item.raw_date,
-                                  candidate.dt.isoformat()))
-            return
-        candidate.source = item.date_field
 
     chash = content_hash(f"{item.url}|{f.title}|{f.company}")
     existing_first = db.get_first_seen(uh)
@@ -493,6 +529,7 @@ async def run(args: argparse.Namespace) -> None:
         "verified_fresh": dict(stats.verified),
         "inferred_fresh": dict(stats.inferred),
         "rejected_by_code": dict(stats.rejected),
+        "skipped_pre_llm": stats.skipped_pre_llm,
         "stored_this_run": stats.stored,
         "exported_fresh_now": exported,
         "llm_calls": orch.calls_made if orch else 0,

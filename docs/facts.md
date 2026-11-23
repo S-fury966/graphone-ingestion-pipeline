@@ -60,5 +60,12 @@ Three rungs: **L0** `AsyncFetcher` GET with a single fixed identifying UA
 render (js_only < 300 chars, policy allowing) → **L2** stop on challenge
 (`blocked_by_challenge`, no retry, no bypass).
 
+## Job ingest reason codes (src/pipeline/jobs.py `JOB_REASON_CODES`)
+`NON_AI`, `DUPLICATE`, `BAD_DATE`, `FUTURE_DATE`, `STALE`, `FRESHNESS_UNPROVABLE`,
+`UNDATED_BASELINE`, `ROBOTS`, `HTTP_ERROR`, `UNGROUNDED`, `NO_TEXT`,
+`LLM_BUDGET_EXHAUSTED`, `EXTRACTION_FAILED`. The HN LLM source applies the
+deterministic freshness gate (STALE/FUTURE_DATE/BAD_DATE) **before** any LLM
+call; those are counted as `skipped_pre_llm`.
+
 ## Tests
-`pytest --co`: **322 tests collected**.
+`pytest --co`: **327 tests collected**.

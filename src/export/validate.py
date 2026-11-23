@@ -196,12 +196,35 @@ def validate(out: str = "submission", db_path: str = "data/state.db",
         for col, n in truncated.items():
             rep.info(f"- {col}: {n}")
 
+    # 10. Job rejection reason codes (if a rejection log is present) ---------
+    _validate_job_reason_codes(rep)
+
     rep.info("\n---\n")
     rep.info("**RESULT: " + ("PASS" if rep.ok else "FAIL") + "**")
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "VALIDATION.md").write_text("\n".join(rep.lines) + "\n", encoding="utf-8")
     print(f"validation: {'PASS' if rep.ok else 'FAIL'} -> {out_dir/'VALIDATION.md'}")
     return 0 if rep.ok else 1
+
+
+def _validate_job_reason_codes(rep: _Report, path: str = "data/jobs_rejected.csv") -> None:
+    """If a jobs rejection log exists, every `reason` must be a known code
+    (`JOB_REASON_CODES` in src/pipeline/jobs.py) — catches drift/typos."""
+    rep.info("\n## Job rejection reason codes")
+    p = Path(path)
+    if not p.exists():
+        rep.info("- (no data/jobs_rejected.csv present; skipped)")
+        return
+    from src.pipeline.jobs import JOB_REASON_CODES
+    known = set(JOB_REASON_CODES)
+    seen = Counter()
+    with p.open(encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            seen[row.get("reason")] += 1
+    unknown = {c: n for c, n in seen.items() if c not in known}
+    rep.check(not unknown, "all job rejection reason codes are known",
+              f"unknown: {unknown}" if unknown else "")
+    rep.info(f"- counts by code: {dict(seen)}")
 
 
 def _dupe(rep: _Report, label: str, keys: List) -> None:
